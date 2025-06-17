@@ -1,517 +1,588 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVC Viewer - Sustainable Vocabulary Catalog</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SVC Viewer - Sustainable Vocabulary Catalog</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            overflow: hidden;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            font-weight: 300;
-        }
-
-        .header p {
-            margin: 10px 0 0 0;
-            opacity: 0.9;
-        }
-
-        .content {
-            padding: 30px;
-        }
-
-        .file-selector {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .file-input {
-            display: none;
-        }
-
-        .file-label {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            font-size: 16px;
-        }
-
-        .file-label:hover {
-            background: #2980b9;
-        }
-
-        .file-info {
-            margin-top: 15px;
-            color: #666;
-        }
-
-        .scheme-info {
-            background: #ecf0f1;
-            padding: 25px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            border-left: 5px solid #3498db;
-        }
-
-        .scheme-info h2 {
-            margin-top: 0;
-            color: #2c3e50;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .info-item {
-            background: white;
-            padding: 15px;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .info-label {
-            font-weight: 600;
-            color: #34495e;
-            font-size: 0.9em;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .info-value {
-            margin-top: 5px;
-            color: #2c3e50;
-        }
-
-        .collapsible {
-            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-            color: white;
-            cursor: pointer;
-            padding: 20px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 16px;
-            font-weight: 500;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            transition: all 0.3s;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .collapsible:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
-        }
-
-        .collapsible.active {
-            background: linear-gradient(135deg, #2980b9 0%, #1f618d 100%);
-        }
-
-        .collapsible-icon {
-            font-size: 20px;
-            transition: transform 0.3s;
-        }
-
-        .collapsible.active .collapsible-icon {
-            transform: rotate(45deg);
-        }
-
-        .content-panel {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease-out;
-            background: #fff;
-            border: 2px solid #ecf0f1;
-            border-top: none;
-            border-radius: 0 0 8px 8px;
-            margin-bottom: 20px;
-        }
-
-        .content-panel.active {
-            max-height: none;
-            border-color: #3498db;
-        }
-
-        .content-inner {
-            padding: 25px;
-        }
-
-        .criterion {
-            background: #fff;
-            border: 1px solid #e9ecef;
-            border-left: 4px solid #e74c3c;
-            border-radius: 6px;
-            padding: 20px;
-            margin-bottom: 20px;
-            transition: all 0.3s;
-        }
-
-        .criterion:hover {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transform: translateY(-2px);
-        }
-
-        .criterion-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 15px;
-        }
-
-        .criterion-title {
-            flex: 1;
-            margin: 0;
-            color: #2c3e50;
-            font-size: 1.2em;
-        }
-
-        .criterion-badges {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .badge {
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 0.8em;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .topic-badge {
-            background: #27ae60;
-            color: white;
-        }
-
-        .status-badge {
-            background: #f39c12;
-            color: white;
-        }
-
-        .criterion-id {
-            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-            background: #f8f9fa;
-            padding: 6px 10px;
-            border-radius: 4px;
-            font-size: 0.85em;
-            color: #495057;
-            margin-bottom: 10px;
-            display: inline-block;
-        }
-
-        .criterion-description {
-            color: #555;
-            margin-bottom: 15px;
-            line-height: 1.7;
-        }
-
-        .metric {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 15px;
-            border-radius: 6px;
-            margin: 15px 0;
-            border-left: 3px solid #17a2b8;
-        }
-
-        .metric-title {
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 8px;
-        }
-
-        .metric-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 10px;
-        }
-
-        .metric-item {
-            background: white;
-            padding: 8px 12px;
-            border-radius: 4px;
-            text-align: center;
-        }
-
-        .metric-label {
-            font-size: 0.8em;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .metric-value {
-            font-weight: 600;
-            color: #2c3e50;
-            margin-top: 2px;
-        }
-
-        .tags {
-            margin-top: 15px;
-        }
-
-        .tag {
-            background: #6c757d;
-            color: white;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.8em;
-            margin-right: 8px;
-            margin-bottom: 5px;
-            display: inline-block;
-        }
-
-        .regulation {
-            background: #fff;
-            border: 1px solid #e9ecef;
-            border-left: 4px solid #9b59b6;
-            border-radius: 6px;
-            padding: 20px;
-            margin-bottom: 15px;
-        }
-
-        .regulation-title {
-            margin: 0 0 10px 0;
-            color: #2c3e50;
-        }
-
-        .regulation-details {
-            color: #666;
-            font-size: 0.95em;
-        }
-
-        .performance-level {
-            background: #fff;
-            border: 1px solid #e9ecef;
-            border-left: 4px solid #3498db;
-            border-radius: 6px;
-            padding: 15px;
-            margin-bottom: 15px;
-        }
-
-        .level-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-
-        .level-name {
-            font-weight: 600;
-            color: #2c3e50;
-            margin: 0;
-        }
-
-        .level-rank {
-            background: #3498db;
-            color: white;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 0.8em;
-            font-weight: 600;
-        }
-
-        .no-data {
-            text-align: center;
-            color: #666;
-            font-style: italic;
-            padding: 40px;
-        }
-
-        .loading {
-            text-align: center;
-            padding: 40px;
-            color: #666;
-        }
-
-        .error {
-            background: #f8d7da;
-            color: #721c24;
-            padding: 15px;
-            border-radius: 6px;
-            margin: 20px 0;
-            border-left: 4px solid #dc3545;
-        }
-
-        @media (max-width: 768px) {
             body {
-                padding: 10px;
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    Oxygen, Ubuntu, Cantarell, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                margin: 0;
+                padding: 20px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+                overflow: hidden;
             }
 
             .header {
-                padding: 20px;
+                background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+                color: white;
+                padding: 30px;
+                text-align: center;
             }
 
             .header h1 {
-                font-size: 2em;
+                margin: 0;
+                font-size: 2.5em;
+                font-weight: 300;
+            }
+
+            .header p {
+                margin: 10px 0 0 0;
+                opacity: 0.9;
             }
 
             .content {
+                padding: 30px;
+            }
+
+            .file-selector {
+                background: #f8f9fa;
                 padding: 20px;
+                border-radius: 8px;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .file-input {
+                display: none;
+            }
+
+            .file-label {
+                display: inline-block;
+                background: #3498db;
+                color: white;
+                padding: 12px 24px;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                font-size: 16px;
+            }
+
+            .file-label:hover {
+                background: #2980b9;
+            }
+
+            .file-info {
+                margin-top: 15px;
+                color: #666;
+            }
+
+            .scheme-info {
+                background: #ecf0f1;
+                padding: 25px;
+                border-radius: 8px;
+                margin-bottom: 30px;
+                border-left: 5px solid #3498db;
+            }
+
+            .scheme-info h2 {
+                margin-top: 0;
+                color: #2c3e50;
+            }
+
+            .info-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 15px;
+                margin-top: 15px;
+            }
+
+            .info-item {
+                background: white;
+                padding: 15px;
+                border-radius: 6px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .info-label {
+                font-weight: 600;
+                color: #34495e;
+                font-size: 0.9em;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .info-value {
+                margin-top: 5px;
+                color: #2c3e50;
+            }
+
+            .collapsible {
+                background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+                color: white;
+                cursor: pointer;
+                padding: 20px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 16px;
+                font-weight: 500;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                transition: all 0.3s;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .collapsible:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+            }
+
+            .collapsible.active {
+                background: linear-gradient(135deg, #2980b9 0%, #1f618d 100%);
+            }
+
+            .collapsible-icon {
+                font-size: 20px;
+                transition: transform 0.3s;
+            }
+
+            .collapsible.active .collapsible-icon {
+                transform: rotate(45deg);
+            }
+
+            .content-panel {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease-out;
+                background: #fff;
+                border: 2px solid #ecf0f1;
+                border-top: none;
+                border-radius: 0 0 8px 8px;
+                margin-bottom: 20px;
+            }
+
+            .content-panel.active {
+                max-height: none;
+                border-color: #3498db;
+            }
+
+            .content-inner {
+                padding: 25px;
+            }
+
+            .criterion {
+                background: #fff;
+                border: 1px solid #e9ecef;
+                border-left: 4px solid #e74c3c;
+                border-radius: 6px;
+                padding: 20px;
+                margin-bottom: 20px;
+                transition: all 0.3s;
+            }
+
+            .criterion:hover {
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                transform: translateY(-2px);
+            }
+
+            .criterion.level-1 {
+                border-left-color: #e74c3c;
+                margin-left: 0;
+            }
+
+            .criterion.level-2 {
+                border-left-color: #f39c12;
+                margin-left: 20px;
+                background: #fefefe;
+            }
+
+            .criterion.level-3 {
+                border-left-color: #27ae60;
+                margin-left: 40px;
+                background: #fdfdfd;
+            }
+
+            .criterion.level-4 {
+                border-left-color: #3498db;
+                margin-left: 60px;
+                background: #fcfcfc;
+            }
+
+            .criterion.level-5 {
+                border-left-color: #9b59b6;
+                margin-left: 80px;
+                background: #fbfbfb;
+            }
+
+            .sub-criteria {
+                margin-top: 20px;
+                padding-top: 15px;
+                border-top: 1px solid #ecf0f1;
+            }
+
+            .expand-button {
+                background: #3498db;
+                color: white;
+                border: none;
+                padding: 6px 12px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 0.9em;
+                margin-top: 10px;
+                transition: background-color 0.3s;
+            }
+
+            .expand-button:hover {
+                background: #2980b9;
+            }
+
+            .expand-button.expanded {
+                background: #27ae60;
+            }
+
+            .expand-button.expanded:hover {
+                background: #229954;
             }
 
             .criterion-header {
-                flex-direction: column;
-                gap: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 15px;
+            }
+
+            .criterion-title {
+                flex: 1;
+                margin: 0;
+                color: #2c3e50;
+                font-size: 1.2em;
             }
 
             .criterion-badges {
-                justify-content: flex-start;
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
             }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>SVC Viewer</h1>
-            <p>Sustainable Vocabulary Catalog Viewer</p>
-        </div>
 
-        <div class="content">
-            <div class="file-selector">
-                <label for="fileInput" class="file-label">
-                    📁 Select SVC JSON File
-                </label>
-                <input type="file" id="fileInput" class="file-input" accept=".json">
-                <div class="file-info" id="fileInfo">
-                    No file selected. Choose an SVC JSON file to view its contents.
+            .badge {
+                padding: 4px 12px;
+                border-radius: 12px;
+                font-size: 0.8em;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .topic-badge {
+                background: #27ae60;
+                color: white;
+            }
+
+            .status-badge {
+                background: #f39c12;
+                color: white;
+            }
+
+            .criterion-id {
+                font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+                background: #f8f9fa;
+                padding: 6px 10px;
+                border-radius: 4px;
+                font-size: 0.85em;
+                color: #495057;
+                margin-bottom: 10px;
+                display: inline-block;
+            }
+
+            .criterion-description {
+                color: #555;
+                margin-bottom: 15px;
+                line-height: 1.7;
+            }
+
+            .metric {
+                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+                padding: 15px;
+                border-radius: 6px;
+                margin: 15px 0;
+                border-left: 3px solid #17a2b8;
+            }
+
+            .metric-title {
+                font-weight: 600;
+                color: #2c3e50;
+                margin-bottom: 8px;
+            }
+
+            .metric-details {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 10px;
+            }
+
+            .metric-item {
+                background: white;
+                padding: 8px 12px;
+                border-radius: 4px;
+                text-align: center;
+            }
+
+            .metric-label {
+                font-size: 0.8em;
+                color: #666;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .metric-value {
+                font-weight: 600;
+                color: #2c3e50;
+                margin-top: 2px;
+            }
+
+            .tags {
+                margin-top: 15px;
+            }
+
+            .tag {
+                background: #6c757d;
+                color: white;
+                padding: 4px 10px;
+                border-radius: 4px;
+                font-size: 0.8em;
+                margin-right: 8px;
+                margin-bottom: 5px;
+                display: inline-block;
+            }
+
+            .regulation {
+                background: #fff;
+                border: 1px solid #e9ecef;
+                border-left: 4px solid #9b59b6;
+                border-radius: 6px;
+                padding: 20px;
+                margin-bottom: 15px;
+            }
+
+            .regulation-title {
+                margin: 0 0 10px 0;
+                color: #2c3e50;
+            }
+
+            .regulation-details {
+                color: #666;
+                font-size: 0.95em;
+            }
+
+            .performance-level {
+                background: #fff;
+                border: 1px solid #e9ecef;
+                border-left: 4px solid #3498db;
+                border-radius: 6px;
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .level-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 8px;
+            }
+
+            .level-name {
+                font-weight: 600;
+                color: #2c3e50;
+                margin: 0;
+            }
+
+            .level-rank {
+                background: #3498db;
+                color: white;
+                padding: 4px 10px;
+                border-radius: 12px;
+                font-size: 0.8em;
+                font-weight: 600;
+            }
+
+            .no-data {
+                text-align: center;
+                color: #666;
+                font-style: italic;
+                padding: 40px;
+            }
+
+            .loading {
+                text-align: center;
+                padding: 40px;
+                color: #666;
+            }
+
+            .error {
+                background: #f8d7da;
+                color: #721c24;
+                padding: 15px;
+                border-radius: 6px;
+                margin: 20px 0;
+                border-left: 4px solid #dc3545;
+            }
+
+            @media (max-width: 768px) {
+                body {
+                    padding: 10px;
+                }
+
+                .header {
+                    padding: 20px;
+                }
+
+                .header h1 {
+                    font-size: 2em;
+                }
+
+                .content {
+                    padding: 20px;
+                }
+
+                .criterion-header {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+
+                .criterion-badges {
+                    justify-content: flex-start;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>SVC Viewer</h1>
+                <p>Sustainable Vocabulary Catalog Viewer</p>
+            </div>
+
+            <div class="content">
+                <div class="file-selector">
+                    <label for="fileInput" class="file-label">
+                        📁 Select SVC JSON File
+                    </label>
+                    <input
+                        type="file"
+                        id="fileInput"
+                        class="file-input"
+                        accept=".json"
+                    />
+                    <div class="file-info" id="fileInfo">
+                        No file selected. Choose an SVC JSON file to view its
+                        contents.
+                    </div>
+                </div>
+
+                <div id="svcContent" class="no-data">
+                    Select an SVC JSON file to begin viewing its contents.
                 </div>
             </div>
-
-            <div id="svcContent" class="no-data">
-                Select an SVC JSON file to begin viewing its contents.
-            </div>
         </div>
-    </div>
 
-    <script>
-        const fileInput = document.getElementById('fileInput');
-        const fileInfo = document.getElementById('fileInfo');
-        const svcContent = document.getElementById('svcContent');
+        <script>
+            const fileInput = document.getElementById("fileInput");
+            const fileInfo = document.getElementById("fileInfo");
+            const svcContent = document.getElementById("svcContent");
 
-        fileInput.addEventListener('change', handleFileSelect);
+            fileInput.addEventListener("change", handleFileSelect);
 
-        function handleFileSelect(event) {
-            const file = event.target.files[0];
-            if (!file) return;
+            function handleFileSelect(event) {
+                const file = event.target.files[0];
+                if (!file) return;
 
-            if (file.type !== 'application/json' && !file.name.endsWith('.json')) {
-                showError('Please select a valid JSON file.');
-                return;
+                if (
+                    file.type !== "application/json" &&
+                    !file.name.endsWith(".json")
+                ) {
+                    showError("Please select a valid JSON file.");
+                    return;
+                }
+
+                fileInfo.textContent = `Selected: ${file.name} (${formatFileSize(file.size)})`;
+                loadSVCFile(file);
             }
 
-            fileInfo.textContent = `Selected: ${file.name} (${formatFileSize(file.size)})`;
-            loadSVCFile(file);
-        }
+            function loadSVCFile(file) {
+                svcContent.innerHTML =
+                    '<div class="loading">Loading SVC file...</div>';
 
-        function loadSVCFile(file) {
-            svcContent.innerHTML = '<div class="loading">Loading SVC file...</div>';
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    try {
+                        const svcData = JSON.parse(e.target.result);
+                        renderSVC(svcData);
+                    } catch (error) {
+                        showError(`Error parsing JSON: ${error.message}`);
+                    }
+                };
+                reader.onerror = function () {
+                    showError("Error reading file.");
+                };
+                reader.readAsText(file);
+            }
 
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                try {
-                    const svcData = JSON.parse(e.target.result);
-                    renderSVC(svcData);
-                } catch (error) {
-                    showError(`Error parsing JSON: ${error.message}`);
-                }
-            };
-            reader.onerror = function() {
-                showError('Error reading file.');
-            };
-            reader.readAsText(file);
-        }
-
-        function renderSVC(data) {
-            const scheme = data.scheme || {};
-            const html = `
+            function renderSVC(data) {
+                const scheme = data.scheme || {};
+                const html = `
                 ${renderSchemeInfo(scheme)}
-                ${renderSection('Conformity Criteria', data.conformityCriterion, renderCriteria)}
-                ${renderSection('Regulatory Alignment', data.regulatoryAlignment, renderRegulations)}
-                ${renderSection('Performance Levels', data.performanceLevelCode, renderPerformanceLevels)}
-                ${renderSection('Tag Codes', data.tagCode, renderTagCodes)}
+                ${renderSection("Conformity Criteria", data.conformityCriterion, renderCriteria)}
+                ${renderSection("Regulatory Alignment", data.regulatoryAlignment, renderRegulations)}
+                ${renderSection("Performance Levels", data.performanceLevelCode, renderPerformanceLevels)}
+                ${renderSection("Tag Codes", data.tagCode, renderTagCodes)}
                 ${renderScopeInfo(data.industryScope, data.geographicScope)}
             `;
-            svcContent.innerHTML = html;
-            attachCollapsibleHandlers();
-        }
+                svcContent.innerHTML = html;
+                attachCollapsibleHandlers();
+            }
 
-        function renderSchemeInfo(scheme) {
-            return `
+            function renderSchemeInfo(scheme) {
+                return `
                 <div class="scheme-info">
-                    <h2>${scheme.name || 'Unknown Scheme'}</h2>
+                    <h2>${scheme.name || "Unknown Scheme"}</h2>
                     <div class="info-grid">
                         <div class="info-item">
                             <div class="info-label">Version</div>
-                            <div class="info-value">${scheme.version || 'Not specified'}</div>
+                            <div class="info-value">${scheme.version || "Not specified"}</div>
                         </div>
                         <div class="info-item">
                             <div class="info-label">Valid From</div>
-                            <div class="info-value">${scheme.validFrom || 'Not specified'}</div>
+                            <div class="info-value">${scheme.validFrom || "Not specified"}</div>
                         </div>
                         <div class="info-item">
                             <div class="info-label">Owner</div>
-                            <div class="info-value">${scheme.owner?.name || 'Not specified'}</div>
+                            <div class="info-value">${scheme.owner?.name || "Not specified"}</div>
                         </div>
                         <div class="info-item">
                             <div class="info-label">ID</div>
-                            <div class="info-value">${scheme.id || 'Not specified'}</div>
+                            <div class="info-value">${scheme.id || "Not specified"}</div>
                         </div>
                     </div>
-                    ${scheme.description ? `<p style="margin-top: 15px; font-style: italic;">${scheme.description}</p>` : ''}
+                    ${scheme.description ? `<p style="margin-top: 15px; font-style: italic;">${scheme.description}</p>` : ""}
                 </div>
             `;
-        }
+            }
 
-        function renderSection(title, data, renderFunction) {
-            if (!data || data.length === 0) return '';
+            function renderSection(title, data, renderFunction) {
+                if (!data || data.length === 0) return "";
 
-            return `
+                return `
                 <button class="collapsible">
                     <span>${title} (${data.length} items)</span>
                     <span class="collapsible-icon">+</span>
@@ -522,160 +593,244 @@
                     </div>
                 </div>
             `;
-        }
+            }
 
-        function renderCriteria(criteria) {
-            return criteria.map((criterion, index) => `
-                <div class="criterion">
+            function renderCriteria(criteria, level = 1) {
+                return criteria
+                    .map((criterion, index) =>
+                        renderSingleCriterion(criterion, index + 1, level),
+                    )
+                    .join("");
+            }
+
+            function renderSingleCriterion(criterion, index, level) {
+                const hasSubCriteria =
+                    criterion.subCriterion && criterion.subCriterion.length > 0;
+                const criterionId = `criterion-${criterion.id ? criterion.id.replace(/[^a-zA-Z0-9]/g, "-") : `level-${level}-${index}`}`;
+
+                return `
+                <div class="criterion level-${level}" data-level="${level}">
                     <div class="criterion-header">
-                        <h3 class="criterion-title">${index + 1}. ${criterion.name || 'Unnamed Criterion'}</h3>
+                        <h${Math.min(level + 2, 6)} class="criterion-title">${getNumberPrefix(level, index)}${criterion.name || "Unnamed Criterion"}</h${Math.min(level + 2, 6)}>
                         <div class="criterion-badges">
-                            ${criterion.conformityTopic ? `<span class="badge topic-badge">${criterion.conformityTopic}</span>` : ''}
-                            ${criterion.status ? `<span class="badge status-badge">${criterion.status}</span>` : ''}
+                            ${criterion.conformityTopic ? `<span class="badge topic-badge">${criterion.conformityTopic}</span>` : ""}
+                            ${criterion.status ? `<span class="badge status-badge">${criterion.status}</span>` : ""}
                         </div>
                     </div>
 
-                    ${criterion.id ? `<div class="criterion-id">ID: ${criterion.id}</div>` : ''}
+                    ${criterion.id ? `<div class="criterion-id">ID: ${criterion.id}</div>` : ""}
 
-                    ${criterion.description ? `<div class="criterion-description">${criterion.description}</div>` : ''}
+                    ${criterion.description ? `<div class="criterion-description">${criterion.description}</div>` : ""}
 
-                    ${criterion.thresholdValue ? renderMetric(criterion.thresholdValue) : ''}
+                    ${criterion.thresholdValue ? renderMetric(criterion.thresholdValue) : ""}
 
-                    ${criterion.performanceLevel ? `<p><strong>Performance Level:</strong> ${criterion.performanceLevel}</p>` : ''}
+                    ${criterion.performanceLevel ? `<p><strong>Performance Level:</strong> ${criterion.performanceLevel}</p>` : ""}
 
-                    ${criterion.tag && criterion.tag.length > 0 ? renderTags(criterion.tag) : ''}
+                    ${criterion.tag && criterion.tag.length > 0 ? renderTags(criterion.tag) : ""}
+
+                    ${
+                        hasSubCriteria
+                            ? `
+                        <button class="expand-button" onclick="toggleSubCriteria('${criterionId}')">
+                            <span id="${criterionId}-text">Show ${criterion.subCriterion.length} Sub-Criteria</span>
+                        </button>
+                        <div class="sub-criteria" id="${criterionId}" style="display: none;">
+                            ${renderCriteria(criterion.subCriterion, level + 1)}
+                        </div>
+                    `
+                            : ""
+                    }
                 </div>
-            `).join('');
-        }
+            `;
+            }
 
-        function renderMetric(threshold) {
-            const metricValue = threshold.metricValue || {};
-            return `
+            function getNumberPrefix(level, index) {
+                // Don't add numbering for top level as it's already handled by the section
+                if (level === 1) return "";
+                return `${index}. `;
+            }
+
+            function renderMetric(threshold) {
+                const metricValue = threshold.metricValue || {};
+                return `
                 <div class="metric">
-                    <div class="metric-title">Threshold: ${threshold.metricName || 'N/A'}</div>
+                    <div class="metric-title">Threshold: ${threshold.metricName || "N/A"}</div>
                     <div class="metric-details">
                         <div class="metric-item">
                             <div class="metric-label">Value</div>
-                            <div class="metric-value">${metricValue.value || 'N/A'}</div>
+                            <div class="metric-value">${metricValue.value || "N/A"}</div>
                         </div>
                         <div class="metric-item">
                             <div class="metric-label">Unit</div>
-                            <div class="metric-value">${metricValue.unit || 'N/A'}</div>
+                            <div class="metric-value">${metricValue.unit || "N/A"}</div>
                         </div>
                         <div class="metric-item">
                             <div class="metric-label">Score</div>
-                            <div class="metric-value">${threshold.score || 'N/A'}</div>
+                            <div class="metric-value">${threshold.score || "N/A"}</div>
                         </div>
-                        ${threshold.accuracy ? `
+                        ${
+                            threshold.accuracy
+                                ? `
                         <div class="metric-item">
                             <div class="metric-label">Accuracy</div>
                             <div class="metric-value">${Math.round(threshold.accuracy * 100)}%</div>
                         </div>
-                        ` : ''}
+                        `
+                                : ""
+                        }
                     </div>
                 </div>
             `;
-        }
+            }
 
-        function renderTags(tags) {
-            return `
+            function renderTags(tags) {
+                return `
                 <div class="tags">
                     <strong>Tags:</strong>
-                    ${tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    ${tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
                 </div>
             `;
-        }
+            }
 
-        function renderRegulations(regulations) {
-            return regulations.map(reg => `
+            function renderRegulations(regulations) {
+                return regulations
+                    .map(
+                        (reg) => `
                 <div class="regulation">
-                    <h4 class="regulation-title">${reg.name || 'Unnamed Regulation'}</h4>
+                    <h4 class="regulation-title">${reg.name || "Unnamed Regulation"}</h4>
                     <div class="regulation-details">
-                        <p><strong>Jurisdiction:</strong> ${reg.jurisdictionCountry || 'Not specified'}</p>
-                        <p><strong>Administered by:</strong> ${reg.administeredBy?.name || 'Not specified'}</p>
-                        <p><strong>Effective Date:</strong> ${reg.effectiveDate || 'Not specified'}</p>
+                        <p><strong>Jurisdiction:</strong> ${reg.jurisdictionCountry || "Not specified"}</p>
+                        <p><strong>Administered by:</strong> ${reg.administeredBy?.name || "Not specified"}</p>
+                        <p><strong>Effective Date:</strong> ${reg.effectiveDate || "Not specified"}</p>
                     </div>
                 </div>
-            `).join('');
-        }
+            `,
+                    )
+                    .join("");
+            }
 
-        function renderPerformanceLevels(levels) {
-            return levels.map(level => `
+            function renderPerformanceLevels(levels) {
+                return levels
+                    .map(
+                        (level) => `
                 <div class="performance-level">
                     <div class="level-header">
-                        <h4 class="level-name">${level.name || 'Unnamed Level'}</h4>
-                        <span class="level-rank">Rank: ${level.rank || 'N/A'}</span>
+                        <h4 class="level-name">${level.name || "Unnamed Level"}</h4>
+                        <span class="level-rank">Rank: ${level.rank || "N/A"}</span>
                     </div>
-                    <p>${level.description || 'No description available'}</p>
+                    <p>${level.description || "No description available"}</p>
                 </div>
-            `).join('');
-        }
+            `,
+                    )
+                    .join("");
+            }
 
-        function renderTagCodes(tagCodes) {
-            return tagCodes.map(tag => `
+            function renderTagCodes(tagCodes) {
+                return tagCodes
+                    .map(
+                        (tag) => `
                 <div class="performance-level">
-                    <h4 class="level-name">${tag.name || 'Unnamed Tag'}</h4>
-                    <p>${tag.description || 'No description available'}</p>
+                    <h4 class="level-name">${tag.name || "Unnamed Tag"}</h4>
+                    <p>${tag.description || "No description available"}</p>
                 </div>
-            `).join('');
-        }
+            `,
+                    )
+                    .join("");
+            }
 
-        function renderScopeInfo(industryScope, geographicScope) {
-            if (!industryScope && !geographicScope) return '';
+            function renderScopeInfo(industryScope, geographicScope) {
+                if (!industryScope && !geographicScope) return "";
 
-            return `
+                return `
                 <button class="collapsible">
                     <span>Scope Information</span>
                     <span class="collapsible-icon">+</span>
                 </button>
                 <div class="content-panel">
                     <div class="content-inner">
-                        ${industryScope ? `
+                        ${
+                            industryScope
+                                ? `
                             <h3>Industry Scope</h3>
-                            <p><strong>Code:</strong> ${industryScope.code || 'N/A'}</p>
-                            <p><strong>Name:</strong> ${industryScope.name || 'N/A'}</p>
-                            <p><strong>Scheme:</strong> ${industryScope.schemeName || 'N/A'}</p>
-                        ` : ''}
+                            <p><strong>Code:</strong> ${industryScope.code || "N/A"}</p>
+                            <p><strong>Name:</strong> ${industryScope.name || "N/A"}</p>
+                            <p><strong>Scheme:</strong> ${industryScope.schemeName || "N/A"}</p>
+                        `
+                                : ""
+                        }
 
-                        ${geographicScope ? `
+                        ${
+                            geographicScope
+                                ? `
                             <h3>Geographic Scope</h3>
-                            <p><strong>Code:</strong> ${geographicScope.code || 'N/A'}</p>
-                            <p><strong>Name:</strong> ${geographicScope.name || 'N/A'}</p>
-                            <p><strong>Scheme:</strong> ${geographicScope.schemeName || 'N/A'}</p>
-                        ` : ''}
+                            <p><strong>Code:</strong> ${geographicScope.code || "N/A"}</p>
+                            <p><strong>Name:</strong> ${geographicScope.name || "N/A"}</p>
+                            <p><strong>Scheme:</strong> ${geographicScope.schemeName || "N/A"}</p>
+                        `
+                                : ""
+                        }
                     </div>
                 </div>
             `;
-        }
+            }
 
-        function attachCollapsibleHandlers() {
-            const collapsibles = document.querySelectorAll('.collapsible');
-            collapsibles.forEach(collapsible => {
-                collapsible.addEventListener('click', function() {
-                    this.classList.toggle('active');
-                    const content = this.nextElementSibling;
-                    content.classList.toggle('active');
+            function attachCollapsibleHandlers() {
+                const collapsibles = document.querySelectorAll(".collapsible");
+                collapsibles.forEach((collapsible) => {
+                    collapsible.addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        const content = this.nextElementSibling;
+                        content.classList.toggle("active");
 
-                    if (content.classList.contains('active')) {
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                    } else {
-                        content.style.maxHeight = '0';
-                    }
+                        if (content.classList.contains("active")) {
+                            content.style.maxHeight =
+                                content.scrollHeight + "px";
+                        } else {
+                            content.style.maxHeight = "0";
+                        }
+                    });
                 });
-            });
-        }
+            }
 
-        function showError(message) {
-            svcContent.innerHTML = `<div class="error">${message}</div>`;
-        }
+            function showError(message) {
+                svcContent.innerHTML = `<div class="error">${message}</div>`;
+            }
 
-        function formatFileSize(bytes) {
-            if (bytes === 0) return '0 Bytes';
-            const k = 1024;
-            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-            const i = Math.floor(Math.log(bytes) / Math.log(k));
-            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-        }
-    </script>
-</body>
+            function formatFileSize(bytes) {
+                if (bytes === 0) return "0 Bytes";
+                const k = 1024;
+                const sizes = ["Bytes", "KB", "MB", "GB"];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return (
+                    parseFloat((bytes / Math.pow(k, i)).toFixed(2)) +
+                    " " +
+                    sizes[i]
+                );
+            }
+
+            function toggleSubCriteria(criterionId) {
+                const subCriteriaDiv = document.getElementById(criterionId);
+                const button = subCriteriaDiv.previousElementSibling;
+                const buttonText = document.getElementById(
+                    criterionId + "-text",
+                );
+
+                if (subCriteriaDiv.style.display === "none") {
+                    subCriteriaDiv.style.display = "block";
+                    button.classList.add("expanded");
+                    buttonText.textContent = buttonText.textContent.replace(
+                        "Show",
+                        "Hide",
+                    );
+                } else {
+                    subCriteriaDiv.style.display = "none";
+                    button.classList.remove("expanded");
+                    buttonText.textContent = buttonText.textContent.replace(
+                        "Hide",
+                        "Show",
+                    );
+                }
+            }
+        </script>
+    </body>
 </html>
