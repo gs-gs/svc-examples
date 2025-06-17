@@ -10,13 +10,13 @@ The purpose of the repository is to generate and collect initial SVC's that are 
 
 ## Quick Start
 
-To view the SVC files as interactive HTML pages:
+To view the SVC files as interactive HTML pages, first either clone the git repository or simply [download the ZIP file of the repo](https://github.com/gs-gs/svc-examples/archive/refs/heads/main.zip) and then:
 
 1. Open `svc-viewer.html` in your web browser
 2. Click "Select SVC JSON File" and choose any JSON file from the `catalogs/` directory structure
 3. View the interactive content with collapsible sections and expandable criteria hierarchies
 
-**No installation required** This works offline and doesn't need Python or any web server setup.
+**No installation required.** This works offline and doesn't need Python or any web server setup.
 
 ## SVC Compliance
 
