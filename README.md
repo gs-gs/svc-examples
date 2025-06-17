@@ -54,16 +54,6 @@ and attaching the first PDF.
 
 Sustainable Vocabulary Catalog (SVC) is a structured format for defining conformity schemes and their criteria. Read more at [UNTP Sustainable Vocabulary Catalog](https://uncefact.github.io/spec-untp/docs/specification/SustainabilityVocabularyCatalog).
 
-## RBA VAP
-
-The Responsible Business Alliance (RBA) Validated Assessment Program (VAP) is a leading standard for onsite compliance verification in supply chains, focusing on:
-
-- **Labor Standards** - Worker rights and working conditions
-- **Health & Safety** - Workplace safety and employee wellbeing
-- **Environmental** - Environmental management and sustainability
-- **Ethics** - Business integrity and ethical practices
-- **Management Systems** - Governance and continuous improvement
-
 ## Requirements
 
 - Modern web browser (Chrome, Firefox, Safari, Edge)
