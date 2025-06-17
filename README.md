@@ -6,20 +6,49 @@ This directory contains examples of Sustainable Vocabulary Catalog files and a s
 
 *The SVC Viewer displaying the RBA Validated Assessment Program standard with expandable criteria hierarchy*
 
-## Contents
-
-- `RBA-VAP/` - RBA Validated Assessment Program SVC files
-- `svc-viewer.html` - Standalone HTML viewer for SVC JSON files
+The purpose of the repository is to generate and collect initial SVC's that are compliant with the current schema and then incrementally improve their display as needed or requested. No attempt has been made to audit the SVC generation from their respective PDFs.
 
 ## Quick Start
 
 To view the SVC files as interactive HTML pages:
 
 1. Open `svc-viewer.html` in your web browser
-2. Click "Select SVC JSON File" and choose any JSON file from the `RBA-VAP/` directory
-3. View the interactive content with collapsible sections
+2. Click "Select SVC JSON File" and choose any JSON file from the `catalogs/` directory structure
+3. View the interactive content with collapsible sections and expandable criteria hierarchies
 
 **No installation required** This works offline and doesn't need Python or any web server setup.
+
+## SVC Compliance
+
+Each SVC example is linted using `jsonld lint --safe` and the schema checked with `ajv --spec=draft2020 --strict=false -c ajv-formats -s /path/to/untp-svc-schema-0.6.1.json -d example-svc-file`
+
+TODO: Add a GH action to verify all examples are compliant.
+
+## Contents
+
+- `catalogs/` - Collection of SVC files organized by standards organization:
+  - `ResponsibleBusinessAlliance/` - RBA standards including:
+    - `ValidatedAssessmentProgram-8.0.2.json` - Standard RBA VAP criteria
+    - `ValidatedAssessmentProgram-8.0.2-full.json` - Full RBA VAP with detailed nested sub-criteria
+  - `ResponsibleMineralsInitiative/` - RMI standards including:
+    - `RiskReadynessAssessment.json` - RMI Risk Readiness Assessment
+    - `GlobalResponsibleSourcing-AllMinerals.json` - RMI Global Responsible Sourcing (summary)
+    - `GlobalResponsibleSourcing-AllMinerals-full.json` - RMI Global Responsible Sourcing with detailed nested sub-criteria
+- `svc-viewer.html` - Standalone HTML viewer for SVC JSON files
+
+### Available Standards
+
+- **RBA Validated Assessment Program** - Comprehensive supply chain compliance verification
+- **RMI Risk Readiness Assessment** - Responsible minerals sourcing evaluation
+- **RMI Global Responsible Sourcing** - Minerals supply chain due diligence standards
+
+### Generation of SVCs
+
+The SVC examples in this repo were initially created with the following prompt using Claude Sonnet 4:
+
+> Using the JSON schema, instance and context at the following URLs respectively: https://raw.githubusercontent.com/uncefact/spec-untp/refs/tags/v0.6.1/data-models/untp-svc/artefacts/untp-svc-schema.json , https://raw.githubusercontent.com/uncefact/spec-untp/refs/tags/v0.6.1/data-models/untp-svc/artefacts/untp-svc-instance.json , https://raw.githubusercontent.com/uncefact/spec-untp/refs/tags/v0.6.1/data-models/untp-svc/artefacts/context.jsonld , can you create an SVC for the attached document
+
+and attaching the first PDF.
 
 ## About SVC
 
