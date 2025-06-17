@@ -173,7 +173,8 @@
             }
 
             .content-panel.active {
-                max-height: none;
+                max-height: 80vh;
+                overflow-y: auto;
                 border-color: #3498db;
             }
 
@@ -783,8 +784,8 @@
                         content.classList.toggle("active");
 
                         if (content.classList.contains("active")) {
-                            content.style.maxHeight =
-                                content.scrollHeight + "px";
+                            // Use CSS class for active state instead of inline styles
+                            content.style.maxHeight = "";
                         } else {
                             content.style.maxHeight = "0";
                         }
@@ -829,6 +830,25 @@
                         "Hide",
                         "Show",
                     );
+                }
+
+                // Update parent collapsible panels to accommodate new content
+                updateParentPanels(subCriteriaDiv);
+            }
+
+            function updateParentPanels(element) {
+                // Find all parent content panels and refresh their height
+                let parent = element.parentElement;
+                while (parent) {
+                    if (
+                        parent.classList.contains("content-panel") &&
+                        parent.classList.contains("active")
+                    ) {
+                        // Force recalculation by briefly removing and re-adding active class
+                        parent.style.maxHeight = "80vh";
+                        parent.scrollTop = parent.scrollTop; // Trigger reflow
+                    }
+                    parent = parent.parentElement;
                 }
             }
         </script>
