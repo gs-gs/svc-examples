@@ -1,0 +1,1594 @@
+{
+  "type": ["ConformitySchemeVocabulary"],
+  "@context": ["https://test.uncefact.org/vocabulary/untp/svc/0.6.1/"],
+  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1",
+  "scheme": {
+    "type": ["ConformityScheme"],
+    "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1",
+    "name": "Global Responsible Sourcing Due Diligence Standard For Mineral Supply Chains - All Minerals",
+    "description": "A comprehensive standard for responsible mineral supply chain due diligence based on OECD Due Diligence Guidance, covering management systems, risk assessment, and responsible sourcing practices for all minerals except tin, tantalum, tungsten, gold, cobalt, and mica.",
+    "version": "1.1",
+    "validFrom": "2022-01-01",
+    "owner": {
+      "id": "https://responsiblemineralsinitiative.org/",
+      "name": "Responsible Minerals Initiative (RMI)",
+      "registeredId": "RMI"
+    },
+    "trustmark": {
+      "fileName": "RMI Logo",
+      "fileType": "image/svg+xml",
+      "file": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI2LjAuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgOTgxIDUwMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgOTgxIDUwMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM0ODY3QTY7fQoJLnN0MXtmaWxsOm5vbmU7fQoJLnN0MntmaWxsOiNGRkZGRkY7fQoJLnN0M3tmaWxsOiM5M0IxREI7fQo8L3N0eWxlPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0zMi41LDE3NGg1Ny44YzE2LjctMC4yLDMzLjYtMC4yLDQ1LjcsMTAuMmM5LjQsOC4xLDEzLjEsMTkuMiwxMy4xLDI5YzAsMjguMi0yNC4yLDM0LjgtMzEuNSwzNi45ICAgYzIyLjcsMi4xLDI0LjQsMTUsMjcuMSwzNC42YzIuMywxNy43LDMuNSwyNSw0LjYsMjkuMmMxLjcsNi43LDIuOSw4LjMsNC42LDEwLjhoLTM1LjdjLTEuNS04LjMtNi00Ni41LTguMS01Mi40ICAgYy0yLjktOC42LTEwLjgtOC42LTE2LjMtOC42SDY1LjV2NjAuOWgtMzNWMTc0eiBNNjQuNCwyMzkuOWgyNi4xYzMuOCwwLDExLjMsMCwxNi41LTQuMmMyLjMtMS43LDguMy02LjksOC4zLTE3LjUgICBjMC0xMC4yLTUtMTUtNy45LTE2LjljLTUtMy41LTExLjEtMy41LTIxLjMtMy41SDY0LjRWMjM5Ljl6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTcxLjYsMTc0aDUyLjhsMzEuOSwxMDkuN0wyOTAuNywxNzRIMzQydjE1MC44aC0zMi4xVjE5NS41bC00MS4xLDEyOS4zaC0yNi43bC00MC4zLTEyOS4zdjEyOS4zaC0zMC4yICAgTDE3MS42LDE3NEwxNzEuNiwxNzR6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzY4LjUsMTczLjZoMzIuM3YxNTEuMmgtMzIuM1YxNzMuNnoiLz4KPC9nPgo8cmVjdCBjbGFzcz0ic3QxIiB3aWR0aD0iOTgwIiBoZWlnaHQ9IjQ5OS41Ii8+CjxjaXJjbGUgY2xhc3M9InN0MCIgY3g9IjczMSIgY3k9IjI1MSIgcj0iMjQwIi8+CjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik04ODQsMjQ3LjVsLTI5LTE0LjlsLTE0LjgtNy42bDAsMEw4MTYsMjEyLjVjLTEtMC42LTIuMy0wLjYtMy40LTAuMmMxMS40LDI0LjcsMTEuNCw1My4xLDAsNzcuOCAgYzAuNSwwLjIsMSwwLjMsMS41LDAuM2MwLjcsMCwxLjMtMC4yLDEuOS0wLjVsMjQuMS0xMi40bDguNS00LjRMODg0LDI1NWMyLjEtMS4xLDIuOS0zLjYsMS44LTUuNkM4ODUuNCwyNDguNiw4ODQuOCwyNDgsODg0LDI0Ny41Ii8+CjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik04MDAuOSwxNjEuNGM2LjMsNS4yLDEyLDExLjEsMTcuMSwxNy41YzQuNiwwLjUsOS4xLDEuOCwxMy4zLDMuOWwxMy41LDdjLTEyLjUtMjQtMzEuOC00My42LTU1LjYtNTYuNCAgbDcuOCwxNS4xQzc5OS4xLDE1Mi41LDgwMC40LDE1Ni45LDgwMC45LDE2MS40Ii8+CjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik04MTcuOSwzMjMuNmMtNS4xLDYuNC0xMC44LDEyLjItMTcsMTcuNGMtMC41LDQuNS0xLjgsOC45LTMuOSwxMi45bC03LjgsMTUuMWMyMy43LTEyLjgsNDMuMS0zMi40LDU1LjYtNTYuMyAgbC0xMy41LDdDODI3LjEsMzIxLjgsODIyLjYsMzIzLjEsODE3LjksMzIzLjYiLz4KPHBhdGggY2xhc3M9InN0MiIgZD0iTTYzMy41LDE3OS45YzYuNy04LjcsMTQuNi0xNi41LDIzLjUtMjNjMC43LTIuOSwxLjctNS43LDMuMS04LjRsOS41LTE4LjRjLTI3LjgsMTMuMS01MC4zLDM1LjMtNjMuOCw2MyAgbDIwLTEwLjNDNjI4LjMsMTgxLjYsNjMwLjksMTgwLjYsNjMzLjUsMTc5LjkiLz4KPHBhdGggY2xhc3M9InN0MiIgZD0iTTYwOS44LDI3My44bDMxLjQsMTYuMWMwLjYsMC4zLDEuMiwwLjUsMS45LDAuNWMwLjUsMCwxLTAuMSwxLjUtMC4zYy0xMS40LTI0LjctMTEuNC01My4xLDAtNzcuOCAgYy0xLjEtMC40LTIuMy0wLjQtMy40LDAuMmwtMjkuNSwxNS4ybC0xOC4zLDkuNGwtMjAuMiwxMC40Yy0yLjEsMS4xLTIuOSwzLjYtMS44LDUuNmMwLjQsMC44LDEsMS40LDEuOCwxLjhsMjAuMiwxMC40TDYwOS44LDI3My44eiAgIi8+CjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik02NTcsMzQ1LjVjLTguOC02LjUtMTYuNy0xNC4yLTIzLjQtMjIuOWMtMi43LTAuNy01LjMtMS43LTcuNy0yLjlsLTIwLTEwLjNjMTMuNCwyNy42LDM1LjksNDkuOCw2My43LDYyLjkgIGwtOS40LTE4LjNDNjU4LjcsMzUxLjIsNjU3LjYsMzQ4LjQsNjU3LDM0NS41Ii8+CjxwYXRoIGNsYXNzPSJzdDMiIGQ9Ik03MjguNiwxNTguNmMxMy40LDAsMjYuNywyLjksMzguOSw4LjZjMC40LTEuMSwwLjQtMi4zLTAuMi0zLjRsLTE3LjUtMzRsLTUuNy0xMWwtMTEuOC0yMi45ICBjLTEuMS0yLjEtMy42LTIuOS01LjYtMS44Yy0wLjgsMC40LTEuNCwxLTEuOCwxLjhsLTE1LjQsMjkuOWwtNS40LDEwLjZMNjkwLDE2My44Yy0wLjUsMS0wLjYsMi4zLTAuMiwzLjQgIEM3MDEuOSwxNjEuNSw3MTUuMiwxNTguNiw3MjguNiwxNTguNiIvPgo8cGF0aCBjbGFzcz0ic3QyIiBkPSJNNzI4LjYsMzQzLjhjLTEzLjQsMC0yNi43LTIuOS0zOC45LTguNmMtMC40LDEuMS0wLjQsMi4zLDAuMiwzLjRMNzA0LDM2NmwwLDBsOS40LDE4LjJsMTEuNSwyMi40ICBjMS4xLDIuMSwzLjYsMi45LDUuNiwxLjhjMC44LTAuNCwxLjQtMSwxLjgtMS44bDExLjgtMjNsNC4xLThsMTkuMS0zN2MwLjUtMSwwLjYtMi4zLDAuMi0zLjRDNzU1LjMsMzQwLjksNzQyLDM0My45LDcyOC42LDM0My44Ii8+Cjwvc3ZnPg=="
+    }
+  },
+  "conformityCriterion": [
+    {
+      "type": ["Criterion"],
+      "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1-management-systems",
+      "name": "Step 1 - Establish Strong Company Management Systems",
+      "description": "Companies must adopt and publish a supply chain policy, structure internal management to support due diligence, establish controls and transparency systems, strengthen supplier engagement, and establish grievance mechanisms.",
+      "conformityTopic": "governance.compliance",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1a-supply-chain-policy",
+          "name": "Step 1A - Adopt and Commit to Supply Chain Policy",
+          "description": "Company must publish a policy demonstrating commitment to performing OECD-conforming supply chain due diligence on risks described in Annex II.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "subCriterion": [
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1a-1",
+              "name": "Written Supply Chain Policy",
+              "description": "Adopt a written supply chain policy with an effective date.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["policy", "documentation"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1a-2",
+              "name": "Policy Standards Inclusion",
+              "description": "Include in the policy the standards against which the company will make assessments of itself and its suppliers' activities.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["policy", "standards"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1a-3",
+              "name": "Annex II Consistency",
+              "description": "Ensure the policy and standards are consistent with those in the Annex II model supply chain policy or equivalent, including timescales for disengagement or progressive improvement through mitigation.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["policy", "annex-II"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1a-4",
+              "name": "Management Process Description",
+              "description": "Include in the policy a clear and coherent description of the management process for identifying and managing risks.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["policy", "risk-management"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1a-5",
+              "name": "Due Diligence Commitment",
+              "description": "Include in the policy a commitment to the due diligence steps relevant to its supply chain and operations.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["policy", "commitment"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1a-6",
+              "name": "Covered Minerals Scope",
+              "description": "Ensure the policy covers all covered minerals relevant to company activities.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["policy", "scope"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1a-7",
+              "name": "Policy Review Process",
+              "description": "Have and implement a process for periodically reviewing the policy and updating as necessary.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["policy", "review"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1a-8",
+              "name": "Policy Communication",
+              "description": "Ensure that policy is publicly available and communicated to suppliers.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "tag": ["policy", "communication"]
+            }
+          ],
+          "tag": ["policy", "management"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1b-internal-management",
+          "name": "Step 1B - Structure Internal Management",
+          "description": "Company must have a system in place which assigns responsibility for each relevant aspect of the company's due diligence management process to identified and accountable staff.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "subCriterion": [
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1b-1",
+              "name": "Responsibility Assignment",
+              "description": "Assign responsibility for each part of the due diligence management process to appropriate staff.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["responsibility", "staff"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1b-2",
+              "name": "Senior Level Authority",
+              "description": "Provide authority to staff at a senior level to oversee due diligence.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["authority", "senior-management"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1b-3",
+              "name": "Training and Competence",
+              "description": "Ensure responsible employees have sufficient knowledge and experience of due diligence through training, including as part of new hire and refresher, on the due diligence management system to relevant personnel.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["training", "competence"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1b-4",
+              "name": "Resource Allocation",
+              "description": "Allocate adequate resources and staff for due diligence operation and monitoring.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["resources", "staffing"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1b-5",
+              "name": "Communication Processes",
+              "description": "Implement communication processes to ensure that critical information – including the company supply chain policy, management processes and information on risks – reaches relevant employees and suppliers.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "tag": ["communication", "information-sharing"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1b-6",
+              "name": "Risk Reporting",
+              "description": "Report findings on actual and/or potential risks identified in the supply chain to the appointed senior manager.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["reporting", "risk-identification"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1b-7",
+              "name": "Senior Management Accountability",
+              "description": "Put in place accountability for senior management expected to oversee due diligence.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["accountability", "senior-management"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1b-8",
+              "name": "Decision Integration Records",
+              "description": "Maintain records on how senior management has incorporated risks and assessments into company decisions.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "tag": ["records", "decision-making"]
+            }
+          ],
+          "tag": ["management", "training"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-controls-transparency",
+          "name": "Step 1C - Establish System of Controls and Transparency",
+          "description": "Company must have in place a chain of custody or traceability system to enable red flag review of covered minerals and suppliers.",
+          "conformityTopic": "governance.transparency",
+          "status": "active",
+          "subCriterion": [
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-mineral-sourcing",
+              "name": "Mineral Sourcing Information Requirements",
+              "description": "Collect and retain available information regarding covered minerals, their origin, transport and transit to determine if the known or suspected origin is a CAHRA.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "subCriterion": [
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-1-1",
+                  "name": "Mineral Form and Type",
+                  "description": "Collect form, type and physical description of mineral type, including for by-products.",
+                  "conformityTopic": "governance.transparency",
+                  "status": "active",
+                  "tag": ["traceability", "mineral-description"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-1-2",
+                  "name": "Mineral Origin",
+                  "description": "Collect the stated mineral origin (location of extraction, country or regional mining area within a country).",
+                  "conformityTopic": "governance.transparency",
+                  "status": "active",
+                  "tag": ["traceability", "origin"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-1-3",
+                  "name": "Mining Operations Type",
+                  "description": "Collect the type of operations (Artisanal and Small-Scale Mining - ASM and/or Large-Scale Mining - LSM) of the mined mineral used.",
+                  "conformityTopic": "governance.transparency",
+                  "status": "active",
+                  "tag": ["traceability", "mining-type"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-1-4",
+                  "name": "LSM Source Assessment",
+                  "description": "Determine if LSM purchase covered materials from other sources, including ASM and whether this may trigger a red flag.",
+                  "conformityTopic": "governance.compliance",
+                  "status": "active",
+                  "tag": ["risk-assessment", "LSM-ASM"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-1-5",
+                  "name": "Extraction Quantities and Dates",
+                  "description": "Collect quantities and dates of extraction, if available, expressed in volume or weight.",
+                  "conformityTopic": "governance.transparency",
+                  "status": "active",
+                  "tag": ["traceability", "quantities"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-1-6",
+                  "name": "Transit Countries",
+                  "description": "Collect countries through which minerals have transited (in sealed shipping containers).",
+                  "conformityTopic": "governance.transparency",
+                  "status": "active",
+                  "tag": ["traceability", "transit"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-1-7",
+                  "name": "Transport Countries",
+                  "description": "Collect countries through which minerals have been transported (not in sealed shipping containers), or in which they have been reprocessed, repacked or handled.",
+                  "conformityTopic": "governance.transparency",
+                  "status": "active",
+                  "tag": ["traceability", "transport"]
+                }
+              ],
+              "tag": ["traceability", "mineral-information"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-supplier-information",
+              "name": "Supplier Information Requirements",
+              "description": "Collect and retain available information regarding immediate suppliers and known upstream actors to determine if supplier trading activities are associated with CAHRAs.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "subCriterion": [
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-2-1",
+                  "name": "Supplier Identity",
+                  "description": "Collect name, addresses and type of business of immediate suppliers.",
+                  "conformityTopic": "governance.transparency",
+                  "status": "active",
+                  "tag": ["supplier-information", "identity"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-2-2",
+                  "name": "Shareholder Interests",
+                  "description": "Collect aggregated lists of countries in which the supplier has shareholder or company interests.",
+                  "conformityTopic": "governance.transparency",
+                  "status": "active",
+                  "tag": ["supplier-information", "ownership"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-2-3",
+                  "name": "Supplier Sourcing Countries",
+                  "description": "Collect aggregated lists of countries of origin, transport and transit of minerals from which suppliers have sourced over the last 12 months.",
+                  "conformityTopic": "governance.transparency",
+                  "status": "active",
+                  "tag": ["supplier-information", "sourcing"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-2-4",
+                  "name": "CAHRA Declaration",
+                  "description": "Collect declaration of the countries or areas determined by the supplier to be a CAHRA.",
+                  "conformityTopic": "governance.compliance",
+                  "status": "active",
+                  "tag": ["supplier-information", "CAHRA"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-2-5",
+                  "name": "Beneficial Ownership",
+                  "description": "Collect declaration of individuals and entities that hold direct or indirect beneficial ownership stakes in the supplier and review against relevant sanctions lists.",
+                  "conformityTopic": "governance.compliance",
+                  "status": "active",
+                  "tag": ["supplier-information", "beneficial-ownership"]
+                }
+              ],
+              "tag": ["supplier-information", "KYC"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-kyc",
+              "name": "Know Your Counterparty (KYC) Process",
+              "description": "Implement a KYC process to determine identity, type of business relationship and legality of business operations for each supplying counterparty.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "subCriterion": [
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-kyc-1",
+                  "name": "Counterparty Identity",
+                  "description": "Establish the identity of the supplying counterparty.",
+                  "conformityTopic": "governance.compliance",
+                  "status": "active",
+                  "tag": ["KYC", "identity"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-kyc-2",
+                  "name": "Ownership Structure",
+                  "description": "Identify ownership of supplying counterparty and corporate structure.",
+                  "conformityTopic": "governance.compliance",
+                  "status": "active",
+                  "tag": ["KYC", "ownership"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-kyc-3",
+                  "name": "Sanctions Verification",
+                  "description": "Verify supplying counterparty and their owners against relevant government sanction lists.",
+                  "conformityTopic": "governance.compliance",
+                  "status": "active",
+                  "tag": ["KYC", "sanctions"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-kyc-4",
+                  "name": "KYC Timing",
+                  "description": "Conduct KYC before entering into business relationship and throughout the business relationship.",
+                  "conformityTopic": "governance.compliance",
+                  "status": "active",
+                  "tag": ["KYC", "timing"]
+                }
+              ],
+              "tag": ["KYC", "compliance"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-mass-balance",
+              "name": "Mass Balance Calculation",
+              "description": "Calculate a mass balance to substantiate the total material processed, taking into account receipts, inventory, losses, and sales quantities.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "thresholdValue": {
+                "metricName": "Mass Balance Margin of Error",
+                "metricValue": {
+                  "value": 10,
+                  "unit": "P1"
+                },
+                "accuracy": 1.0
+              },
+              "subCriterion": [
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-mass-1",
+                  "name": "Inventory Reconciliation",
+                  "description": "The closing inventory (declared) and the closing inventory (calculated) must be within the allowed maximum margin of error of 10%.",
+                  "conformityTopic": "governance.transparency",
+                  "status": "active",
+                  "thresholdValue": {
+                    "metricName": "Inventory Variance",
+                    "metricValue": {
+                      "value": 10,
+                      "unit": "P1"
+                    }
+                  },
+                  "tag": ["mass-balance", "inventory"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1c-mass-2",
+                  "name": "Discrepancy Investigation",
+                  "description": "Any discrepancies observed during internal material control processes and/or mass balance calculation are investigated and findings recorded.",
+                  "conformityTopic": "governance.compliance",
+                  "status": "active",
+                  "tag": ["mass-balance", "investigation"]
+                }
+              ],
+              "tag": ["mass-balance", "material-control"]
+            }
+          ],
+          "tag": ["traceability", "transparency"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1d-supplier-engagement",
+          "name": "Step 1D - Strengthen Company Engagement with Suppliers",
+          "description": "Company must aim to establish positive long-term relationships with immediate suppliers to increase leverage over due diligence performance.",
+          "conformityTopic": "social.community",
+          "status": "active",
+          "subCriterion": [
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1d-1",
+              "name": "Long-term Relationships",
+              "description": "Establish, where practicable, long-term relationships with immediate suppliers.",
+              "conformityTopic": "social.community",
+              "status": "active",
+              "tag": ["supplier-engagement", "relationships"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1d-2",
+              "name": "Supplier Policy Commitment",
+              "description": "Confirm that immediate suppliers commit to a supply chain policy consistent with Annex II and the OECD Guidance.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["supplier-engagement", "policy-commitment"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1d-3",
+              "name": "Expectations Communication",
+              "description": "Communicate to immediate suppliers the company supply chain policy and their expectations on responsible supply chains of covered minerals.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "tag": ["supplier-engagement", "communication"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1d-4",
+              "name": "Contractual Requirements",
+              "description": "Incorporate disclosure requirements and requirement to comply with company's supply chain policy into contracts and/or agreements with immediate suppliers.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["supplier-engagement", "contracts"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1d-5",
+              "name": "Capability Building",
+              "description": "Consider ways the company can support and build capabilities of immediate suppliers to improve performance and conform to company supply chain policy.",
+              "conformityTopic": "social.community",
+              "status": "active",
+              "tag": ["supplier-engagement", "capability-building"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1d-6",
+              "name": "EITI Support",
+              "description": "Support the implementation of the principles and criteria of the Extractive Industry Transparency Initiative (EITI) individually or through joint efforts.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "tag": ["supplier-engagement", "EITI"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1d-7",
+              "name": "Improvement Plans",
+              "description": "Design measurable improvement plans with immediate suppliers, with involvement of relevant stakeholders when pursuing Step 3 risk mitigation.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["supplier-engagement", "improvement-plans"]
+            }
+          ],
+          "tag": ["suppliers", "engagement"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1e-grievance-mechanism",
+          "name": "Step 1E - Establish Company-Level Grievance Mechanism",
+          "description": "Company must have a mechanism allowing internal and external parties to voice concerns regarding mineral extraction, trade and handling circumstances.",
+          "conformityTopic": "social.rights",
+          "status": "active",
+          "subCriterion": [
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1e-1",
+              "name": "Grievance Mechanism Access",
+              "description": "Have a mechanism allowing any internal or external interested party, including affected parties and whistle-blowers, to voice concerns regarding mineral extraction, trade and handling circumstances.",
+              "conformityTopic": "social.rights",
+              "status": "active",
+              "tag": ["grievance", "access"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step1e-2",
+              "name": "Grievance Records",
+              "description": "Record concerns received through the company mechanism and the results of follow-up.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "tag": ["grievance", "records"]
+            }
+          ],
+          "tag": ["grievance", "stakeholder"]
+        }
+      ],
+      "tag": ["management-systems", "OECD-step1"]
+    },
+    {
+      "type": ["Criterion"],
+      "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2-risk-assessment",
+      "name": "Step 2 - Identify and Assess Risks in Upstream Supply Chain",
+      "description": "Companies must identify the scope of risk assessment, map factual circumstances of supply chains, and assess risks against Annex II criteria.",
+      "conformityTopic": "governance.compliance",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2a-red-flag-review",
+          "name": "Step 2A - Red Flag Review",
+          "description": "Company must review relevant information to conduct red flag review of locations of covered minerals origin and transit, and supplier red-flags.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "subCriterion": [
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2a-1",
+              "name": "Information Review Process",
+              "description": "Have and implement a process to review information gathered in Step 1 to determine whether there are any discrepancies or inconsistencies.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["red-flag-review", "information-analysis"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2a-2",
+              "name": "Due Diligence Trigger Assessment",
+              "description": "Have and implement a process to review information gathered in Step 1 to determine whether further steps of due diligence are triggered.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["red-flag-review", "trigger-assessment"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2a-validation",
+              "name": "Information Validation Process",
+              "description": "Design and implement a process to validate information on covered minerals and materials received.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "subCriterion": [
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2a-val-1",
+                  "name": "Material Consistency Verification",
+                  "description": "Confirm that the type, weight, composition and quality of covered minerals and materials received are consistent with accompanying documentation.",
+                  "conformityTopic": "governance.compliance",
+                  "status": "active",
+                  "tag": ["validation", "material-verification"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2a-val-2",
+                  "name": "Information Collection Confirmation",
+                  "description": "Confirm that information required for red flag review has been collected and/or provided by immediate suppliers and known upstream actors.",
+                  "conformityTopic": "governance.compliance",
+                  "status": "active",
+                  "tag": ["validation", "information-collection"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2a-val-3",
+                  "name": "Discrepancy Investigation",
+                  "description": "Investigate and address any discrepancies or inconsistencies identified during the validation review.",
+                  "conformityTopic": "governance.compliance",
+                  "status": "active",
+                  "tag": ["validation", "investigation"]
+                }
+              ],
+              "tag": ["validation", "information-verification"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2a-plausibility",
+              "name": "Supply Plausibility Assessment",
+              "description": "Design and implement a process to understand plausibility of covered mineral supply.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "subCriterion": [
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2a-plaus-1",
+                  "name": "Production Statistics Understanding",
+                  "description": "Maintain a reasonable understanding of reserves, production and export statistics and trends for all mining countries and/or regional mining areas.",
+                  "conformityTopic": "governance.compliance",
+                  "status": "active",
+                  "tag": ["plausibility", "production-data"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2a-plaus-2",
+                  "name": "Mining Site Information",
+                  "description": "Consider available information on mining sites such as geological studies, on-site visits or other data where the company has direct relationship with a mine.",
+                  "conformityTopic": "governance.compliance",
+                  "status": "active",
+                  "tag": ["plausibility", "mining-site-data"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2a-plaus-3",
+                  "name": "Secondary Materials Assessment",
+                  "description": "Consider the type, volume and chemical content received for secondary materials.",
+                  "conformityTopic": "governance.compliance",
+                  "status": "active",
+                  "tag": ["plausibility", "secondary-materials"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2a-plaus-4",
+                  "name": "Volume Anomaly Investigation",
+                  "description": "Investigate and address any higher-than-expected volumes of covered mineral supplied from any area compared to potential for production in that area.",
+                  "conformityTopic": "governance.compliance",
+                  "status": "active",
+                  "tag": ["plausibility", "volume-analysis"]
+                }
+              ],
+              "tag": ["plausibility", "supply-analysis"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2a-cahra-determination",
+              "name": "CAHRA Determination Process",
+              "description": "Design and implement a process to determine any Conflict-Affected and High-Risk Areas (CAHRAs).",
+              "conformityTopic": "social.rights",
+              "status": "active",
+              "subCriterion": [
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2a-cahra-1",
+                  "name": "Minimum CAHRA List",
+                  "description": "Include at minimum: DRC and nine adjoining countries as outlined in Dodd Frank Act, and indicative list of CAHRAs provided by European Commission pursuant to EU Regulation 2017/821.",
+                  "conformityTopic": "social.rights",
+                  "status": "active",
+                  "tag": ["CAHRA", "minimum-list"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2a-cahra-2",
+                  "name": "CAHRA Identification Resources",
+                  "description": "Document the types of resources used by the company to identify CAHRAs.",
+                  "conformityTopic": "governance.transparency",
+                  "status": "active",
+                  "tag": ["CAHRA", "resources"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2a-cahra-3",
+                  "name": "CAHRA Criteria",
+                  "description": "Document the criteria used by the company to determine a CAHRA.",
+                  "conformityTopic": "governance.transparency",
+                  "status": "active",
+                  "tag": ["CAHRA", "criteria"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2a-cahra-4",
+                  "name": "CAHRA Review Frequency",
+                  "description": "Document the frequency within which the CAHRA determination is reviewed and updated.",
+                  "conformityTopic": "governance.compliance",
+                  "status": "active",
+                  "tag": ["CAHRA", "review-frequency"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2a-cahra-5",
+                  "name": "CAHRA Supply Chain Record",
+                  "description": "Maintain a record of all countries and/or areas identified as Conflict-Affected or High-Risk within the company's supply chain.",
+                  "conformityTopic": "governance.transparency",
+                  "status": "active",
+                  "tag": ["CAHRA", "records"]
+                },
+                {
+                  "type": ["Criterion"],
+                  "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step2a-cahra-6",
+                  "name": "Sanctions List Consultation",
+                  "description": "Include in the process a general consultation of relevant national and international sanctions lists.",
+                  "conformityTopic": "governance.compliance",
+                  "status": "active",
+                  "tag": ["CAHRA", "sanctions"]
+                }
+              ],
+              "tag": ["CAHRA", "determination"]
+            }
+          ],
+          "tag": ["risk-assessment", "red-flags"]
+        }
+      ],
+      "tag": ["risk-assessment", "OECD-step2"]
+    },
+    {
+      "type": ["Criterion"],
+      "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step3-risk-management",
+      "name": "Step 3 - Design and Implement Risk Management Strategy",
+      "description": "Companies must report findings to senior management, devise and adopt risk management plans, implement and monitor risk mitigation efforts.",
+      "conformityTopic": "governance.compliance",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step3a-report-findings",
+          "name": "Step 3A - Report Findings to Senior Management",
+          "description": "Company must ensure all risks identified during Step 2 are reported to senior manager with designated responsibility for due diligence.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "tag": ["reporting", "senior-management"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step3b-risk-management-plan",
+          "name": "Step 3B - Devise and Adopt Risk Management Plan",
+          "description": "Company must develop plan to manage identified risks taking into account options of continuing trade, suspending trade while managing risks, or disengaging.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "subCriterion": [
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step3b-1",
+              "name": "Risk Management Strategy Options",
+              "description": "Have process to continue trade throughout measurable risk mitigation efforts; OR temporarily suspend trade while pursuing ongoing measurable mitigation efforts; AND/OR disengage with supplier where mitigation is not feasible.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["risk-management", "strategy-options"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step3b-2",
+              "name": "Risk Policy Review",
+              "description": "Review identified risks against company policy to determine relevant risk management strategy and risk management plan.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["risk-management", "policy-review"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step3b-3",
+              "name": "Progressive Improvement Plan",
+              "description": "When mitigating risks, include in risk management plan description of means to achieve progressive improvement within reasonable timescales.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["risk-management", "improvement"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step3b-4",
+              "name": "Leverage Building",
+              "description": "To support progressive improvement, build and/or exercise leverage over actors in supply chain who can most effectively and directly mitigate risks.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["risk-management", "leverage"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step3b-5",
+              "name": "Stakeholder Consultation",
+              "description": "Consult with suppliers and affected stakeholders to agree on strategy for risk mitigation including qualitative or quantitative measures of improvement.",
+              "conformityTopic": "social.community",
+              "status": "active",
+              "tag": ["risk-management", "stakeholder-consultation"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step3b-6",
+              "name": "Risk Assessment Publication",
+              "description": "Publish supply chain risk assessment and risk management plan with due regard to business confidentiality and competitive concerns.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "tag": ["risk-management", "publication"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step3b-7",
+              "name": "Sanctions Response",
+              "description": "Include in risk management strategy and plan responses to risks associated with relevant national and international sanctions.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["risk-management", "sanctions"]
+            }
+          ],
+          "tag": ["risk-management", "mitigation"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step3c-implement-plan",
+          "name": "Step 3C - Implement Risk Management Plan",
+          "description": "Company must ensure risk mitigation plan is implemented and progressive success monitored in cooperation with relevant stakeholders.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "subCriterion": [
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step3c-1",
+              "name": "Plan Implementation",
+              "description": "Have and implement the risk management plan.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["implementation", "plan-execution"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step3c-2",
+              "name": "Performance Monitoring",
+              "description": "Monitor and track performance of risk mitigation in cooperation with stakeholders.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["implementation", "monitoring"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step3c-3",
+              "name": "Senior Management Reporting",
+              "description": "Report back to designated senior management and consider suspending or discontinuing engagement with supplier after failed attempts at mitigation.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["implementation", "reporting"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step3c-4",
+              "name": "Community Monitoring Network",
+              "description": "Consider establishing or supporting a community monitoring network to monitor or track performance of risk mitigation.",
+              "conformityTopic": "social.community",
+              "status": "active",
+              "tag": ["implementation", "community-monitoring"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step3c-5",
+              "name": "Sanctions Implementation",
+              "description": "Implement risk management strategy and plan for risks associated with relevant national and international sanctions.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["implementation", "sanctions"]
+            }
+          ],
+          "tag": ["implementation", "monitoring"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step3d-additional-assessment",
+          "name": "Step 3D - Additional Fact and Risk Assessments",
+          "description": "Company must conduct ongoing monitoring and repeat information gathering and cross-checking after implementation of risk management plan or following changes in supply chain.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "tag": ["ongoing-assessment", "monitoring"]
+        }
+      ],
+      "tag": ["risk-management", "OECD-step3"]
+    },
+    {
+      "type": ["Criterion"],
+      "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step4-independent-audit",
+      "name": "Step 4 - Carry Out Independent Third-Party Audit",
+      "description": "Companies must undergo independent third-party audits following ISO 19011:2018 standard, allowing auditor access to sites, personnel, and documentation.",
+      "conformityTopic": "governance.compliance",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step4-1",
+          "name": "Third-Party Audit Access",
+          "description": "Company must allow independent third-party audit of activities, processes and supply chain due diligence, ensuring adequate preparation with documentation and allowing auditor access to sites, personnel and records.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "tag": ["audit", "access"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step4-2",
+          "name": "ISO 19011:2018 Compliance",
+          "description": "Assessment must follow ISO 19011:2018 auditing standard providing guidance on auditing management systems, audit program management, and auditor competence evaluation.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "tag": ["audit", "ISO19011"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step4-3",
+          "name": "Combined Standards Assessment",
+          "description": "Audit may combine environmental, occupational health and safety, social and governance standards with supply chain due diligence standards, with separate reports for each standard.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "tag": ["audit", "combined-standards"]
+        }
+      ],
+      "tag": ["audit", "third-party", "ISO19011"]
+    },
+    {
+      "type": ["Criterion"],
+      "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step5-public-reporting",
+      "name": "Step 5 - Report Annually on Supply Chain Due Diligence",
+      "description": "Companies must annually report on due diligence for responsible supply chains, describing management systems, risk assessment methodology, and risk management strategies while protecting business confidentiality.",
+      "conformityTopic": "governance.transparency",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step5-1",
+          "name": "Annual Due Diligence Report",
+          "description": "Companies must annually report on due diligence or integrate information into annual sustainability or corporate responsibility reports.",
+          "conformityTopic": "governance.transparency",
+          "status": "active",
+          "tag": ["reporting", "annual-report"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step5-management-systems",
+          "name": "Management Systems Reporting",
+          "description": "Report on company management systems including supply chain policy availability, management structure, information gathering system, record-keeping system, and disclosure methods.",
+          "conformityTopic": "governance.transparency",
+          "status": "active",
+          "subCriterion": [
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step5-mgmt-1",
+              "name": "Policy Publication",
+              "description": "Report availability of company's supply chain policy with indication of RMAP audit completion and link to supply chain statement.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "tag": ["reporting", "policy"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step5-mgmt-2",
+              "name": "Information System Description",
+              "description": "Describe the system used by company to gather information necessary for red-flag review.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "tag": ["reporting", "information-systems"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step5-mgmt-3",
+              "name": "Due Diligence Strengthening",
+              "description": "Explain how information obtained for red flag review has strengthened the company's due diligence efforts.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "tag": ["reporting", "improvement"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step5-mgmt-4",
+              "name": "Record-Keeping System",
+              "description": "Describe the company's record-keeping system.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "tag": ["reporting", "records"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step5-mgmt-5",
+              "name": "Disclosure Methods",
+              "description": "Describe methods for disclosing relevant information to downstream actors.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "tag": ["reporting", "disclosure"]
+            }
+          ],
+          "tag": ["reporting", "management-systems"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step5-2",
+          "name": "Audit Summary Publication",
+          "description": "Company must publish summary audit report with due regard to business confidentiality, including company details, audit date and period, audit activities and methodology, and audit conclusions.",
+          "conformityTopic": "governance.transparency",
+          "status": "active",
+          "tag": ["reporting", "audit-summary"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#step5-3",
+          "name": "Business Confidentiality Protection",
+          "description": "All public information must take into account business confidentiality and competitive concerns including price information, supplier relationships, contract terms, tonnage and capacity.",
+          "conformityTopic": "governance.transparency",
+          "status": "active",
+          "tag": ["reporting", "confidentiality"]
+        }
+      ],
+      "tag": ["reporting", "transparency", "annual-report"]
+    },
+    {
+      "type": ["Criterion"],
+      "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#annex2-risks",
+      "name": "Annex II Risk Management Requirements",
+      "description": "Companies must address serious abuses associated with mineral extraction, support to armed groups and security forces, bribery, money laundering, and non-payment of taxes.",
+      "conformityTopic": "social.rights",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#serious-abuses",
+          "name": "Serious Abuses Prevention",
+          "description": "Companies must not tolerate any forms of torture, cruel, inhuman and degrading treatment; forced or compulsory labor; worst forms of child labor; gross human rights violations; war crimes or serious violations of international humanitarian law.",
+          "conformityTopic": "social.rights",
+          "status": "active",
+          "subCriterion": [
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#torture-prevention",
+              "name": "Torture and Cruel Treatment Prevention",
+              "description": "Prevent any forms of torture, cruel, inhuman and degrading treatment in mineral extraction, transport or trade.",
+              "conformityTopic": "social.rights",
+              "status": "active",
+              "tag": ["human-rights", "torture-prevention"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#forced-labor-prevention",
+              "name": "Forced Labor Prevention",
+              "description": "Prevent any forms of forced or compulsory labor in mineral supply chains.",
+              "conformityTopic": "social.labour",
+              "status": "active",
+              "tag": ["human-rights", "forced-labor"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#child-labor-prevention",
+              "name": "Child Labor Prevention",
+              "description": "Prevent the worst forms of child labor as defined in ILO Convention No. 182.",
+              "conformityTopic": "social.labour",
+              "status": "active",
+              "tag": ["human-rights", "child-labor"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#human-rights-violations",
+              "name": "Human Rights Violations Prevention",
+              "description": "Prevent other gross human rights violations and abuses such as widespread sexual violence.",
+              "conformityTopic": "social.rights",
+              "status": "active",
+              "tag": ["human-rights", "violations-prevention"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#war-crimes-prevention",
+              "name": "War Crimes Prevention",
+              "description": "Prevent war crimes or other serious violations of international humanitarian law, crimes against humanity or genocide.",
+              "conformityTopic": "social.rights",
+              "status": "active",
+              "tag": ["human-rights", "war-crimes"]
+            }
+          ],
+          "tag": ["human-rights", "serious-abuses"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#armed-groups",
+          "name": "Non-State Armed Groups",
+          "description": "Companies must not provide direct or indirect support to non-state armed groups who illegally control, tax or extort benefits at mines, trading points, transportation routes or supply chain actors.",
+          "conformityTopic": "social.rights",
+          "status": "active",
+          "subCriterion": [
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#direct-support-prevention",
+              "name": "Direct Support Prevention",
+              "description": "Prevent direct financial or logistical support to non-state armed groups.",
+              "conformityTopic": "social.rights",
+              "status": "active",
+              "tag": ["armed-groups", "direct-support"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#indirect-support-prevention",
+              "name": "Indirect Support Prevention",
+              "description": "Prevent indirect support through payments, taxes or extortion that benefit non-state armed groups.",
+              "conformityTopic": "social.rights",
+              "status": "active",
+              "tag": ["armed-groups", "indirect-support"]
+            }
+          ],
+          "tag": ["armed-groups", "conflict"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#security-forces",
+          "name": "Security Forces Support",
+          "description": "Companies must avoid providing direct or indirect support to public or private security forces that commit human rights abuses.",
+          "conformityTopic": "social.rights",
+          "status": "active",
+          "tag": ["security-forces", "human-rights"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#bribery-corruption",
+          "name": "Bribery and Fraudulent Misrepresentation",
+          "description": "Companies must prevent bribery and fraudulent misrepresentation of the origin of minerals.",
+          "conformityTopic": "governance.ethics",
+          "status": "active",
+          "subCriterion": [
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#bribery-prevention",
+              "name": "Bribery Prevention",
+              "description": "Prevent bribery and corruption in mineral supply chains.",
+              "conformityTopic": "governance.ethics",
+              "status": "active",
+              "tag": ["corruption", "bribery"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#fraudulent-misrepresentation",
+              "name": "Fraudulent Misrepresentation Prevention",
+              "description": "Prevent fraudulent misrepresentation of the origin of minerals.",
+              "conformityTopic": "governance.ethics",
+              "status": "active",
+              "tag": ["fraud", "misrepresentation"]
+            }
+          ],
+          "tag": ["corruption", "fraud"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#money-laundering",
+          "name": "Money Laundering Prevention",
+          "description": "Companies must prevent money laundering in mineral supply chains.",
+          "conformityTopic": "governance.ethics",
+          "status": "active",
+          "tag": ["money-laundering", "financial-crimes"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#tax-payment",
+          "name": "Tax, Fees and Royalties Payment",
+          "description": "Companies must ensure payment of taxes, fees and royalties to governments in accordance with EITI principles.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "subCriterion": [
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#tax-compliance",
+              "name": "Tax Compliance",
+              "description": "Ensure proper payment of taxes to relevant government authorities.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["tax-compliance", "government-payments"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#fees-royalties",
+              "name": "Fees and Royalties Payment",
+              "description": "Ensure proper payment of fees and royalties to government authorities.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["fees", "royalties", "government-payments"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#eiti-principles",
+              "name": "EITI Principles Compliance",
+              "description": "Align payment practices with Extractive Industry Transparency Initiative principles.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "tag": ["EITI", "transparency"]
+            }
+          ],
+          "tag": ["tax-compliance", "EITI"]
+        }
+      ],
+      "tag": ["annex-II", "OECD-risks"]
+    },
+    {
+      "type": ["Criterion"],
+      "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#cahra-specific-requirements",
+      "name": "CAHRA-Specific Due Diligence Requirements",
+      "description": "Additional requirements for materials known or suspected to be from Conflict-Affected and High-Risk Areas, including enhanced chain of custody, on-the-ground assessments, and Annex II risk assessment.",
+      "conformityTopic": "social.rights",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#cahra-chain-custody",
+          "name": "CAHRA Chain of Custody System",
+          "description": "Establish chain of custody or traceability system that generates detailed information on circumstances of extraction, export, processing or trade for CAHRA materials.",
+          "conformityTopic": "governance.transparency",
+          "status": "active",
+          "subCriterion": [
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#cahra-data-rights",
+              "name": "Data Request Rights",
+              "description": "Seek to incorporate right for company to request data required to complete risk assessment into written agreements with immediate suppliers.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "tag": ["CAHRA", "data-rights"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#cahra-detailed-information",
+              "name": "Detailed CAHRA Information Collection",
+              "description": "Collect detailed information including material description, ownership and corporate structure, transportation routes, and export/import documentation.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "tag": ["CAHRA", "detailed-information"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#cahra-payment-records",
+              "name": "CAHRA Payment Records",
+              "description": "If supplier not RMAP assessed, collect records of all taxes, fees, royalties and other payments made to government officials and security forces throughout supply chain.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "tag": ["CAHRA", "payment-records"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#cahra-mine-origin",
+              "name": "CAHRA Mine Origin Information",
+              "description": "Collect information on mine of origin, quantity and dates of extraction, method of extraction (ASM or LSM), and locations of consolidation, trade or processing.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "tag": ["CAHRA", "mine-origin"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#cahra-upstream-actors",
+              "name": "CAHRA Upstream Actors Identification",
+              "description": "Identify all upstream intermediaries, consolidators or other actors in the upstream supply chain for CAHRA materials.",
+              "conformityTopic": "governance.transparency",
+              "status": "active",
+              "tag": ["CAHRA", "upstream-actors"]
+            }
+          ],
+          "tag": ["CAHRA", "chain-of-custody"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#on-ground-assessment",
+          "name": "On-the-Ground Assessment Requirements",
+          "description": "Conduct on-the-ground assessments or engage aligned upstream assurance mechanism to understand local context, work with stakeholders, and monitor risk management.",
+          "conformityTopic": "social.community",
+          "status": "active",
+          "subCriterion": [
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#assessment-team-independence",
+              "name": "Assessment Team Independence",
+              "description": "On-the-ground assessment team must be independent of activities being assessed and understand local context.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["on-ground-assessment", "independence"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#stakeholder-engagement",
+              "name": "Local Stakeholder Engagement",
+              "description": "Assessment team must work with local stakeholders to understand context and address concerns.",
+              "conformityTopic": "social.community",
+              "status": "active",
+              "tag": ["on-ground-assessment", "stakeholder-engagement"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#risk-monitoring",
+              "name": "Risk Management Monitoring",
+              "description": "Assessment team must suggest and monitor risk management activities and address grievances.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["on-ground-assessment", "risk-monitoring"]
+            }
+          ],
+          "tag": ["CAHRA", "on-ground-assessment"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#annex2-risk-assessment",
+          "name": "Annex II Risk Assessment Process",
+          "description": "Cross-check factual information against company supply chain policy and standards to carry out comprehensive risk assessment for CAHRA materials.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "subCriterion": [
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#policy-comparison",
+              "name": "Supply Chain Policy Comparison",
+              "description": "Compare available information against company supply chain policy principles and standards referencing Annex II.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["annex-II-assessment", "policy-comparison"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#national-laws-comparison",
+              "name": "National Laws Comparison",
+              "description": "Compare information against national laws of countries where company is domiciled, where minerals originate, and of transport or re-export.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["annex-II-assessment", "national-laws"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#legal-instruments-comparison",
+              "name": "Legal Instruments Comparison",
+              "description": "Compare against legal instruments governing company operations such as financing agreements, contractor agreements and supplier agreements.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["annex-II-assessment", "legal-instruments"]
+            },
+            {
+              "type": ["Criterion"],
+              "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#international-instruments",
+              "name": "International Instruments Comparison",
+              "description": "Compare against relevant international instruments such as OECD Guidelines for Multinational Enterprises, international human rights and humanitarian law, and sanctions lists.",
+              "conformityTopic": "governance.compliance",
+              "status": "active",
+              "tag": ["annex-II-assessment", "international-law"]
+            }
+          ],
+          "tag": ["CAHRA", "annex-II-assessment"]
+        }
+      ],
+      "tag": ["CAHRA", "enhanced-due-diligence"]
+    },
+    {
+      "type": ["Criterion"],
+      "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#precious-metals-requirements",
+      "name": "Precious Group Metals Additional Requirements",
+      "description": "Additional requirements for companies sourcing or processing precious group metals (gold, silver, platinum, palladium) including enhanced security measures and ASM engagement.",
+      "conformityTopic": "governance.compliance",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#precious-unique-reference",
+          "name": "Unique Reference Assignment",
+          "description": "Assign unique reference number to each input and output for precious group metals processing.",
+          "conformityTopic": "governance.transparency",
+          "status": "active",
+          "tag": ["precious-metals", "unique-reference"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#precious-physical-security",
+          "name": "Physical Security Measures",
+          "description": "Adopt tamper proof physical security measures including security of transport, sealing, and tamper-proof containers.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "tag": ["precious-metals", "physical-security"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#precious-shipment-inspection",
+          "name": "Shipment Inspection Requirements",
+          "description": "Inspect all shipments for completeness of documentation, verify weight and quality information, and verify physical security practices of immediate supplier.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "tag": ["precious-metals", "shipment-inspection"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#precious-output-identification",
+          "name": "Output Identification Requirements",
+          "description": "Record and render all material outputs identifiable with refiner name/stamp/logo, year of refining/production, and unique reference for each output.",
+          "conformityTopic": "governance.transparency",
+          "status": "active",
+          "tag": ["precious-metals", "output-identification"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#precious-asm-engagement",
+          "name": "ASM Direct Engagement",
+          "description": "Seek to engage directly with legitimate ASM producers or their representatives where possible for precious group metals sourcing.",
+          "conformityTopic": "social.community",
+          "status": "active",
+          "tag": ["precious-metals", "ASM-engagement"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#precious-law-enforcement",
+          "name": "Law Enforcement Cooperation",
+          "description": "Fully and transparently cooperate with law enforcement agencies regarding covered mineral transactions and provide customs officials with access to complete information on international shipments.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "tag": ["precious-metals", "law-enforcement"]
+        }
+      ],
+      "tag": ["precious-metals", "enhanced-requirements"]
+    },
+    {
+      "type": ["Criterion"],
+      "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#secondary-materials-requirements",
+      "name": "Secondary Materials Requirements",
+      "description": "Specific requirements for sourcing and processing secondary materials (recycled materials) including verification of recycled content and enhanced due diligence for high-value transactions.",
+      "conformityTopic": "circularity.content",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#secondary-documentation",
+          "name": "Secondary Material Documentation",
+          "description": "Obtain and retain information to demonstrate receipts are secondary and out-of-scope for CAHRA assessment including material description, supplier information, and transport documentation.",
+          "conformityTopic": "governance.transparency",
+          "status": "active",
+          "tag": ["secondary-materials", "documentation"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#precious-secondary-verification",
+          "name": "Precious Metals Secondary Verification",
+          "description": "For precious group metals secondary materials, obtain sufficient information to reasonably exclude false representations made to hide origin of newly mined materials in recycled supply chains.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "tag": ["secondary-materials", "precious-metals", "verification"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/standards/rmap/all-minerals/v1.1#high-value-due-diligence",
+          "name": "High-Value Transaction Due Diligence",
+          "description": "For materials sourced from location outside CAHRA, carry out additional due diligence for transactions beyond threshold of $15,000 USD cash per transaction, proportional to transaction value.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "thresholdValue": {
+            "metricName": "Cash Transaction Threshold",
+            "metricValue": {
+              "value": 15000,
+              "unit": "USD"
+            }
+          },
+          "tag": ["secondary-materials", "high-value-transactions"]
+        }
+      ],
+      "tag": ["secondary-materials", "recycled-content"]
+    }
+  ],
+  "regulatoryAlignment": [
+    {
+      "type": ["Regulation"],
+      "id": "https://www.oecd.org/corporate/mne/mining.htm",
+      "name": "OECD Due Diligence Guidance for Responsible Supply Chains of Minerals from Conflict-Affected and High-Risk Areas",
+      "jurisdictionCountry": "INTERNATIONAL",
+      "administeredBy": {
+        "id": "https://www.oecd.org/",
+        "name": "Organisation for Economic Co-operation and Development (OECD)",
+        "registeredId": "OECD"
+      },
+      "effectiveDate": "2016-05-25"
+    },
+    {
+      "type": ["Regulation"],
+      "id": "https://www.sec.gov/rules/final/2012/34-67716.pdf",
+      "name": "Section 1502 of the US Dodd-Frank Wall Street Reform and Consumer Protection Act",
+      "jurisdictionCountry": "US",
+      "administeredBy": {
+        "id": "https://www.sec.gov/",
+        "name": "U.S. Securities and Exchange Commission",
+        "registeredId": "SEC"
+      },
+      "effectiveDate": "2012-08-22"
+    },
+    {
+      "type": ["Regulation"],
+      "id": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0821",
+      "name": "Regulation (EU) 2017/821 - EU Conflict Minerals Regulation",
+      "jurisdictionCountry": "EU",
+      "administeredBy": {
+        "id": "https://ec.europa.eu/",
+        "name": "European Commission",
+        "registeredId": "EC"
+      },
+      "effectiveDate": "2021-01-01"
+    }
+  ],
+  "industryScope": {
+    "type": ["Classification"],
+    "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/07",
+    "code": "07",
+    "name": "Mining and quarrying",
+    "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+    "schemeName": "UN Central Product Classification (CPC)"
+  },
+  "geographicScope": {
+    "type": ["Classification"],
+    "id": "https://unstats.un.org/unsd/methodology/m49/001",
+    "code": "001",
+    "name": "World",
+    "schemeID": "https://unstats.un.org/unsd/methodology/m49/",
+    "schemeName": "UN M49 Standard Country or Area Codes"
+  },
+  "performanceLevelCode": [
+    {
+      "name": "Conformant",
+      "rank": 3,
+      "description": "Full conformance with all applicable OECD due diligence requirements and RMI standard criteria."
+    },
+    {
+      "name": "Conditionally Conformant",
+      "rank": 2,
+      "description": "Substantial conformance with minor non-conformances that can be addressed within specified timeframes."
+    },
+    {
+      "name": "Non-Conformant",
+      "rank": 1,
+      "description": "Significant non-conformances requiring corrective action before conformance can be achieved."
+    }
+  ],
+  "tagCode": [
+    {
+      "name": "OECD-Step1",
+      "description": "Criteria related to establishing strong company management systems."
+    },
+    {
+      "name": "OECD-Step2",
+      "description": "Criteria related to identifying and assessing risks in upstream supply chains."
+    },
+    {
+      "name": "OECD-Step3",
+      "description": "Criteria related to designing and implementing risk management strategies."
+    },
+    {
+      "name": "OECD-Step4",
+      "description": "Criteria related to independent third-party audits."
+    },
+    {
+      "name": "OECD-Step5",
+      "description": "Criteria related to annual public reporting on due diligence."
+    },
+    {
+      "name": "CAHRA",
+      "description": "Criteria specifically applicable to Conflict-Affected and High-Risk Areas."
+    },
+    {
+      "name": "PreciousMetals",
+      "description": "Criteria with additional requirements for precious group metals (gold, silver, platinum, palladium)."
+    },
+    {
+      "name": "SecondaryMaterials",
+      "description": "Criteria applicable to recycled and secondary materials."
+    },
+    {
+      "name": "SupplyChain",
+      "description": "Criteria targeting supply chain management and transparency."
+    },
+    {
+      "name": "RiskManagement",
+      "description": "Criteria focused on risk assessment and mitigation strategies."
+    },
+    {
+      "name": "HumanRights",
+      "description": "Criteria addressing human rights protection and abuse prevention."
+    },
+    {
+      "name": "AntiCorruption",
+      "description": "Criteria focused on preventing bribery, corruption, and financial crimes."
+    },
+    {
+      "name": "Transparency",
+      "description": "Criteria emphasizing transparency and public reporting requirements."
+    },
+    {
+      "name": "ASM",
+      "description": "Criteria specific to Artisanal and Small-Scale Mining operations."
+    },
+    {
+      "name": "OnGroundAssessment",
+      "description": "Criteria requiring physical assessment and local stakeholder engagement."
+    }
+  ]
+}

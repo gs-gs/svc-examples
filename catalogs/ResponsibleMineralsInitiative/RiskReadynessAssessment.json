@@ -1,0 +1,974 @@
+{
+  "type": ["ConformitySchemeVocabulary"],
+  "@context": ["https://test.uncefact.org/vocabulary/untp/svc/0.6.1/"],
+  "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0",
+  "scheme": {
+    "type": ["ConformityScheme"],
+    "id": "https://responsiblemineralsinitiative.org/rra-criteria/3.0",
+    "name": "RMI Risk Readiness Assessment (RRA) Criteria",
+    "description": "The RRA Criteria serves as a common standard of reference for environmental, social and governance (ESG) due diligence practices of facilities sourcing and processing minerals and metals. The RRA consists of 33 Criteria applicable to any company in the supply chain, regardless of their types of operations.",
+    "version": "3.0",
+    "validFrom": "2024-01-01",
+    "owner": {
+      "id": "https://responsiblemineralsinitiative.org",
+      "name": "Responsible Minerals Initiative (RMI)",
+      "registeredId": "RMI"
+    },
+    "trustmark": {
+      "fileName": "RMI Logo",
+      "fileType": "image/svg+xml",
+      "file": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI2LjAuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgOTgxIDUwMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgOTgxIDUwMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM0ODY3QTY7fQoJLnN0MXtmaWxsOm5vbmU7fQoJLnN0MntmaWxsOiNGRkZGRkY7fQoJLnN0M3tmaWxsOiM5M0IxREI7fQo8L3N0eWxlPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0zMi41LDE3NGg1Ny44YzE2LjctMC4yLDMzLjYtMC4yLDQ1LjcsMTAuMmM5LjQsOC4xLDEzLjEsMTkuMiwxMy4xLDI5YzAsMjguMi0yNC4yLDM0LjgtMzEuNSwzNi45ICAgYzIyLjcsMi4xLDI0LjQsMTUsMjcuMSwzNC42YzIuMywxNy43LDMuNSwyNSw0LjYsMjkuMmMxLjcsNi43LDIuOSw4LjMsNC42LDEwLjhoLTM1LjdjLTEuNS04LjMtNi00Ni41LTguMS01Mi40ICAgYy0yLjktOC42LTEwLjgtOC42LTE2LjMtOC42SDY1LjV2NjAuOWgtMzNWMTc0eiBNNjQuNCwyMzkuOWgyNi4xYzMuOCwwLDExLjMsMCwxNi41LTQuMmMyLjMtMS43LDguMy02LjksOC4zLTE3LjUgICBjMC0xMC4yLTUtMTUtNy45LTE2LjljLTUtMy41LTExLjEtMy41LTIxLjMtMy41SDY0LjRWMjM5Ljl6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTcxLjYsMTc0aDUyLjhsMzEuOSwxMDkuN0wyOTAuNywxNzRIMzQydjE1MC44aC0zMi4xVjE5NS41bC00MS4xLDEyOS4zaC0yNi43bC00MC4zLTEyOS4zdjEyOS4zaC0zMC4yICAgTDE3MS42LDE3NEwxNzEuNiwxNzR6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzY4LjUsMTczLjZoMzIuM3YxNTEuMmgtMzIuM1YxNzMuNnoiLz4KPC9nPgo8cmVjdCBjbGFzcz0ic3QxIiB3aWR0aD0iOTgwIiBoZWlnaHQ9IjQ5OS41Ii8+CjxjaXJjbGUgY2xhc3M9InN0MCIgY3g9IjczMSIgY3k9IjI1MSIgcj0iMjQwIi8+CjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik04ODQsMjQ3LjVsLTI5LTE0LjlsLTE0LjgtNy42bDAsMEw4MTYsMjEyLjVjLTEtMC42LTIuMy0wLjYtMy40LTAuMmMxMS40LDI0LjcsMTEuNCw1My4xLDAsNzcuOCAgYzAuNSwwLjIsMSwwLjMsMS41LDAuM2MwLjcsMCwxLjMtMC4yLDEuOS0wLjVsMjQuMS0xMi40bDguNS00LjRMODg0LDI1NWMyLjEtMS4xLDIuOS0zLjYsMS44LTUuNkM4ODUuNCwyNDguNiw4ODQuOCwyNDgsODg0LDI0Ny41Ii8+CjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik04MDAuOSwxNjEuNGM2LjMsNS4yLDEyLDExLjEsMTcuMSwxNy41YzQuNiwwLjUsOS4xLDEuOCwxMy4zLDMuOWwxMy41LDdjLTEyLjUtMjQtMzEuOC00My42LTU1LjYtNTYuNCAgbDcuOCwxNS4xQzc5OS4xLDE1Mi41LDgwMC40LDE1Ni45LDgwMC45LDE2MS40Ii8+CjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik04MTcuOSwzMjMuNmMtNS4xLDYuNC0xMC44LDEyLjItMTcsMTcuNGMtMC41LDQuNS0xLjgsOC45LTMuOSwxMi45bC03LjgsMTUuMWMyMy43LTEyLjgsNDMuMS0zMi40LDU1LjYtNTYuMyAgbC0xMy41LDdDODI3LjEsMzIxLjgsODIyLjYsMzIzLjEsODE3LjksMzIzLjYiLz4KPHBhdGggY2xhc3M9InN0MiIgZD0iTTYzMy41LDE3OS45YzYuNy04LjcsMTQuNi0xNi41LDIzLjUtMjNjMC43LTIuOSwxLjctNS43LDMuMS04LjRsOS41LTE4LjRjLTI3LjgsMTMuMS01MC4zLDM1LjMtNjMuOCw2MyAgbDIwLTEwLjNDNjI4LjMsMTgxLjYsNjMwLjksMTgwLjYsNjMzLjUsMTc5LjkiLz4KPHBhdGggY2xhc3M9InN0MiIgZD0iTTYwOS44LDI3My44bDMxLjQsMTYuMWMwLjYsMC4zLDEuMiwwLjUsMS45LDAuNWMwLjUsMCwxLTAuMSwxLjUtMC4zYy0xMS40LTI0LjctMTEuNC01My4xLDAtNzcuOCAgYy0xLjEtMC40LTIuMy0wLjQtMy40LDAuMmwtMjkuNSwxNS4ybC0xOC4zLDkuNGwtMjAuMiwxMC40Yy0yLjEsMS4xLTIuOSwzLjYtMS44LDUuNmMwLjQsMC44LDEsMS40LDEuOCwxLjhsMjAuMiwxMC40TDYwOS44LDI3My44eiAgIi8+CjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik02NTcsMzQ1LjVjLTguOC02LjUtMTYuNy0xNC4yLTIzLjQtMjIuOWMtMi43LTAuNy01LjMtMS43LTcuNy0yLjlsLTIwLTEwLjNjMTMuNCwyNy42LDM1LjksNDkuOCw2My43LDYyLjkgIGwtOS40LTE4LjNDNjU4LjcsMzUxLjIsNjU3LjYsMzQ4LjQsNjU3LDM0NS41Ii8+CjxwYXRoIGNsYXNzPSJzdDMiIGQ9Ik03MjguNiwxNTguNmMxMy40LDAsMjYuNywyLjksMzguOSw4LjZjMC40LTEuMSwwLjQtMi4zLTAuMi0zLjRsLTE3LjUtMzRsLTUuNy0xMWwtMTEuOC0yMi45ICBjLTEuMS0yLjEtMy42LTIuOS01LjYtMS44Yy0wLjgsMC40LTEuNCwxLTEuOCwxLjhsLTE1LjQsMjkuOWwtNS40LDEwLjZMNjkwLDE2My44Yy0wLjUsMS0wLjYsMi4zLTAuMiwzLjQgIEM3MDEuOSwxNjEuNSw3MTUuMiwxNTguNiw3MjguNiwxNTguNiIvPgo8cGF0aCBjbGFzcz0ic3QyIiBkPSJNNzI4LjYsMzQzLjhjLTEzLjQsMC0yNi43LTIuOS0zOC45LTguNmMtMC40LDEuMS0wLjQsMi4zLDAuMiwzLjRMNzA0LDM2NmwwLDBsOS40LDE4LjJsMTEuNSwyMi40ICBjMS4xLDIuMSwzLjYsMi45LDUuNiwxLjhjMC44LTAuNCwxLjQtMSwxLjgtMS44bDExLjgtMjNsNC4xLThsMTkuMS0zN2MwLjUtMSwwLjYtMi4zLDAuMi0zLjRDNzU1LjMsMzQwLjksNzQyLDM0My45LDcyOC42LDM0My44Ii8+Cjwvc3ZnPg=="
+    }
+  },
+  "conformityCriterion": [
+    {
+      "type": ["Criterion"],
+      "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/Governance",
+      "name": "Governance",
+      "description": "Governance criteria are cross-cutting and constitute sets of practices that underpin the effective implementation of any social and environmental criterion. Governance criteria include core aspects of due diligence systems, and practices that enable accountability and predictability.",
+      "conformityTopic": "governance.compliance",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/G1",
+          "name": "Management System",
+          "description": "Implement a corporate or site-level management system for the effective prevention, mitigation and remedy of risks and impacts related to environment, social, and governance (ESG) issues.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/governance",
+              "code": "1",
+              "name": "Management System",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": ["management-system", "esg-prevention", "risk-mitigation"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/G2",
+          "name": "Risk Assessment",
+          "description": "Conduct a risk assessment for the identification and prioritization of environmental, social and governance (ESG) issues.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/governance",
+              "code": "2",
+              "name": "Risk Assessment",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": ["risk-assessment", "esg-identification", "prioritization"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/G3",
+          "name": "Business Integrity",
+          "description": "Implement high standards of business integrity through the prohibition and effective prevention of bribery, money laundering, and anti-competitive behavior.",
+          "conformityTopic": "governance.ethics",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/governance",
+              "code": "3",
+              "name": "Business Integrity",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "business-integrity",
+            "anti-bribery",
+            "anti-competitive",
+            "money-laundering"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/G4",
+          "name": "Revenue Transparency",
+          "description": "Demonstrate corporate transparency and accountability through the public disclosure of all material payments to governments of taxes, royalties, signature bonuses, and all other forms of payments or benefits and support the Extractive Industries Transparency Initiative.",
+          "conformityTopic": "governance.transparency",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/governance",
+              "code": "4",
+              "name": "Revenue Transparency",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "revenue-transparency",
+            "eiti",
+            "government-payments",
+            "public-disclosure"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/G5",
+          "name": "Legal Compliance",
+          "description": "Implement high standards of business conduct through compliance with applicable national regulatory requirements, applicable cross-jurisdictional obligations and international laws.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/governance",
+              "code": "5",
+              "name": "Legal Compliance",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "legal-compliance",
+            "regulatory-requirements",
+            "international-law"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/G6",
+          "name": "Sustainability Reporting",
+          "description": "Enable corporate transparency and accountability and promote informed decision-making through the publication of annual reports on material environmental, social and governance (ESG) issues.",
+          "conformityTopic": "governance.transparency",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/governance",
+              "code": "6",
+              "name": "Sustainability Reporting",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "sustainability-reporting",
+            "annual-reports",
+            "esg-disclosure"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/G7",
+          "name": "Grievance Mechanism",
+          "description": "Respect the rights of adversely affected stakeholders' access to remedy, through the implementation or participation in an operational-level grievance mechanism aligned with the United Nations Guiding Principles on Business and Human Rights (UNGPs).",
+          "conformityTopic": "governance.transparency",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/governance",
+              "code": "7",
+              "name": "Grievance Mechanism",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "grievance-mechanism",
+            "ungps",
+            "access-to-remedy",
+            "stakeholder-rights"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/G8",
+          "name": "Stakeholder Engagement",
+          "description": "Enable stakeholders' early and continued participation in decisions that affect their health, well-being, safety, livelihoods, communities, and environment, through the implementation of an inclusive and meaningful engagement process.",
+          "conformityTopic": "governance.transparency",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/governance",
+              "code": "8",
+              "name": "Stakeholder Engagement",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "stakeholder-engagement",
+            "meaningful-participation",
+            "inclusive-process"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/G9",
+          "name": "Mine Closure & Reclamation",
+          "description": "Ensure the long-term environmental, economic and social stability of mining communities through the implementation of a system to manage and monitor mine closure and reclamation and the allocation of financial provisions for mining reclamation, closure, and post-closure activities.",
+          "conformityTopic": "environment.biodiversity",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/governance",
+              "code": "9",
+              "name": "Mine Closure & Reclamation",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "mine-closure",
+            "reclamation",
+            "financial-provisions",
+            "post-closure"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/G10",
+          "name": "Responsible Supply Chains",
+          "description": "Respect regulatory requirements and promote responsible business conduct in supply chains through the implementation of corporate or site-level, comprehensive, integrated, iterative, and risk-based due diligence.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/governance",
+              "code": "10",
+              "name": "Responsible Supply Chains",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": ["responsible-supply-chains", "due-diligence", "risk-based"]
+        }
+      ],
+      "category": [
+        {
+          "type": ["Classification"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/governance",
+          "code": "Governance",
+          "name": "Governance",
+          "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+          "schemeName": "RMI RRA Criteria"
+        }
+      ],
+      "tag": ["governance", "due-diligence", "accountability"]
+    },
+    {
+      "type": ["Criterion"],
+      "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/Social",
+      "name": "Social",
+      "description": "Social criteria refer to the respect and enhancement of the human rights and labor rights of workers, communities, and other affected stakeholders in line with internationally recognized frameworks.",
+      "conformityTopic": "social.rights",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/S11",
+          "name": "No Child Labor",
+          "description": "Prohibit, prevent and remedy the employment of children below the age of 15, and ensure that young workers below the age of 18 are not exposed to the worst forms of child labor, including hazardous work.",
+          "conformityTopic": "social.labour",
+          "status": "active",
+          "thresholdValue": {
+            "metricName": "Minimum working age",
+            "metricValue": {
+              "value": 15,
+              "unit": "ANN"
+            }
+          },
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/social",
+              "code": "11",
+              "name": "No Child Labor",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "child-labor",
+            "minimum-age",
+            "hazardous-work",
+            "young-workers"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/S12",
+          "name": "No Forced Labor",
+          "description": "Prohibit, prevent and remedy forced labor in any form, including but not limited to, bonded (including debt bondage) or indentured labor, involuntary or exploitative prison labor, slavery or trafficking of persons and adhere to international principles of responsible recruitment.",
+          "conformityTopic": "social.labour",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/social",
+              "code": "12",
+              "name": "No Forced Labor",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "forced-labor",
+            "bonded-labor",
+            "trafficking",
+            "responsible-recruitment"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/S13",
+          "name": "Freedom of Association and Collective Bargaining",
+          "description": "Respect workers' rights to freedom of association, to collective bargaining, and to engage in peaceful assembly, prevent and remedy adverse impact.",
+          "conformityTopic": "social.rights",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/social",
+              "code": "13",
+              "name": "Freedom of Association and Collective Bargaining",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "freedom-of-association",
+            "collective-bargaining",
+            "peaceful-assembly"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/S14",
+          "name": "Non-Discrimination and Harassment",
+          "description": "Respect workers' rights to equality of opportunity and treatment and prohibit, prevent and remedy workplace discrimination and harassment.",
+          "conformityTopic": "social.rights",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/social",
+              "code": "14",
+              "name": "Non-Discrimination and Harassment",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": ["non-discrimination", "harassment", "equality-opportunity"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/S15",
+          "name": "Diversity, Equity and Inclusion",
+          "description": "Promote diversity, equality and inclusion by ensuring equity for all persons in the workplace, respecting the diversity of all workers, and fostering an organizational culture of inclusivity and respect for fundamental rights and dignity.",
+          "conformityTopic": "social.rights",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/social",
+              "code": "15",
+              "name": "Diversity, Equity and Inclusion",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": ["diversity", "equity", "inclusion", "workplace-culture"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/S16",
+          "name": "Employment Terms",
+          "description": "Respect workers' rights to fair and decent employment terms, prevent and remedy adverse impact.",
+          "conformityTopic": "social.labour",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/social",
+              "code": "16",
+              "name": "Employment Terms",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": ["employment-terms", "fair-wages", "decent-work"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/S17",
+          "name": "Occupational Health & Safety",
+          "description": "Respect workers' rights to healthy working and living conditions, provide all workers with the means and conditions for safe and healthy work, and prevent and remedy adverse impact.",
+          "conformityTopic": "social.safety",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/social",
+              "code": "17",
+              "name": "Occupational Health & Safety",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "occupational-health",
+            "workplace-safety",
+            "safe-working-conditions"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/S18",
+          "name": "Emergency Preparedness",
+          "description": "Respect the right of workers and stakeholders to keep themselves and others safe in the event of an emergency, by implementing a system to manage emergency responses, prevent and remedy adverse impact.",
+          "conformityTopic": "social.safety",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/social",
+              "code": "18",
+              "name": "Emergency Preparedness",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "emergency-preparedness",
+            "emergency-response",
+            "safety-management"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/S19",
+          "name": "Community Health & Safety",
+          "description": "Respect communities' rights to healthy and safe living conditions through the implementation of a system to prevent health and safety risks and remedy adverse impact.",
+          "conformityTopic": "social.community",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/social",
+              "code": "19",
+              "name": "Community Health & Safety",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": ["community-health", "community-safety", "community-rights"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/S20",
+          "name": "Community Development",
+          "description": "Contribute to economic and social development of affected communities through the implementation of a system to positively contribute to meet community needs.",
+          "conformityTopic": "social.community",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/social",
+              "code": "20",
+              "name": "Community Development",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "community-development",
+            "economic-development",
+            "social-development"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/S21",
+          "name": "Artisanal & Small-Scale Mining",
+          "description": "Respect the human rights, create economic opportunities and contribute to the formalization and professionalization of artisanal and small-scale mining operations (ASM) where it is safe, and legally and/or legitimately possible.",
+          "conformityTopic": "social.community",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/social",
+              "code": "21",
+              "name": "Artisanal & Small-Scale Mining",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "artisanal-mining",
+            "small-scale-mining",
+            "asm",
+            "formalization"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/S22",
+          "name": "Security & Human Rights",
+          "description": "Implement a system to prevent and mitigate risks to human rights related to the conduct of private and public security forces, and remedy adverse impact.",
+          "conformityTopic": "social.rights",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/social",
+              "code": "22",
+              "name": "Security & Human Rights",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "security",
+            "human-rights",
+            "private-security",
+            "public-security"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/S23",
+          "name": "Indigenous Peoples' Rights",
+          "description": "Respect Indigenous Peoples' rights, including the right to free, prior, and informed consent and engage in an inclusive, transparent, respectful and culturally appropriate manner to prevent adverse impacts and create benefits for Indigenous Peoples.",
+          "conformityTopic": "social.rights",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/social",
+              "code": "23",
+              "name": "Indigenous Peoples' Rights",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "indigenous-rights",
+            "fpic",
+            "free-prior-informed-consent",
+            "cultural-rights"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/S24",
+          "name": "Land Acquisition & Resettlement",
+          "description": "Respect land rights, prevent involuntary resettlements and physical and economic displacement and, where that is not possible, provide fair compensation, restore or improve the livelihoods and standards of living of displaced people.",
+          "conformityTopic": "social.community",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/social",
+              "code": "24",
+              "name": "Land Acquisition & Resettlement",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "land-rights",
+            "resettlement",
+            "displacement",
+            "fair-compensation"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/S25",
+          "name": "Cultural Heritage",
+          "description": "Respect the cultural rights of affected stakeholders through the implementation of a system to prevent and remedy adverse impact to cultural heritage.",
+          "conformityTopic": "social.community",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/social",
+              "code": "25",
+              "name": "Cultural Heritage",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": ["cultural-heritage", "cultural-rights", "heritage-protection"]
+        }
+      ],
+      "category": [
+        {
+          "type": ["Classification"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/social",
+          "code": "Social",
+          "name": "Social",
+          "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+          "schemeName": "RMI RRA Criteria"
+        }
+      ],
+      "tag": ["social", "human-rights", "labor-rights", "community"]
+    },
+    {
+      "type": ["Criterion"],
+      "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/Environment",
+      "name": "Environment",
+      "description": "Environmental criteria address alignment with global climate goals and circularity principles as well as the implementation of environmental management practices informed by the mitigation strategy.",
+      "conformityTopic": "environment.emissions",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/E26",
+          "name": "Climate Action",
+          "description": "Contribute to the goals of the Paris Agreement to curb global temperature rising to 1.5°C above pre-industrial levels through the implementation of a corporate or site-level, comprehensive, integrated climate change mitigation and adaptation strategy.",
+          "conformityTopic": "environment.emissions",
+          "status": "active",
+          "thresholdValue": {
+            "metricName": "Global temperature rise limit",
+            "metricValue": {
+              "value": 1.5,
+              "unit": "CEL"
+            }
+          },
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/environment",
+              "code": "26",
+              "name": "Climate Action",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "climate-action",
+            "paris-agreement",
+            "1.5-degrees",
+            "mitigation",
+            "adaptation"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/E27",
+          "name": "Greenhouse Gas Emissions Reductions",
+          "description": "Avoid, minimize, and compensate for scope 1, 2 and relevant scope 3 emissions through the definition of science-based goals and targets in line with the Paris Agreement.",
+          "conformityTopic": "environment.emissions",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/environment",
+              "code": "27",
+              "name": "Greenhouse Gas Emissions Reductions",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "ghg-emissions",
+            "scope-1-2-3",
+            "science-based-targets",
+            "emissions-reduction"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/E28",
+          "name": "Water Stewardship",
+          "description": "Avoid, minimize, rectify, and compensate for adverse impacts on water balance, flow, quality, and access and needs of other water users and wildlife from operational activities.",
+          "conformityTopic": "environment.water",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/environment",
+              "code": "28",
+              "name": "Water Stewardship",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "water-stewardship",
+            "water-quality",
+            "water-access",
+            "water-balance"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/E29",
+          "name": "Waste Management",
+          "description": "Avoid, minimize and recover all types of waste, including hazardous waste.",
+          "conformityTopic": "environment.waste",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/environment",
+              "code": "29",
+              "name": "Waste Management",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "waste-management",
+            "hazardous-waste",
+            "waste-recovery",
+            "waste-minimization"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/E30",
+          "name": "Circular Economy",
+          "description": "Promote a circular economy through the collection, reuse and recycling of materials at Sites, the reduction of waste and increased resource efficiency.",
+          "conformityTopic": "circularity.design",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/environment",
+              "code": "30",
+              "name": "Circular Economy",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "circular-economy",
+            "reuse",
+            "recycling",
+            "resource-efficiency"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/E31",
+          "name": "Tailings Management",
+          "description": "Avoid, minimize, rectify, and compensate for adverse impacts from tailings through the implementation of a system to manage on-land tailings in line with internationally recognized frameworks and good practice.",
+          "conformityTopic": "environment.waste",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/environment",
+              "code": "31",
+              "name": "Tailings Management",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": ["tailings-management", "tailings-safety", "mining-waste"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/E32",
+          "name": "Biodiversity and Productive Land",
+          "description": "Avoid, minimize, restore or replace, and compensate for adverse impacts on biodiversity, soil and productive land, commit to a no net loss and consider a net gain of biodiversity.",
+          "conformityTopic": "environment.biodiversity",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/environment",
+              "code": "32",
+              "name": "Biodiversity and Productive Land",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "biodiversity",
+            "productive-land",
+            "no-net-loss",
+            "ecosystem-restoration"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/3.0/E33",
+          "name": "Pollution",
+          "description": "Avoid, minimize, rectify, and compensate for adverse impacts on human health and the environment caused by pollution from the introduction of poisonous and harmful substances to air, land, and water and from noise, light, and visual pollution.",
+          "conformityTopic": "environment.emissions",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/environment",
+              "code": "33",
+              "name": "Pollution",
+              "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+              "schemeName": "RMI RRA Criteria"
+            }
+          ],
+          "tag": [
+            "pollution",
+            "air-pollution",
+            "water-pollution",
+            "noise-pollution",
+            "harmful-substances"
+          ]
+        }
+      ],
+      "category": [
+        {
+          "type": ["Classification"],
+          "id": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/environment",
+          "code": "Environment",
+          "name": "Environment",
+          "schemeID": "https://responsiblemineralsinitiative.org/vocabulary/rra-criteria/",
+          "schemeName": "RMI RRA Criteria"
+        }
+      ],
+      "tag": ["environment", "climate", "sustainability", "biodiversity"]
+    }
+  ],
+  "regulatoryAlignment": [
+    {
+      "type": ["Regulation"],
+      "id": "https://www.oecd.org/corporate/mne/",
+      "name": "OECD Guidelines for Multinational Enterprises on Responsible Business Conduct",
+      "jurisdictionCountry": "GLOBAL",
+      "administeredBy": {
+        "id": "https://www.oecd.org/",
+        "name": "Organisation for Economic Co-operation and Development",
+        "registeredId": "OECD"
+      },
+      "effectiveDate": "2023-01-01"
+    },
+    {
+      "type": ["Regulation"],
+      "id": "https://www.oecd.org/investment/due-diligence-guidance-for-responsible-business-conduct.htm",
+      "name": "OECD Due Diligence Guidance for Responsible Business Conduct",
+      "jurisdictionCountry": "GLOBAL",
+      "administeredBy": {
+        "id": "https://www.oecd.org/",
+        "name": "Organisation for Economic Co-operation and Development",
+        "registeredId": "OECD"
+      },
+      "effectiveDate": "2018-01-01"
+    },
+    {
+      "type": ["Regulation"],
+      "id": "https://www.oecd.org/corporate/mne/mining.htm",
+      "name": "OECD Due Diligence Guidance for Responsible Supply Chains of Minerals from Conflict-Affected and High-Risk Areas",
+      "jurisdictionCountry": "GLOBAL",
+      "administeredBy": {
+        "id": "https://www.oecd.org/",
+        "name": "Organisation for Economic Co-operation and Development",
+        "registeredId": "OECD"
+      },
+      "effectiveDate": "2016-01-01"
+    },
+    {
+      "type": ["Regulation"],
+      "id": "https://www.ohchr.org/sites/default/files/documents/publications/guidingprinciplesbusinesshr_en.pdf",
+      "name": "United Nations Guiding Principles for Business and Human Rights",
+      "jurisdictionCountry": "GLOBAL",
+      "administeredBy": {
+        "id": "https://www.un.org/",
+        "name": "United Nations",
+        "registeredId": "UN"
+      },
+      "effectiveDate": "2011-06-16"
+    }
+  ],
+  "industryScope": {
+    "type": ["Classification"],
+    "id": "https://unstats.un.org/unsd/classifications/Econ/isic4/05/",
+    "code": "05-09",
+    "name": "Mining and quarrying",
+    "schemeID": "https://unstats.un.org/unsd/classifications/Econ/isic4/",
+    "schemeName": "International Standard Industrial Classification (ISIC) Rev.4"
+  },
+  "geographicScope": {
+    "type": ["Classification"],
+    "id": "https://unstats.un.org/unsd/methodology/m49/001/",
+    "code": "001",
+    "name": "World",
+    "schemeID": "https://unstats.un.org/unsd/methodology/m49/",
+    "schemeName": "UN M49 Standard Country or Area Codes for Statistical Use"
+  },
+  "performanceLevelCode": [
+    {
+      "name": "High Risk",
+      "rank": 1,
+      "description": "Indicates significant ESG risks requiring immediate attention and comprehensive remediation measures."
+    },
+    {
+      "name": "Medium Risk",
+      "rank": 2,
+      "description": "Indicates moderate ESG risks requiring targeted improvement actions within defined timeframes."
+    },
+    {
+      "name": "Low Risk",
+      "rank": 3,
+      "description": "Indicates minimal ESG risks with opportunities for continuous improvement and best practice implementation."
+    },
+    {
+      "name": "Ready",
+      "rank": 4,
+      "description": "Indicates ESG readiness with robust systems and practices meeting or exceeding industry standards."
+    }
+  ],
+  "tagCode": [
+    {
+      "name": "Governance",
+      "description": "Criteria related to governance systems, due diligence, transparency, and accountability practices."
+    },
+    {
+      "name": "Social",
+      "description": "Criteria related to human rights, labor rights, community relations, and social impact management."
+    },
+    {
+      "name": "Environment",
+      "description": "Criteria related to environmental management, climate action, and sustainability practices."
+    },
+    {
+      "name": "Mining",
+      "description": "Criteria specifically applicable to mining operations and co-located metal processing."
+    },
+    {
+      "name": "Metal Processing",
+      "description": "Criteria applicable to stand-alone metal processing operations including smelting, refining, and roasting."
+    },
+    {
+      "name": "Manufacturing",
+      "description": "Criteria applicable to downstream processing, manufacturing, and recycling operations."
+    },
+    {
+      "name": "Due Diligence",
+      "description": "Criteria related to risk-based due diligence processes and supply chain management."
+    },
+    {
+      "name": "Human Rights",
+      "description": "Criteria focused on protecting and promoting human rights across operations and supply chains."
+    },
+    {
+      "name": "Climate",
+      "description": "Criteria related to climate action, greenhouse gas emissions, and Paris Agreement alignment."
+    },
+    {
+      "name": "Community",
+      "description": "Criteria focused on community relations, development, and stakeholder engagement."
+    }
+  ]
+}
