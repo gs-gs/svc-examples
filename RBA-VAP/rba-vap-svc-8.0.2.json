@@ -1,0 +1,549 @@
+{
+  "type": ["ConformitySchemeVocabulary"],
+  "@context": ["https://test.uncefact.org/vocabulary/untp/svc/0.6.1/"],
+  "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/8.0.2",
+  "scheme": {
+    "type": ["ConformityScheme"],
+    "id": "https://responsiblebusiness.org/rba-vap-standard/8.0.2",
+    "name": "RBA Validated Assessment Program (VAP) Standard",
+    "description": "The RBA VAP Standard provides comprehensive guidance for deeper understanding of the Responsible Business Alliance Code of Conduct, offering elements to demonstrate compliance with the RBA Code for companies implementing the RBA Code of Conduct in their operations.",
+    "version": "8.0.2",
+    "validFrom": "2025-04-01",
+    "owner": {
+      "id": "https://responsiblebusiness.org",
+      "name": "Responsible Business Alliance (RBA)",
+      "registeredId": "RBA"
+    },
+    "trustmark": {
+      "fileName": "RBA VAP Trustmark",
+      "fileType": "image/png",
+      "file": "iVBORw0KGgoAAAANSUhEUgAAADkAAAA2CAYAAAB9TjFQAAAABGdBTUEAAi/9H3pWy6vI9uFdAAAAAElFTkSuQmCC"
+    }
+  },
+  "conformityCriterion": [
+    {
+      "type": ["Criterion"],
+      "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/8.0.2/A",
+      "name": "Labor",
+      "description": "Participants commit to respect the human rights of workers, and to treat them with dignity and respect as understood by the international community. This applies to all workers including temporary, migrant, student, contract, direct employees, and any other type of worker.",
+      "conformityTopic": "social.labour",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/8.0.2/A1",
+          "name": "Prohibition of Forced Labor",
+          "description": "Forced labor in any form, including but not limited to, bonded (including debt bondage) or indentured labor, involuntary or exploitative prison labor, slavery or trafficking of persons is not permitted. This includes transporting, harboring, recruiting, transferring, or receiving persons by means of threat, force, coercion, abduction or fraud for labor or services.",
+          "conformityTopic": "social.labour",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/labor",
+              "code": "A1",
+              "name": "Prohibition of Forced Labor",
+              "schemeID": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/",
+              "schemeName": "RBA VAP Standard"
+            }
+          ],
+          "tag": [
+            "forced-labor",
+            "human-trafficking",
+            "recruitment-fees",
+            "document-retention"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/8.0.2/A2",
+          "name": "Young Workers",
+          "description": "Child labor shall not be used in any stage of manufacturing. The term 'child' refers to any person under the age of 15, or under the age for completing compulsory education, or under the minimum age for employment in the country, whichever is greatest. Workers under the age of 18 (Young Workers) shall not perform work that is likely to jeopardize their health or safety.",
+          "conformityTopic": "social.labour",
+          "status": "active",
+          "thresholdValue": {
+            "metricName": "Minimum working age",
+            "metricValue": {
+              "value": 15,
+              "unit": "ANN"
+            }
+          },
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/labor",
+              "code": "A2",
+              "name": "Young Workers",
+              "schemeID": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/",
+              "schemeName": "RBA VAP Standard"
+            }
+          ],
+          "tag": [
+            "child-labor",
+            "young-workers",
+            "age-verification",
+            "education"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/8.0.2/A3",
+          "name": "Working Hours",
+          "description": "Working hours shall not exceed the maximum set by local law. Further, a work week shall not be more than 60 hours per week, including overtime, except in emergency or unusual situations. All overtime shall be voluntary. Workers shall be allowed to have at least one day off every seven days.",
+          "conformityTopic": "social.labour",
+          "status": "active",
+          "thresholdValue": {
+            "metricName": "Maximum weekly working hours",
+            "metricValue": {
+              "value": 60,
+              "unit": "HUR"
+            }
+          },
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/labor",
+              "code": "A3",
+              "name": "Working Hours",
+              "schemeID": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/",
+              "schemeName": "RBA VAP Standard"
+            }
+          ],
+          "tag": ["working-hours", "overtime", "rest-days"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/8.0.2/A4",
+          "name": "Wages and Benefits",
+          "description": "Compensation paid to workers shall comply with all applicable wage laws, including those relating to minimum wages, overtime hours and legally mandated benefits. All workers shall receive equal pay for equal work and qualification. Workers shall be compensated for overtime at pay rates greater than regular hourly rates.",
+          "conformityTopic": "social.labour",
+          "status": "active",
+          "thresholdValue": {
+            "metricName": "Overtime premium rate",
+            "metricValue": {
+              "value": 1.25,
+              "unit": "C62"
+            }
+          },
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/labor",
+              "code": "A4",
+              "name": "Wages and Benefits",
+              "schemeID": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/",
+              "schemeName": "RBA VAP Standard"
+            }
+          ],
+          "tag": ["wages", "benefits", "overtime-pay", "equal-pay"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/8.0.2/A5",
+          "name": "Non-Discrimination / Non-Harassment / Humane Treatment",
+          "description": "Participants shall commit to a workplace free of harassment and unlawful discrimination. There shall be no harsh or inhumane treatment including violence, gender-based violence, sexual harassment, sexual abuse, corporal punishment, mental or physical coercion, bullying, public shaming, or verbal abuse of workers.",
+          "conformityTopic": "social.rights",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/labor",
+              "code": "A5",
+              "name": "Non-Discrimination / Non-Harassment / Humane Treatment",
+              "schemeID": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/",
+              "schemeName": "RBA VAP Standard"
+            }
+          ],
+          "tag": [
+            "discrimination",
+            "harassment",
+            "humane-treatment",
+            "workplace-violence"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/8.0.2/A6",
+          "name": "Freedom of Association and Collective Bargaining",
+          "description": "Open communication and direct engagement between workers and management are the most effective ways to resolve workplace and compensation issues. Workers and/or their representatives shall be able to openly communicate and share ideas and concerns with management regarding working conditions and management practices without fear of discrimination, reprisal, intimidation, or harassment.",
+          "conformityTopic": "social.rights",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/labor",
+              "code": "A6",
+              "name": "Freedom of Association and Collective Bargaining",
+              "schemeID": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/",
+              "schemeName": "RBA VAP Standard"
+            }
+          ],
+          "tag": [
+            "freedom-of-association",
+            "collective-bargaining",
+            "worker-representation"
+          ]
+        }
+      ],
+      "category": [
+        {
+          "type": ["Classification"],
+          "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/labor",
+          "code": "A",
+          "name": "Labor",
+          "schemeID": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/",
+          "schemeName": "RBA VAP Standard"
+        }
+      ],
+      "tag": ["labor", "human-rights", "workers"]
+    },
+    {
+      "type": ["Criterion"],
+      "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/8.0.2/B",
+      "name": "Health and Safety",
+      "description": "Participants recognize that in addition to minimizing the incidence of work-related injuries and illnesses, a safe and healthy working environment enhances the quality of products and services, consistency of production and worker retention and morale. Participants also recognize that ongoing worker input and education are essential to identifying and solving health and safety issues in the workplace.",
+      "conformityTopic": "social.safety",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/8.0.2/B1",
+          "name": "Occupational Health and Safety",
+          "description": "Worker potential for exposure to health and safety hazards (chemical, electrical and other energy sources, fire, vehicles, and fall hazards, etc.) shall be identified and assessed, mitigated using the Hierarchy of Controls. Where hazards cannot be adequately controlled by these means, workers shall be provided with appropriate, well-maintained, personal protective equipment.",
+          "conformityTopic": "social.safety",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/health-safety",
+              "code": "B1",
+              "name": "Occupational Health and Safety",
+              "schemeID": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/",
+              "schemeName": "RBA VAP Standard"
+            }
+          ],
+          "tag": [
+            "occupational-health",
+            "safety-hazards",
+            "ppe",
+            "hierarchy-of-controls"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/8.0.2/B2",
+          "name": "Emergency Preparedness",
+          "description": "Potential emergency situations and events shall be identified and assessed, and their impact minimized by implementing emergency plans and response procedures including emergency reporting, employee notification and evacuation procedures, worker training, and drills.",
+          "conformityTopic": "social.safety",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/health-safety",
+              "code": "B2",
+              "name": "Emergency Preparedness",
+              "schemeID": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/",
+              "schemeName": "RBA VAP Standard"
+            }
+          ],
+          "tag": [
+            "emergency-preparedness",
+            "evacuation",
+            "fire-safety",
+            "emergency-response"
+          ]
+        }
+      ],
+      "category": [
+        {
+          "type": ["Classification"],
+          "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/health-safety",
+          "code": "B",
+          "name": "Health and Safety",
+          "schemeID": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/",
+          "schemeName": "RBA VAP Standard"
+        }
+      ],
+      "tag": ["health", "safety", "workplace-safety"]
+    },
+    {
+      "type": ["Criterion"],
+      "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/8.0.2/C",
+      "name": "Environment",
+      "description": "Participants recognize that environmental responsibility is integral to producing world-class products. Participants shall identify the environmental impacts and minimize adverse effects on the community, environment, and natural resources within their manufacturing operations, while safeguarding the health and safety of the public.",
+      "conformityTopic": "environment.emissions",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/8.0.2/C1",
+          "name": "Environmental Permits and Reporting",
+          "description": "All required environmental permits (e.g. discharge monitoring), approvals, and registrations shall be obtained, maintained, and kept current, and their operational and reporting requirements shall be followed.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/environment",
+              "code": "C1",
+              "name": "Environmental Permits and Reporting",
+              "schemeID": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/",
+              "schemeName": "RBA VAP Standard"
+            }
+          ],
+          "tag": ["environmental-permits", "compliance", "reporting"]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/8.0.2/C6",
+          "name": "Energy Consumption and Greenhouse Gas Emissions",
+          "description": "Participants shall establish and report against an absolute corporate-wide greenhouse gas reduction goal. Energy consumption and all Scopes 1, 2, and significant categories of Scope 3 greenhouse gas emissions shall be tracked, documented, and publicly reported.",
+          "conformityTopic": "environment.emissions",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/environment",
+              "code": "C6",
+              "name": "Energy Consumption and Greenhouse Gas Emissions",
+              "schemeID": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/",
+              "schemeName": "RBA VAP Standard"
+            }
+          ],
+          "tag": [
+            "greenhouse-gas",
+            "energy-consumption",
+            "scope-1-2-3",
+            "carbon-reporting"
+          ]
+        }
+      ],
+      "category": [
+        {
+          "type": ["Classification"],
+          "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/environment",
+          "code": "C",
+          "name": "Environment",
+          "schemeID": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/",
+          "schemeName": "RBA VAP Standard"
+        }
+      ],
+      "tag": ["environment", "sustainability", "environmental-responsibility"]
+    },
+    {
+      "type": ["Criterion"],
+      "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/8.0.2/D",
+      "name": "Ethics",
+      "description": "To meet social responsibilities and to achieve success in the marketplace, Participants and their agents shall uphold the highest standards of ethics.",
+      "conformityTopic": "governance.ethics",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/8.0.2/D1",
+          "name": "Business Integrity and No Improper Advantage",
+          "description": "The highest standards of integrity shall be upheld in all business interactions. Participants shall have a zero-tolerance policy to prohibit any and all forms of bribery, corruption, extortion, and embezzlement. Bribes or other means of obtaining undue or improper advantage shall not be promised, offered, authorized, given, or accepted.",
+          "conformityTopic": "governance.ethics",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/ethics",
+              "code": "D1",
+              "name": "Business Integrity and No Improper Advantage",
+              "schemeID": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/",
+              "schemeName": "RBA VAP Standard"
+            }
+          ],
+          "tag": [
+            "business-integrity",
+            "anti-corruption",
+            "bribery",
+            "zero-tolerance"
+          ]
+        }
+      ],
+      "category": [
+        {
+          "type": ["Classification"],
+          "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/ethics",
+          "code": "D",
+          "name": "Ethics",
+          "schemeID": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/",
+          "schemeName": "RBA VAP Standard"
+        }
+      ],
+      "tag": ["ethics", "integrity", "governance"]
+    },
+    {
+      "type": ["Criterion"],
+      "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/8.0.2/E",
+      "name": "Supply Chain Management",
+      "description": "Participants shall establish human rights, health and safety, environmental and ethics policy statements affirming Participant's commitment to due diligence and continual improvement, endorsed by executive management. Policy statements shall be made public and communicated to workers in a language they understand via accessible channels.",
+      "conformityTopic": "governance.transparency",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/8.0.2/E1",
+          "name": "Company Commitment",
+          "description": "Participants shall establish human rights, health and safety, environmental and ethics policy statements affirming Participant's commitment to due diligence and continual improvement, endorsed by executive management. Policy statements shall be made public and communicated to workers in a language they understand via accessible channels.",
+          "conformityTopic": "governance.transparency",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/supply-chain",
+              "code": "E1",
+              "name": "Company Commitment",
+              "schemeID": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/",
+              "schemeName": "RBA VAP Standard"
+            }
+          ],
+          "tag": [
+            "company-commitment",
+            "policy-statements",
+            "executive-endorsement"
+          ]
+        },
+        {
+          "type": ["Criterion"],
+          "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/8.0.2/E4",
+          "name": "Supplier Responsibility",
+          "description": "Participants shall establish a process to communicate Code requirements to suppliers and to monitor supplier compliance with the Code.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "category": [
+            {
+              "type": ["Classification"],
+              "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/supply-chain",
+              "code": "E4",
+              "name": "Supplier Responsibility",
+              "schemeID": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/",
+              "schemeName": "RBA VAP Standard"
+            }
+          ],
+          "tag": [
+            "supplier-responsibility",
+            "supply-chain-monitoring",
+            "code-communication"
+          ]
+        }
+      ],
+      "category": [
+        {
+          "type": ["Classification"],
+          "id": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/supply-chain",
+          "code": "E",
+          "name": "Supply Chain Management",
+          "schemeID": "https://responsiblebusiness.org/vocabulary/rba-vap-standard/",
+          "schemeName": "RBA VAP Standard"
+        }
+      ],
+      "tag": ["supply-chain", "management-systems", "due-diligence"]
+    }
+  ],
+  "regulatoryAlignment": [
+    {
+      "type": ["Regulation"],
+      "id": "https://www.ilo.org/global/standards/introduction-to-international-labour-standards/conventions-and-recommendations/lang--en/index.htm",
+      "name": "ILO Fundamental Conventions",
+      "jurisdictionCountry": "GLOBAL",
+      "administeredBy": {
+        "id": "https://www.ilo.org/",
+        "name": "International Labour Organization",
+        "registeredId": "ILO"
+      },
+      "effectiveDate": "1919-01-01"
+    },
+    {
+      "type": ["Regulation"],
+      "id": "https://www.ohchr.org/en/universal-declaration-of-human-rights",
+      "name": "Universal Declaration of Human Rights",
+      "jurisdictionCountry": "GLOBAL",
+      "administeredBy": {
+        "id": "https://www.un.org/",
+        "name": "United Nations",
+        "registeredId": "UN"
+      },
+      "effectiveDate": "1948-12-10"
+    }
+  ],
+  "industryScope": {
+    "type": ["Classification"],
+    "id": "https://unstats.un.org/unsd/classifications/Econ/isic4/26/",
+    "code": "26",
+    "name": "Manufacture of computer, electronic and optical products",
+    "schemeID": "https://unstats.un.org/unsd/classifications/Econ/isic4/",
+    "schemeName": "International Standard Industrial Classification (ISIC) Rev.4"
+  },
+  "geographicScope": {
+    "type": ["Classification"],
+    "id": "https://unstats.un.org/unsd/methodology/m49/001/",
+    "code": "001",
+    "name": "World",
+    "schemeID": "https://unstats.un.org/unsd/methodology/m49/",
+    "schemeName": "UN M49 Standard Country or Area Codes for Statistical Use"
+  },
+  "performanceLevelCode": [
+    {
+      "name": "Priority Non-conformance",
+      "rank": 1,
+      "description": "A priority non-conformance is any finding leading to: Imminent Risk to life, limb, facility, the environment, or the community; Egregious ethical breach"
+    },
+    {
+      "name": "Major Non-conformance",
+      "rank": 2,
+      "description": "Violation of applicable law; Systemic failure (e.g., same incident multiple times or multiple incidents at the same time); Non-conformance situation in which equal or greater than 20 % of total sample population is affected."
+    },
+    {
+      "name": "Minor Non-conformance",
+      "rank": 3,
+      "description": "One-off incident, not likely to repeat; A non-conformance situation in which less than 20% of the total sample population is affected."
+    },
+    {
+      "name": "Risk of Non-conformance",
+      "rank": 4,
+      "description": "If the condition or practice meets minimal conformance with the requirement but would likely deteriorate to a non-conformance without some additional action or effort on the part of facility management."
+    },
+    {
+      "name": "Opportunity for Improvement",
+      "rank": 5,
+      "description": "A situation which is not fully in conformance or can be improved but where a Corrective action plan is not mandatory but recommended."
+    },
+    {
+      "name": "Conformance",
+      "rank": 6,
+      "description": "Conformance is noted when the assessor determines that a facility meets or exceeds the assessment criteria and expectations."
+    }
+  ],
+  "tagCode": [
+    {
+      "name": "Labor",
+      "description": "Criteria related to labor practices, worker rights, and employment conditions."
+    },
+    {
+      "name": "Health and Safety",
+      "description": "Criteria related to occupational health and safety practices and workplace safety."
+    },
+    {
+      "name": "Environment",
+      "description": "Criteria related to environmental management and sustainability practices."
+    },
+    {
+      "name": "Ethics",
+      "description": "Criteria related to business ethics, integrity, and governance practices."
+    },
+    {
+      "name": "Supply Chain",
+      "description": "Criteria related to supply chain management and supplier responsibility."
+    },
+    {
+      "name": "Priority",
+      "description": "Criteria that may result in priority non-conformance findings requiring immediate action."
+    },
+    {
+      "name": "Compliance",
+      "description": "Criteria related to legal and regulatory compliance requirements."
+    }
+  ]
+}
