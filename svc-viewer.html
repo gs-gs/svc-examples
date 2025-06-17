@@ -124,6 +124,31 @@
                 color: #2c3e50;
             }
 
+            .trustmark-container {
+                text-align: center;
+                margin: 20px 0;
+                padding: 15px;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .trustmark-image {
+                max-width: 150px;
+                max-height: 150px;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            }
+
+            .trustmark-label {
+                font-weight: 600;
+                color: #34495e;
+                font-size: 0.9em;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                margin-bottom: 10px;
+            }
+
             .collapsible {
                 background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
                 color: white;
@@ -576,6 +601,7 @@
                         </div>
                     </div>
                     ${scheme.description ? `<p style="margin-top: 15px; font-style: italic;">${scheme.description}</p>` : ""}
+                    ${renderTrustmark(scheme.trustmark)}
                 </div>
             `;
             }
@@ -737,6 +763,23 @@
             `,
                     )
                     .join("");
+            }
+
+            function renderTrustmark(trustmark) {
+                if (!trustmark || !trustmark.file) return "";
+
+                return `
+                    <div class="trustmark-container">
+                        <div class="trustmark-label">Trustmark</div>
+                        <img
+                            src="data:${trustmark.fileType || "image/png"};base64,${trustmark.file}"
+                            alt="${trustmark.fileName || "Trustmark"}"
+                            class="trustmark-image"
+                            onerror="this.style.display='none'"
+                        />
+                        ${trustmark.fileName ? `<p style="margin-top: 8px; font-size: 0.9em; color: #666;">${trustmark.fileName}</p>` : ""}
+                    </div>
+                `;
             }
 
             function renderScopeInfo(industryScope, geographicScope) {
