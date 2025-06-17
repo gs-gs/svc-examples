@@ -1,6 +1,10 @@
 # Sustainable Vocabulary Catalog (SVC) Examples
 
-This directory contains examples of Sustainable Vocabulary Catalog files and a simple viewer to display them.
+This directory contains examples of Sustainable Vocabulary Catalog files and a simple viewer to display them, with the ability to drill down through criteria to whatever level is present in the SVC file.
+
+![SVC Viewer Screenshot](doc/image/svc-viewer.png)
+
+*The SVC Viewer displaying the RBA Validated Assessment Program standard with expandable criteria hierarchy*
 
 ## Contents
 
@@ -15,42 +19,11 @@ To view the SVC files as interactive HTML pages:
 2. Click "Select SVC JSON File" and choose any JSON file from the `RBA-VAP/` directory
 3. View the interactive content with collapsible sections
 
-**No installation required!** This works offline and doesn't need Python or any web server setup.
-
-## Features
-
-The standalone viewer includes:
-
-- **Collapsible sections** for easy navigation
-- **Conformity Criteria** with detailed information about each criterion
-- **Regulatory Alignment** showing related regulations
-- **Performance Levels** and their definitions
-- **Tag Codes** for categorization
-- **Scope Information** (industry and geographic)
-- **Responsive design** that works on desktop and mobile
-- **Modern styling** with smooth animations
-
-## File Structure
-
-```
-svc-examples/
-├── README.md
-├── svc-viewer.html
-├── RBA-VAP/
-│   ├── rba-vap-svc-8.0.2.json
-│   └── rba-vap-svc-8.0.2-full.json
-└── svc_data/ (ignored by git)
-```
+**No installation required** This works offline and doesn't need Python or any web server setup.
 
 ## About SVC
 
-Sustainable Vocabulary Catalog (SVC) is a structured format for defining conformity schemes and their criteria. It provides a standardized way to represent:
-
-- **Conformity Schemes** - Standards and frameworks for assessment
-- **Criteria** - Specific rules and requirements
-- **Regulatory Alignment** - Related laws and regulations
-- **Performance Levels** - Scoring and ranking systems
-- **Classifications** - Industry and geographic scope
+Sustainable Vocabulary Catalog (SVC) is a structured format for defining conformity schemes and their criteria. Read more at [UNTP Sustainable Vocabulary Catalog](https://uncefact.github.io/spec-untp/docs/specification/SustainabilityVocabularyCatalog).
 
 ## RBA VAP
 

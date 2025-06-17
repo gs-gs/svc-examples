@@ -95,6 +95,9 @@
             .scheme-info h2 {
                 margin-top: 0;
                 color: #2c3e50;
+                display: flex;
+                align-items: center;
+                gap: 15px;
             }
 
             .info-grid {
@@ -124,29 +127,12 @@
                 color: #2c3e50;
             }
 
-            .trustmark-container {
-                text-align: center;
-                margin: 20px 0;
-                padding: 15px;
-                background: white;
-                border-radius: 8px;
+            .trustmark-inline {
+                height: 1.5em;
+                width: auto;
+                border-radius: 4px;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            }
-
-            .trustmark-image {
-                max-width: 150px;
-                max-height: 150px;
-                border-radius: 8px;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-            }
-
-            .trustmark-label {
-                font-weight: 600;
-                color: #34495e;
-                font-size: 0.9em;
-                text-transform: uppercase;
-                letter-spacing: 0.5px;
-                margin-bottom: 10px;
+                flex-shrink: 0;
             }
 
             .collapsible {
@@ -579,9 +565,17 @@
             }
 
             function renderSchemeInfo(scheme) {
+                const trustmarkImg =
+                    scheme.trustmark && scheme.trustmark.file
+                        ? `<img src="data:${scheme.trustmark.fileType || "image/png"};base64,${scheme.trustmark.file}" alt="${scheme.trustmark.fileName || "Trustmark"}" class="trustmark-inline" onerror="this.style.display='none'" />`
+                        : "";
+
                 return `
                 <div class="scheme-info">
-                    <h2>${scheme.name || "Unknown Scheme"}</h2>
+                    <h2>
+                        ${trustmarkImg}
+                        <span>${scheme.name || "Unknown Scheme"}</span>
+                    </h2>
                     <div class="info-grid">
                         <div class="info-item">
                             <div class="info-label">Version</div>
@@ -601,7 +595,6 @@
                         </div>
                     </div>
                     ${scheme.description ? `<p style="margin-top: 15px; font-style: italic;">${scheme.description}</p>` : ""}
-                    ${renderTrustmark(scheme.trustmark)}
                 </div>
             `;
             }
@@ -763,23 +756,6 @@
             `,
                     )
                     .join("");
-            }
-
-            function renderTrustmark(trustmark) {
-                if (!trustmark || !trustmark.file) return "";
-
-                return `
-                    <div class="trustmark-container">
-                        <div class="trustmark-label">Trustmark</div>
-                        <img
-                            src="data:${trustmark.fileType || "image/png"};base64,${trustmark.file}"
-                            alt="${trustmark.fileName || "Trustmark"}"
-                            class="trustmark-image"
-                            onerror="this.style.display='none'"
-                        />
-                        ${trustmark.fileName ? `<p style="margin-top: 8px; font-size: 0.9em; color: #666;">${trustmark.fileName}</p>` : ""}
-                    </div>
-                `;
             }
 
             function renderScopeInfo(industryScope, geographicScope) {
