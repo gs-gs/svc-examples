@@ -92,6 +92,30 @@ If you want to publish multiple catalogs then it would be better to:
 
 This will enable a single html template file to be maintained while the presentation branded for each catalog as required.
 
+## Content negotiation
+
+When publishing, we'll want the same URL to serve either the JSON catalog data or the HTML viewer depending on what the client requests, based on the Accept header.
+
+### Apache with MultiViews
+
+As an example, Apache supports automatic content negotiation with MultiViews. Create files like:
+```
+catalog.html      # The viewer (copy of svc-viewer.html)
+catalog.json      # The catalog data
+```
+
+In `.htaccess`:
+```apache
+Options +MultiViews
+AddType application/json .json
+```
+
+Then `http://example.com/catalog` serves:
+- `catalog.html` for browsers (`Accept: text/html`)
+- `catalog.json` for API clients (`Accept: application/json`)
+
+Other production webservers provide similar functionality - the above is just an example with Apache.
+
 ## About SVC
 
 Sustainable Vocabulary Catalog (SVC) is a structured format for defining conformity schemes and their criteria. Read more at [UNTP Sustainable Vocabulary Catalog](https://uncefact.github.io/spec-untp/docs/specification/SustainabilityVocabularyCatalog).
