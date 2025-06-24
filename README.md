@@ -50,11 +50,11 @@ The SVC examples in this repo were initially created with the following prompt u
 
 and attaching the first PDF.
 
-## Publishing a catalog
+## Publishing a single catalog
 
-For publishing at a public location, the SVC viewer can automatically display a specific catalog without requiring file selection. To publish a catalog for direct viewing:
+For publishing a single catalog at a public location, the SVC viewer can automatically display a specific catalog without requiring file selection. To publish a catalog for direct viewing:
 
-1. **Copy your SVC JSON file** to the same directory as `svc-viewer.html` and rename it to `catalog.json`. You may also want to rename `svc-viewer.html` to `index.html` at your serving location.
+1. **Copy your SVC JSON file** to the same directory as `svc-viewer.html` and rename it to `catalog.json`. You may also want to rename `svc-viewer.html` to `index.html` at your serving location, depending on your setup.
 
 2. **Serve the directory** using your webserver, or test with a simple web server:
    ```bash
@@ -84,11 +84,13 @@ This approach is fine for:
 - **Documentation**: Embed in websites or documentation
 - **Sharing**: Distribute a complete, self-contained viewer
 
+## Publishing multiple catalogs
+
 If you want to publish multiple catalogs then it would be better to:
 1. Extract the CSS style to a separate file,
-2. Serve the HTML with server-side rendering that sets the catalog to load and stylesheet to use based on the request location.
+2. Serve the HTML with server-side rendering that sets the catalog file to load and stylesheet to use based on the request location.
 
-This will enable a single html file to be maintained while the presentation branded for each catalog as required.
+This will enable a single html template file to be maintained while the presentation branded for each catalog as required.
 
 ## About SVC
 
