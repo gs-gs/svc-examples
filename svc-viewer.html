@@ -486,7 +486,7 @@
             </div>
 
             <div class="content">
-                <div class="file-selector">
+                <div class="file-selector" id="fileSelector" style="display: none;">
                     <label for="fileInput" class="file-label">
                         📁 Select SVC JSON File
                     </label>
@@ -502,11 +502,10 @@
                     </div>
                 </div>
 
-                <div id="svcContent" class="no-data">
-                    Select an SVC JSON file to begin viewing its contents.
+                <div id="svcContent" class="loading">
+                    Checking for catalog...
                 </div>
             </div>
-        </div>
 
         <script>
             const fileInput = document.getElementById("fileInput");
@@ -523,7 +522,8 @@
             function tryLoadCatalogJson() {
                 // Check if fetch is available
                 if (typeof fetch === "undefined") {
-                    return; // Fall back to file selector
+                    showFileSelector();
+                    return;
                 }
 
                 fetch("catalog.json")
@@ -534,18 +534,24 @@
                         return response.json();
                     })
                     .then((svcData) => {
-                        // Hide file selector and render the catalog
-                        const fileSelector =
-                            document.querySelector(".file-selector");
-                        if (fileSelector) {
-                            fileSelector.style.display = "none";
-                        }
+                        // Render the catalog directly
                         renderSVC(svcData);
                     })
                     .catch(() => {
-                        // Silently fail and show normal file selector
-                        // This is expected when catalog.json doesn't exist
+                        // Show file selector when catalog.json doesn't exist
+                        showFileSelector();
                     });
+            }
+
+            function showFileSelector() {
+                const fileSelector = document.getElementById("fileSelector");
+                const svcContent = document.getElementById("svcContent");
+
+                if (fileSelector) {
+                    fileSelector.style.display = "block";
+                }
+
+                svcContent.innerHTML = '<div class="no-data">Select an SVC JSON file to begin viewing its contents.</div>';
             }
 
             function handleFileSelect(event) {
