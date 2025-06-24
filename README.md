@@ -50,6 +50,46 @@ The SVC examples in this repo were initially created with the following prompt u
 
 and attaching the first PDF.
 
+## Publishing a catalog
+
+For publishing at a public location, the SVC viewer can automatically display a specific catalog without requiring file selection. To publish a catalog for direct viewing:
+
+1. **Copy your SVC JSON file** to the same directory as `svc-viewer.html` and rename it to `catalog.json`. You may also want to rename `svc-viewer.html` to `index.html` at your serving location.
+
+2. **Serve the directory** using your webserver, or test with a simple web server:
+   ```bash
+   # Using Python 3
+   python -m http.server 8000
+
+   # Using Python 2
+   python -m SimpleHTTPServer 8000
+
+   # Using Node.js
+   npx serve .
+
+   # Using PHP
+   php -S localhost:8000
+   ```
+
+3. **Open in browser**: Navigate to `http://localhost:8000/svc-viewer.html` or simply `http://localhost:8000/` if you renamed the html file to `index.html`.
+
+The viewer will automatically detect and display `catalog.json` without showing the file selector. If `catalog.json` is not present, it falls back to the normal file selection interface.
+
+### Customization
+
+You can customize the appearance by modifying the CSS styles in the HTML file.
+
+This approach is fine for:
+- **Demonstrations**: Show a specific catalog to stakeholders
+- **Documentation**: Embed in websites or documentation
+- **Sharing**: Distribute a complete, self-contained viewer
+
+If you want to publish multiple catalogs then it would be better to:
+1. Extract the CSS style to a separate file,
+2. Serve the HTML with server-side rendering that sets the catalog to load and stylesheet to use based on the request location.
+
+This will enable a single html file to be maintained while the presentation branded for each catalog as required.
+
 ## About SVC
 
 Sustainable Vocabulary Catalog (SVC) is a structured format for defining conformity schemes and their criteria. Read more at [UNTP Sustainable Vocabulary Catalog](https://uncefact.github.io/spec-untp/docs/specification/SustainabilityVocabularyCatalog).
@@ -68,3 +108,6 @@ Sustainable Vocabulary Catalog (SVC) is a structured format for defining conform
 
 **Problem**: Can't view files
 **Solution**: Ensure the JSON files are valid. The viewer will show an error message if the JSON is malformed.
+
+**Problem**: `catalog.json` doesn't auto-load
+**Solution**: Make sure you're serving the directory with a web server (not opening the HTML file directly). The auto-loading feature requires HTTP access to work due to browser security restrictions.

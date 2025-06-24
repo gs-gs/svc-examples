@@ -513,7 +513,40 @@
             const fileInfo = document.getElementById("fileInfo");
             const svcContent = document.getElementById("svcContent");
 
+            // Check for catalog.json on page load
+            window.addEventListener("DOMContentLoaded", function () {
+                tryLoadCatalogJson();
+            });
+
             fileInput.addEventListener("change", handleFileSelect);
+
+            function tryLoadCatalogJson() {
+                // Check if fetch is available
+                if (typeof fetch === "undefined") {
+                    return; // Fall back to file selector
+                }
+
+                fetch("catalog.json")
+                    .then((response) => {
+                        if (!response.ok) {
+                            throw new Error("catalog.json not found");
+                        }
+                        return response.json();
+                    })
+                    .then((svcData) => {
+                        // Hide file selector and render the catalog
+                        const fileSelector =
+                            document.querySelector(".file-selector");
+                        if (fileSelector) {
+                            fileSelector.style.display = "none";
+                        }
+                        renderSVC(svcData);
+                    })
+                    .catch(() => {
+                        // Silently fail and show normal file selector
+                        // This is expected when catalog.json doesn't exist
+                    });
+            }
 
             function handleFileSelect(event) {
                 const file = event.target.files[0];
