@@ -1,0 +1,33 @@
+{
+  "name": "svc-examples",
+  "version": "1.0.0",
+  "description": "Sustainable Vocabulary Catalog (SVC) examples and tools",
+  "main": "index.js",
+  "scripts": {
+    "rebase-urls": "node cli/rebase-urls.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "svc-rebase-urls": "./cli/rebase-urls.js"
+  },
+  "keywords": [
+    "sustainability",
+    "vocabulary",
+    "catalog",
+    "svc",
+    "untp"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "yargs": "^17.7.2",
+    "chalk": "^4.1.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gs-gs/svc-examples.git"
+  }
+}
