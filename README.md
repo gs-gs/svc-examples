@@ -50,6 +50,83 @@ The SVC examples in this repo were initially created with the following prompt u
 
 and attaching the first PDF.
 
+## URL Rebasing CLI Tool
+
+The repository includes a command-line tool to rebase URLs in SVC catalog files, addressing [issue #4](https://github.com/gs-gs/svc-examples/issues/4) - the need for configurable domain names when hosting catalogs for demonstrations.
+
+### Installation
+
+```bash
+# Install dependencies
+npm install
+
+# Or use yarn
+yarn install
+```
+
+### Usage
+
+The CLI tool allows you to replace base URLs in SVC catalog files:
+
+```bash
+# Basic usage - replace URLs and output to stdout
+npx svc-rebase-urls catalog.json -f "https://responsiblebusiness.org" -t "https://demo.sustainablevocab.org"
+
+# Save to a new file
+npx svc-rebase-urls catalog.json -f "https://responsiblebusiness.org" -t "https://demo.sustainablevocab.org" -o demo-catalog.json
+
+# Dry run to see what would change
+npx svc-rebase-urls catalog.json -f "https://responsiblebusiness.org" -t "https://demo.sustainablevocab.org" --dry-run
+
+# Create backup and verbose output
+npx svc-rebase-urls catalog.json -f "https://responsiblebusiness.org" -t "https://demo.sustainablevocab.org" -o catalog.json --backup --verbose
+```
+
+### Options
+
+- `-f, --from <url>`: Base URL to replace (required)
+- `-t, --to <url>`: New base URL (required)  
+- `-o, --output <file>`: Output file path (default: stdout)
+- `-b, --backup`: Create backup of original file
+- `-d, --dry-run`: Show what would be changed without modifying files
+- `-v, --verbose`: Show detailed output
+- `-h, --help`: Show help
+
+### Examples
+
+**Demo hosting**: Transform RBA catalog for demo site
+```bash
+npx svc-rebase-urls catalogs/ResponsibleBusinessAlliance/ValidatedAssessmentProgram-8.0.2.json \
+  -f "https://responsiblebusiness.org" \
+  -t "https://demo.sustainablevocab.org/rba" \
+  -o demo/rba-catalog.json
+```
+
+**Local development**: Use localhost URLs
+```bash
+npx svc-rebase-urls catalogs/ResponsibleMineralsInitiative/RiskReadynessAssessment.json \
+  -f "https://responsiblemineralsinitiative.org" \
+  -t "http://localhost:3000/rmi" \
+  -o local-rmi-catalog.json
+```
+
+**Preview changes**: Use dry-run mode
+```bash
+npx svc-rebase-urls catalog.json \
+  -f "https://example.com" \
+  -t "https://new-domain.org" \
+  --dry-run --verbose
+```
+
+### Quick Test
+
+To see the CLI in action, run the example script:
+
+```bash
+# Run interactive examples
+./cli/example-usage.sh
+```
+
 ## Publishing a single catalog
 
 For publishing a single catalog at a public location, the SVC viewer can automatically display a specific catalog without requiring file selection. To publish a catalog for direct viewing:
