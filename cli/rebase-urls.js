@@ -146,17 +146,22 @@ function validateInputs(inputFile, fromUrl, toUrl) {
 }
 
 /**
- * Create backup file
+ * Create backup file if needed
  * @param {string} filePath - Original file path
+ * @param {boolean} backup - Whether backup was requested
+ * @param {string} outputFile - Output file path
  */
-function createBackup(filePath) {
-  const backupPath = `${filePath}.bak`;
-  try {
-    fs.copyFileSync(filePath, backupPath);
-    log.success(`Backup created: ${backupPath}`);
-  } catch (error) {
-    log.error(`Failed to create backup: ${error.message}`);
-    process.exit(1);
+function handleBackup(filePath, backup, outputFile) {
+  // Only create backup if backup is requested AND we're overwriting the input file
+  if (backup && outputFile === filePath) {
+    const backupPath = `${filePath}.bak`;
+    try {
+      fs.copyFileSync(filePath, backupPath);
+      log.success(`Backup created: ${backupPath}`);
+    } catch (error) {
+      log.error(`Failed to create backup: ${error.message}`);
+      process.exit(1);
+    }
   }
 }
 
@@ -208,24 +213,14 @@ async function main() {
     return;
   }
 
-  // Create backup if requested
-  if (backup && outputFile && outputFile !== inputFile) {
-    // Only create backup if we're not overwriting the input file
-    // If we're overwriting, backup will be created below
-  } else if (backup && (!outputFile || outputFile === inputFile)) {
-    createBackup(inputFile);
-  }
+  // Handle backup creation - simplified logic
+  handleBackup(inputFile, backup, outputFile);
 
   // Output the result
   const outputJson = JSON.stringify(processedData, null, 2);
 
   if (outputFile) {
     try {
-      // Create backup if we're overwriting and backup was requested
-      if (backup && outputFile === inputFile) {
-        createBackup(inputFile);
-      }
-
       fs.writeFileSync(outputFile, outputJson);
       log.success(`Output written to: ${outputFile}`);
     } catch (error) {

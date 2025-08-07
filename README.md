@@ -118,15 +118,6 @@ npx svc-rebase-urls catalog.json \
   --dry-run --verbose
 ```
 
-### Quick Test
-
-To see the CLI in action, run the example script:
-
-```bash
-# Run interactive examples
-./cli/example-usage.sh
-```
-
 ## Publishing a single catalog
 
 For publishing a single catalog at a public location, the SVC viewer can automatically display a specific catalog without requiring file selection. To publish a catalog for direct viewing:
