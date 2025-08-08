@@ -1,0 +1,402 @@
+{
+  "type": [
+    "ConformitySchemeVocabulary"
+  ],
+  "@context": [
+    "https://test.uncefact.org/vocabulary/untp/svc/0.6.1/"
+  ],
+  "id": "http://localhost:3000all-minerals/v1.1",
+  "scheme": {
+    "type": [
+      "ConformityScheme"
+    ],
+    "id": "http://localhost:3000all-minerals/v1.1",
+    "name": "Global Responsible Sourcing Due Diligence Standard For Mineral Supply Chains - All Minerals",
+    "description": "A comprehensive standard for responsible mineral supply chain due diligence based on OECD Due Diligence Guidance, covering management systems, risk assessment, and responsible sourcing practices for all minerals except tin, tantalum, tungsten, gold, cobalt, and mica.",
+    "version": "1.1",
+    "validFrom": "2022-01-01",
+    "owner": {
+      "id": "https://responsiblemineralsinitiative.org/",
+      "name": "Responsible Minerals Initiative (RMI)",
+      "registeredId": "RMI"
+    },
+    "trustmark": {
+      "fileName": "RMI Logo",
+      "fileType": "image/svg+xml",
+      "file": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI2LjAuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgOTgxIDUwMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgOTgxIDUwMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM0ODY3QTY7fQoJLnN0MXtmaWxsOm5vbmU7fQoJLnN0MntmaWxsOiNGRkZGRkY7fQoJLnN0M3tmaWxsOiM5M0IxREI7fQo8L3N0eWxlPgo8Zz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0zMi41LDE3NGg1Ny44YzE2LjctMC4yLDMzLjYtMC4yLDQ1LjcsMTAuMmM5LjQsOC4xLDEzLjEsMTkuMiwxMy4xLDI5YzAsMjguMi0yNC4yLDM0LjgtMzEuNSwzNi45ICAgYzIyLjcsMi4xLDI0LjQsMTUsMjcuMSwzNC42YzIuMywxNy43LDMuNSwyNSw0LjYsMjkuMmMxLjcsNi43LDIuOSw4LjMsNC42LDEwLjhoLTM1LjdjLTEuNS04LjMtNi00Ni41LTguMS01Mi40ICAgYy0yLjktOC42LTEwLjgtOC42LTE2LjMtOC42SDY1LjV2NjAuOWgtMzNWMTc0eiBNNjQuNCwyMzkuOWgyNi4xYzMuOCwwLDExLjMsMCwxNi41LTQuMmMyLjMtMS43LDguMy02LjksOC4zLTE3LjUgICBjMC0xMC4yLTUtMTUtNy45LTE2LjljLTUtMy41LTExLjEtMy41LTIxLjMtMy41SDY0LjRWMjM5Ljl6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTcxLjYsMTc0aDUyLjhsMzEuOSwxMDkuN0wyOTAuNywxNzRIMzQydjE1MC44aC0zMi4xVjE5NS41bC00MS4xLDEyOS4zaC0yNi43bC00MC4zLTEyOS4zdjEyOS4zaC0zMC4yICAgTDE3MS42LDE3NEwxNzEuNiwxNzR6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzY4LjUsMTczLjZoMzIuM3YxNTEuMmgtMzIuM1YxNzMuNnoiLz4KPC9nPgo8cmVjdCBjbGFzcz0ic3QxIiB3aWR0aD0iOTgwIiBoZWlnaHQ9IjQ5OS41Ii8+CjxjaXJjbGUgY2xhc3M9InN0MCIgY3g9IjczMSIgY3k9IjI1MSIgcj0iMjQwIi8+CjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik04ODQsMjQ3LjVsLTI5LTE0LjlsLTE0LjgtNy42bDAsMEw4MTYsMjEyLjVjLTEtMC42LTIuMy0wLjYtMy40LTAuMmMxMS40LDI0LjcsMTEuNCw1My4xLDAsNzcuOCAgYzAuNSwwLjIsMSwwLjMsMS41LDAuM2MwLjcsMCwxLjMtMC4yLDEuOS0wLjVsMjQuMS0xMi40bDguNS00LjRMODg0LDI1NWMyLjEtMS4xLDIuOS0zLjYsMS44LTUuNkM4ODUuNCwyNDguNiw4ODQuOCwyNDgsODg0LDI0Ny41Ii8+CjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik04MDAuOSwxNjEuNGM2LjMsNS4yLDEyLDExLjEsMTcuMSwxNy41YzQuNiwwLjUsOS4xLDEuOCwxMy4zLDMuOWwxMy41LDdjLTEyLjUtMjQtMzEuOC00My42LTU1LjYtNTYuNCAgbDcuOCwxNS4xQzc5OS4xLDE1Mi41LDgwMC40LDE1Ni45LDgwMC45LDE2MS40Ii8+CjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik04MTcuOSwzMjMuNmMtNS4xLDYuNC0xMC44LDEyLjItMTcsMTcuNGMtMC41LDQuNS0xLjgsOC45LTMuOSwxMi45bC03LjgsMTUuMWMyMy43LTEyLjgsNDMuMS0zMi40LDU1LjYtNTYuMyAgbC0xMy41LDdDODI3LjEsMzIxLjgsODIyLjYsMzIzLjEsODE3LjksMzIzLjYiLz4KPHBhdGggY2xhc3M9InN0MiIgZD0iTTYzMy41LDE3OS45YzYuNy04LjcsMTQuNi0xNi41LDIzLjUtMjNjMC43LTIuOSwxLjctNS43LDMuMS04LjRsOS41LTE4LjRjLTI3LjgsMTMuMS01MC4zLDM1LjMtNjMuOCw2MyAgbDIwLTEwLjNDNjI4LjMsMTgxLjYsNjMwLjksMTgwLjYsNjMzLjUsMTc5LjkiLz4KPHBhdGggY2xhc3M9InN0MiIgZD0iTTYwOS44LDI3My44bDMxLjQsMTYuMWMwLjYsMC4zLDEuMiwwLjUsMS45LDAuNWMwLjUsMCwxLTAuMSwxLjUtMC4zYy0xMS40LTI0LjctMTEuNC01My4xLDAtNzcuOCAgYy0xLjEtMC40LTIuMy0wLjQtMy40LDAuMmwtMjkuNSwxNS4ybC0xOC4zLDkuNGwtMjAuMiwxMC40Yy0yLjEsMS4xLTIuOSwzLjYtMS44LDUuNmMwLjQsMC44LDEsMS40LDEuOCwxLjhsMjAuMiwxMC40TDYwOS44LDI3My44eiAgIi8+CjxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik02NTcsMzQ1LjVjLTguOC02LjUtMTYuNy0xNC4yLTIzLjQtMjIuOWMtMi43LTAuNy01LjMtMS43LTcuNy0yLjlsLTIwLTEwLjNjMTMuNCwyNy42LDM1LjksNDkuOCw2My43LDYyLjkgIGwtOS40LTE4LjNDNjU4LjcsMzUxLjIsNjU3LjYsMzQ4LjQsNjU3LDM0NS41Ii8+CjxwYXRoIGNsYXNzPSJzdDMiIGQ9Ik03MjguNiwxNTguNmMxMy40LDAsMjYuNywyLjksMzguOSw4LjZjMC40LTEuMSwwLjQtMi4zLTAuMi0zLjRsLTE3LjUtMzRsLTUuNy0xMWwtMTEuOC0yMi45ICBjLTEuMS0yLjEtMy42LTIuOS01LjYtMS44Yy0wLjgsMC40LTEuNCwxLTEuOCwxLjhsLTE1LjQsMjkuOWwtNS40LDEwLjZMNjkwLDE2My44Yy0wLjUsMS0wLjYsMi4zLTAuMiwzLjQgIEM3MDEuOSwxNjEuNSw3MTUuMiwxNTguNiw3MjguNiwxNTguNiIvPgo8cGF0aCBjbGFzcz0ic3QyIiBkPSJNNzI4LjYsMzQzLjhjLTEzLjQsMC0yNi43LTIuOS0zOC45LTguNmMtMC40LDEuMS0wLjQsMi4zLDAuMiwzLjRMNzA0LDM2NmwwLDBsOS40LDE4LjJsMTEuNSwyMi40ICBjMS4xLDIuMSwzLjYsMi45LDUuNiwxLjhjMC44LTAuNCwxLjQtMSwxLjgtMS44bDExLjgtMjNsNC4xLThsMTkuMS0zN2MwLjUtMSwwLjYtMi4zLDAuMi0zLjRDNzU1LjMsMzQwLjksNzQyLDM0My45LDcyOC42LDM0My44Ii8+Cjwvc3ZnPg=="
+    }
+  },
+  "conformityCriterion": [
+    {
+      "type": [
+        "Criterion"
+      ],
+      "id": "http://localhost:3000all-minerals/v1.1#step1-management-systems",
+      "name": "Step 1 - Establish Strong Company Management Systems",
+      "description": "Companies must adopt and publish a supply chain policy, structure internal management to support due diligence, establish controls and transparency systems, strengthen supplier engagement, and establish grievance mechanisms.",
+      "conformityTopic": "governance.compliance",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": [
+            "Criterion"
+          ],
+          "id": "http://localhost:3000all-minerals/v1.1#step1a-supply-chain-policy",
+          "name": "Step 1A - Adopt and Commit to Supply Chain Policy",
+          "description": "Company must adopt a written supply chain policy with effective date, include standards consistent with Annex II model, cover all covered minerals, and ensure policy is publicly available and communicated to suppliers.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "tag": [
+            "policy",
+            "management"
+          ]
+        },
+        {
+          "type": [
+            "Criterion"
+          ],
+          "id": "http://localhost:3000all-minerals/v1.1#step1b-internal-management",
+          "name": "Step 1B - Structure Internal Management",
+          "description": "Company must assign responsibility for due diligence to appropriate staff, provide authority to senior level staff, ensure adequate training and resources, and maintain accountability for senior management.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "tag": [
+            "management",
+            "training"
+          ]
+        },
+        {
+          "type": [
+            "Criterion"
+          ],
+          "id": "http://localhost:3000all-minerals/v1.1#step1c-controls-transparency",
+          "name": "Step 1C - Establish System of Controls and Transparency",
+          "description": "Company must have chain of custody or traceability system, collect and retain information for red flag review for minimum five years, implement Know Your Counterparty (KYC) processes, and calculate mass balance.",
+          "conformityTopic": "governance.transparency",
+          "status": "active",
+          "tag": [
+            "traceability",
+            "transparency"
+          ]
+        },
+        {
+          "type": [
+            "Criterion"
+          ],
+          "id": "http://localhost:3000all-minerals/v1.1#step1d-supplier-engagement",
+          "name": "Step 1D - Strengthen Company Engagement with Suppliers",
+          "description": "Company must establish long-term relationships with suppliers, confirm supplier commitment to supply chain policy, communicate expectations, incorporate requirements into contracts, and support capability building.",
+          "conformityTopic": "social.community",
+          "status": "active",
+          "tag": [
+            "suppliers",
+            "engagement"
+          ]
+        },
+        {
+          "type": [
+            "Criterion"
+          ],
+          "id": "http://localhost:3000all-minerals/v1.1#step1e-grievance-mechanism",
+          "name": "Step 1E - Establish Company-Level Grievance Mechanism",
+          "description": "Company must have a mechanism allowing internal and external parties to voice concerns regarding mineral extraction, trade and handling circumstances, and record concerns and follow-up results.",
+          "conformityTopic": "social.rights",
+          "status": "active",
+          "tag": [
+            "grievance",
+            "stakeholder"
+          ]
+        }
+      ],
+      "tag": [
+        "management-systems",
+        "OECD-step1"
+      ]
+    },
+    {
+      "type": [
+        "Criterion"
+      ],
+      "id": "http://localhost:3000all-minerals/v1.1#step2-risk-assessment",
+      "name": "Step 2 - Identify and Assess Risks in Upstream Supply Chain",
+      "description": "Companies must identify the scope of risk assessment, map factual circumstances of supply chains, and assess risks against Annex II criteria including red flag review and CAHRA determination.",
+      "conformityTopic": "governance.compliance",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": [
+            "Criterion"
+          ],
+          "id": "http://localhost:3000all-minerals/v1.1#step2a-red-flag-review",
+          "name": "Step 2A - Red Flag Review",
+          "description": "Company must review information to conduct red flag review of mineral origins and suppliers, validate information on minerals received, understand plausibility of supply, and determine CAHRAs.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "tag": [
+            "risk-assessment",
+            "red-flags"
+          ]
+        },
+        {
+          "type": [
+            "Criterion"
+          ],
+          "id": "http://localhost:3000all-minerals/v1.1#cahra-requirements",
+          "name": "CAHRA Due Diligence Requirements",
+          "description": "For materials known or suspected to be from Conflict-Affected and High-Risk Areas, companies must establish chain of custody, conduct on-the-ground assessments, and perform Annex II risk assessment.",
+          "conformityTopic": "social.rights",
+          "status": "active",
+          "tag": [
+            "CAHRA",
+            "conflict-minerals"
+          ]
+        }
+      ],
+      "tag": [
+        "risk-assessment",
+        "OECD-step2"
+      ]
+    },
+    {
+      "type": [
+        "Criterion"
+      ],
+      "id": "http://localhost:3000all-minerals/v1.1#step3-risk-management",
+      "name": "Step 3 - Design and Implement Risk Management Strategy",
+      "description": "Companies must report findings to senior management, devise and adopt risk management plans, implement and monitor risk mitigation efforts, and undertake additional assessments for ongoing risks.",
+      "conformityTopic": "governance.compliance",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": [
+            "Criterion"
+          ],
+          "id": "http://localhost:3000all-minerals/v1.1#step3a-report-findings",
+          "name": "Step 3A - Report Findings to Senior Management",
+          "description": "Company must ensure all risks identified during Step 2 are reported to senior manager with designated responsibility for due diligence on ongoing basis.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "tag": [
+            "reporting",
+            "senior-management"
+          ]
+        },
+        {
+          "type": [
+            "Criterion"
+          ],
+          "id": "http://localhost:3000all-minerals/v1.1#step3b-risk-management-plan",
+          "name": "Step 3B - Devise and Adopt Risk Management Plan",
+          "description": "Company must develop plan to manage identified risks considering options of continuing trade, suspending trade while managing risks, or disengaging from trade if risks are not manageable.",
+          "conformityTopic": "governance.compliance",
+          "status": "active",
+          "tag": [
+            "risk-management",
+            "mitigation"
+          ]
+        }
+      ],
+      "tag": [
+        "risk-management",
+        "OECD-step3"
+      ]
+    },
+    {
+      "type": [
+        "Criterion"
+      ],
+      "id": "http://localhost:3000all-minerals/v1.1#step4-independent-audit",
+      "name": "Step 4 - Carry Out Independent Third-Party Audit",
+      "description": "Companies must undergo independent third-party audits of their supply chain due diligence practices following ISO 19011:2018 standard, allowing auditor access to sites, personnel, and documentation.",
+      "conformityTopic": "governance.compliance",
+      "status": "active",
+      "tag": [
+        "audit",
+        "third-party",
+        "ISO19011"
+      ]
+    },
+    {
+      "type": [
+        "Criterion"
+      ],
+      "id": "http://localhost:3000all-minerals/v1.1#step5-public-reporting",
+      "name": "Step 5 - Report Annually on Supply Chain Due Diligence",
+      "description": "Companies must annually report on due diligence for responsible supply chains, publish company management systems information, describe risk assessment methodology, and outline risk management strategies while protecting business confidentiality.",
+      "conformityTopic": "governance.transparency",
+      "status": "active",
+      "tag": [
+        "reporting",
+        "transparency",
+        "annual-report"
+      ]
+    },
+    {
+      "type": [
+        "Criterion"
+      ],
+      "id": "http://localhost:3000all-minerals/v1.1#annex2-risks",
+      "name": "Annex II Risk Management Requirements",
+      "description": "Companies must address serious abuses associated with mineral extraction, direct or indirect support to non-state armed groups, support to public or private security forces, bribery and fraudulent misrepresentation, money laundering, and non-payment of taxes and royalties.",
+      "conformityTopic": "social.rights",
+      "status": "active",
+      "subCriterion": [
+        {
+          "type": [
+            "Criterion"
+          ],
+          "id": "http://localhost:3000all-minerals/v1.1#serious-abuses",
+          "name": "Serious Abuses Prevention",
+          "description": "Companies must not tolerate torture, forced labor, worst forms of child labor, gross human rights violations, war crimes, crimes against humanity or genocide in their mineral supply chains.",
+          "conformityTopic": "social.rights",
+          "status": "active",
+          "tag": [
+            "human-rights",
+            "serious-abuses"
+          ]
+        },
+        {
+          "type": [
+            "Criterion"
+          ],
+          "id": "http://localhost:3000all-minerals/v1.1#armed-groups",
+          "name": "Non-State Armed Groups",
+          "description": "Companies must not provide direct or indirect support to non-state armed groups who illegally control, tax or extort benefits at mines, trading points, transportation routes or supply chain actors.",
+          "conformityTopic": "social.rights",
+          "status": "active",
+          "tag": [
+            "armed-groups",
+            "conflict"
+          ]
+        }
+      ],
+      "tag": [
+        "annex-II",
+        "OECD-risks"
+      ]
+    }
+  ],
+  "regulatoryAlignment": [
+    {
+      "type": [
+        "Regulation"
+      ],
+      "id": "https://www.oecd.org/corporate/mne/mining.htm",
+      "name": "OECD Due Diligence Guidance for Responsible Supply Chains of Minerals from Conflict-Affected and High-Risk Areas",
+      "jurisdictionCountry": "INTERNATIONAL",
+      "administeredBy": {
+        "id": "https://www.oecd.org/",
+        "name": "Organisation for Economic Co-operation and Development (OECD)",
+        "registeredId": "OECD"
+      },
+      "effectiveDate": "2016-05-25"
+    },
+    {
+      "type": [
+        "Regulation"
+      ],
+      "id": "https://www.sec.gov/rules/final/2012/34-67716.pdf",
+      "name": "Section 1502 of the US Dodd-Frank Wall Street Reform and Consumer Protection Act",
+      "jurisdictionCountry": "US",
+      "administeredBy": {
+        "id": "https://www.sec.gov/",
+        "name": "U.S. Securities and Exchange Commission",
+        "registeredId": "SEC"
+      },
+      "effectiveDate": "2012-08-22"
+    },
+    {
+      "type": [
+        "Regulation"
+      ],
+      "id": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0821",
+      "name": "Regulation (EU) 2017/821 - EU Conflict Minerals Regulation",
+      "jurisdictionCountry": "EU",
+      "administeredBy": {
+        "id": "https://ec.europa.eu/",
+        "name": "European Commission",
+        "registeredId": "EC"
+      },
+      "effectiveDate": "2021-01-01"
+    }
+  ],
+  "industryScope": {
+    "type": [
+      "Classification"
+    ],
+    "id": "https://unstats.un.org/unsd/classifications/Econ/cpc/07",
+    "code": "07",
+    "name": "Mining and quarrying",
+    "schemeID": "https://unstats.un.org/unsd/classifications/Econ/cpc/",
+    "schemeName": "UN Central Product Classification (CPC)"
+  },
+  "geographicScope": {
+    "type": [
+      "Classification"
+    ],
+    "id": "https://unstats.un.org/unsd/methodology/m49/001",
+    "code": "001",
+    "name": "World",
+    "schemeID": "https://unstats.un.org/unsd/methodology/m49/",
+    "schemeName": "UN M49 Standard Country or Area Codes"
+  },
+  "performanceLevelCode": [
+    {
+      "name": "Conformant",
+      "rank": 3,
+      "description": "Full conformance with all applicable OECD due diligence requirements and RMI standard criteria."
+    },
+    {
+      "name": "Conditionally Conformant",
+      "rank": 2,
+      "description": "Substantial conformance with minor non-conformances that can be addressed within specified timeframes."
+    },
+    {
+      "name": "Non-Conformant",
+      "rank": 1,
+      "description": "Significant non-conformances requiring corrective action before conformance can be achieved."
+    }
+  ],
+  "tagCode": [
+    {
+      "name": "OECD-Step1",
+      "description": "Criteria related to establishing strong company management systems."
+    },
+    {
+      "name": "OECD-Step2",
+      "description": "Criteria related to identifying and assessing risks in upstream supply chains."
+    },
+    {
+      "name": "OECD-Step3",
+      "description": "Criteria related to designing and implementing risk management strategies."
+    },
+    {
+      "name": "OECD-Step4",
+      "description": "Criteria related to independent third-party audits."
+    },
+    {
+      "name": "OECD-Step5",
+      "description": "Criteria related to annual public reporting on due diligence."
+    },
+    {
+      "name": "CAHRA",
+      "description": "Criteria specifically applicable to Conflict-Affected and High-Risk Areas."
+    },
+    {
+      "name": "PreciousMetals",
+      "description": "Criteria with additional requirements for precious group metals (gold, silver, platinum, palladium)."
+    },
+    {
+      "name": "SecondaryMaterials",
+      "description": "Criteria applicable to recycled and secondary materials."
+    },
+    {
+      "name": "SupplyChain",
+      "description": "Criteria targeting supply chain management and transparency."
+    },
+    {
+      "name": "RiskManagement",
+      "description": "Criteria focused on risk assessment and mitigation strategies."
+    }
+  ]
+}
