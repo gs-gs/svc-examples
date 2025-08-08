@@ -218,62 +218,27 @@ npm run serve -- --root-dir dist --port 8080 --verbose
 - Individual criteria pages with both HTML and JSON versions
 - Static file serving for production deployment compatibility
 
-### 3. URL Rebasing CLI Tool
-
-Transform URLs in SVC catalogs for different hosting environments, addressing the need for configurable domain names when hosting catalogs for demonstrations:
-
-### Usage
-
-The CLI tool allows you to replace base URLs in SVC catalog files:
+### 3. URL Rebasing Tool
+Transform URLs in SVC catalogs for different hosting environments:
 
 ```bash
-# Basic usage - replace URLs and output to stdout
-npx svc-rebase-urls catalog.json -f "https://responsiblebusiness.org" -t "https://demo.sustainablevocab.org"
-
-# Save to a new file
-npx svc-rebase-urls catalog.json -f "https://responsiblebusiness.org" -t "https://demo.sustainablevocab.org" -o demo-catalog.json
-
-# Dry run to see what would change
-npx svc-rebase-urls catalog.json -f "https://responsiblebusiness.org" -t "https://demo.sustainablevocab.org" --dry-run
-
-# Overwrite original file (automatic backup created) with verbose output
-npx svc-rebase-urls catalog.json -f "https://responsiblebusiness.org" -t "https://demo.sustainablevocab.org" -o catalog.json --verbose
+npm run rebase-urls <catalog-file> -- [options]
 ```
 
-### Options
-
+**Options:**
 - `-f, --from <url>`: Base URL to replace (required)
-- `-t, --to <url>`: New base URL (required)
+- `-t, --to <url>`: New base URL (required)  
 - `-o, --output <file>`: Output file path (default: stdout)
-
 - `-d, --dry-run`: Show what would be changed without modifying files
 - `-v, --verbose`: Show detailed output
-- `-h, --help`: Show help
 
-### Examples
-
-**Demo hosting**: Transform RBA catalog for demo site
+**Example:**
 ```bash
-npx svc-rebase-urls catalogs/ResponsibleBusinessAlliance/ValidatedAssessmentProgram-8.0.2.json \
+npm run rebase-urls \
+  catalogs/ResponsibleBusinessAlliance/ValidatedAssessmentProgram-8.0.2.json -- \
   -f "https://responsiblebusiness.org" \
-  -t "https://demo.sustainablevocab.org/rba" \
-  -o demo/rba-catalog.json
-```
-
-**Local development**: Use localhost URLs
-```bash
-npx svc-rebase-urls catalogs/ResponsibleMineralsInitiative/RiskReadynessAssessment.json \
-  -f "https://responsiblemineralsinitiative.org" \
-  -t "http://localhost:3000/rmi" \
-  -o local-rmi-catalog.json
-```
-
-**Preview changes**: Use dry-run mode
-```bash
-npx svc-rebase-urls catalog.json \
-  -f "https://example.com" \
-  -t "https://new-domain.org" \
-  --dry-run --verbose
+  -t "http://localhost:3000" \
+  -o catalogs/ResponsibleBusinessAlliance/ValidatedAssessmentProgram-8.0.2-localhost.json
 ```
 
 ## Publishing Catalogs
