@@ -1,0 +1,33 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/annex-ii-risk-management-requirements/1/",
+  "name": "Annex II Risk Management Requirements",
+  "description": "Companies must address serious abuses associated with mineral extraction, direct or indirect support to non-state armed groups, support to public or private security forces, bribery and fraudulent misrepresentation, money laundering, and non-payment of taxes and royalties.",
+  "conformityTopic": "social.rights",
+  "status": "active",
+  "subCriterion": [
+    {
+      "type": [
+        "CriterionReference"
+      ],
+      "id": "http://localhost:3000/criteria/serious-abuses-prevention/1/",
+      "name": "Serious Abuses Prevention",
+      "version": "1"
+    },
+    {
+      "type": [
+        "CriterionReference"
+      ],
+      "id": "http://localhost:3000/criteria/non-state-armed-groups/1/",
+      "name": "Non-State Armed Groups",
+      "version": "1"
+    }
+  ],
+  "tag": [
+    "annex-II",
+    "OECD-risks"
+  ],
+  "originalId": "http://localhost:3000/standards/rmap/all-minerals/v1.1#annex2-risks"
+}

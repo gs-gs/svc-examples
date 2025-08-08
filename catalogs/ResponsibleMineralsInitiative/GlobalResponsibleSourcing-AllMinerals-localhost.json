@@ -5,18 +5,18 @@
   "@context": [
     "https://test.uncefact.org/vocabulary/untp/svc/0.6.1/"
   ],
-  "id": "http://localhost:3000all-minerals/v1.1",
+  "id": "http://localhost:3000/standards/rmap/all-minerals/v1.1",
   "scheme": {
     "type": [
       "ConformityScheme"
     ],
-    "id": "http://localhost:3000all-minerals/v1.1",
+    "id": "http://localhost:3000/standards/rmap/all-minerals/v1.1",
     "name": "Global Responsible Sourcing Due Diligence Standard For Mineral Supply Chains - All Minerals",
     "description": "A comprehensive standard for responsible mineral supply chain due diligence based on OECD Due Diligence Guidance, covering management systems, risk assessment, and responsible sourcing practices for all minerals except tin, tantalum, tungsten, gold, cobalt, and mica.",
     "version": "1.1",
     "validFrom": "2022-01-01",
     "owner": {
-      "id": "https://responsiblemineralsinitiative.org/",
+      "id": "http://localhost:3000/",
       "name": "Responsible Minerals Initiative (RMI)",
       "registeredId": "RMI"
     },
@@ -31,7 +31,7 @@
       "type": [
         "Criterion"
       ],
-      "id": "http://localhost:3000all-minerals/v1.1#step1-management-systems",
+      "id": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step1-management-systems",
       "name": "Step 1 - Establish Strong Company Management Systems",
       "description": "Companies must adopt and publish a supply chain policy, structure internal management to support due diligence, establish controls and transparency systems, strengthen supplier engagement, and establish grievance mechanisms.",
       "conformityTopic": "governance.compliance",
@@ -41,7 +41,7 @@
           "type": [
             "Criterion"
           ],
-          "id": "http://localhost:3000all-minerals/v1.1#step1a-supply-chain-policy",
+          "id": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step1a-supply-chain-policy",
           "name": "Step 1A - Adopt and Commit to Supply Chain Policy",
           "description": "Company must adopt a written supply chain policy with effective date, include standards consistent with Annex II model, cover all covered minerals, and ensure policy is publicly available and communicated to suppliers.",
           "conformityTopic": "governance.compliance",
@@ -55,7 +55,7 @@
           "type": [
             "Criterion"
           ],
-          "id": "http://localhost:3000all-minerals/v1.1#step1b-internal-management",
+          "id": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step1b-internal-management",
           "name": "Step 1B - Structure Internal Management",
           "description": "Company must assign responsibility for due diligence to appropriate staff, provide authority to senior level staff, ensure adequate training and resources, and maintain accountability for senior management.",
           "conformityTopic": "governance.compliance",
@@ -69,7 +69,7 @@
           "type": [
             "Criterion"
           ],
-          "id": "http://localhost:3000all-minerals/v1.1#step1c-controls-transparency",
+          "id": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step1c-controls-transparency",
           "name": "Step 1C - Establish System of Controls and Transparency",
           "description": "Company must have chain of custody or traceability system, collect and retain information for red flag review for minimum five years, implement Know Your Counterparty (KYC) processes, and calculate mass balance.",
           "conformityTopic": "governance.transparency",
@@ -83,7 +83,7 @@
           "type": [
             "Criterion"
           ],
-          "id": "http://localhost:3000all-minerals/v1.1#step1d-supplier-engagement",
+          "id": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step1d-supplier-engagement",
           "name": "Step 1D - Strengthen Company Engagement with Suppliers",
           "description": "Company must establish long-term relationships with suppliers, confirm supplier commitment to supply chain policy, communicate expectations, incorporate requirements into contracts, and support capability building.",
           "conformityTopic": "social.community",
@@ -97,7 +97,7 @@
           "type": [
             "Criterion"
           ],
-          "id": "http://localhost:3000all-minerals/v1.1#step1e-grievance-mechanism",
+          "id": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step1e-grievance-mechanism",
           "name": "Step 1E - Establish Company-Level Grievance Mechanism",
           "description": "Company must have a mechanism allowing internal and external parties to voice concerns regarding mineral extraction, trade and handling circumstances, and record concerns and follow-up results.",
           "conformityTopic": "social.rights",
@@ -117,7 +117,7 @@
       "type": [
         "Criterion"
       ],
-      "id": "http://localhost:3000all-minerals/v1.1#step2-risk-assessment",
+      "id": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step2-risk-assessment",
       "name": "Step 2 - Identify and Assess Risks in Upstream Supply Chain",
       "description": "Companies must identify the scope of risk assessment, map factual circumstances of supply chains, and assess risks against Annex II criteria including red flag review and CAHRA determination.",
       "conformityTopic": "governance.compliance",
@@ -127,7 +127,7 @@
           "type": [
             "Criterion"
           ],
-          "id": "http://localhost:3000all-minerals/v1.1#step2a-red-flag-review",
+          "id": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step2a-red-flag-review",
           "name": "Step 2A - Red Flag Review",
           "description": "Company must review information to conduct red flag review of mineral origins and suppliers, validate information on minerals received, understand plausibility of supply, and determine CAHRAs.",
           "conformityTopic": "governance.compliance",
@@ -141,7 +141,7 @@
           "type": [
             "Criterion"
           ],
-          "id": "http://localhost:3000all-minerals/v1.1#cahra-requirements",
+          "id": "http://localhost:3000/standards/rmap/all-minerals/v1.1#cahra-requirements",
           "name": "CAHRA Due Diligence Requirements",
           "description": "For materials known or suspected to be from Conflict-Affected and High-Risk Areas, companies must establish chain of custody, conduct on-the-ground assessments, and perform Annex II risk assessment.",
           "conformityTopic": "social.rights",
@@ -161,7 +161,7 @@
       "type": [
         "Criterion"
       ],
-      "id": "http://localhost:3000all-minerals/v1.1#step3-risk-management",
+      "id": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step3-risk-management",
       "name": "Step 3 - Design and Implement Risk Management Strategy",
       "description": "Companies must report findings to senior management, devise and adopt risk management plans, implement and monitor risk mitigation efforts, and undertake additional assessments for ongoing risks.",
       "conformityTopic": "governance.compliance",
@@ -171,7 +171,7 @@
           "type": [
             "Criterion"
           ],
-          "id": "http://localhost:3000all-minerals/v1.1#step3a-report-findings",
+          "id": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step3a-report-findings",
           "name": "Step 3A - Report Findings to Senior Management",
           "description": "Company must ensure all risks identified during Step 2 are reported to senior manager with designated responsibility for due diligence on ongoing basis.",
           "conformityTopic": "governance.compliance",
@@ -185,7 +185,7 @@
           "type": [
             "Criterion"
           ],
-          "id": "http://localhost:3000all-minerals/v1.1#step3b-risk-management-plan",
+          "id": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step3b-risk-management-plan",
           "name": "Step 3B - Devise and Adopt Risk Management Plan",
           "description": "Company must develop plan to manage identified risks considering options of continuing trade, suspending trade while managing risks, or disengaging from trade if risks are not manageable.",
           "conformityTopic": "governance.compliance",
@@ -205,7 +205,7 @@
       "type": [
         "Criterion"
       ],
-      "id": "http://localhost:3000all-minerals/v1.1#step4-independent-audit",
+      "id": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step4-independent-audit",
       "name": "Step 4 - Carry Out Independent Third-Party Audit",
       "description": "Companies must undergo independent third-party audits of their supply chain due diligence practices following ISO 19011:2018 standard, allowing auditor access to sites, personnel, and documentation.",
       "conformityTopic": "governance.compliance",
@@ -220,7 +220,7 @@
       "type": [
         "Criterion"
       ],
-      "id": "http://localhost:3000all-minerals/v1.1#step5-public-reporting",
+      "id": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step5-public-reporting",
       "name": "Step 5 - Report Annually on Supply Chain Due Diligence",
       "description": "Companies must annually report on due diligence for responsible supply chains, publish company management systems information, describe risk assessment methodology, and outline risk management strategies while protecting business confidentiality.",
       "conformityTopic": "governance.transparency",
@@ -235,7 +235,7 @@
       "type": [
         "Criterion"
       ],
-      "id": "http://localhost:3000all-minerals/v1.1#annex2-risks",
+      "id": "http://localhost:3000/standards/rmap/all-minerals/v1.1#annex2-risks",
       "name": "Annex II Risk Management Requirements",
       "description": "Companies must address serious abuses associated with mineral extraction, direct or indirect support to non-state armed groups, support to public or private security forces, bribery and fraudulent misrepresentation, money laundering, and non-payment of taxes and royalties.",
       "conformityTopic": "social.rights",
@@ -245,7 +245,7 @@
           "type": [
             "Criterion"
           ],
-          "id": "http://localhost:3000all-minerals/v1.1#serious-abuses",
+          "id": "http://localhost:3000/standards/rmap/all-minerals/v1.1#serious-abuses",
           "name": "Serious Abuses Prevention",
           "description": "Companies must not tolerate torture, forced labor, worst forms of child labor, gross human rights violations, war crimes, crimes against humanity or genocide in their mineral supply chains.",
           "conformityTopic": "social.rights",
@@ -259,7 +259,7 @@
           "type": [
             "Criterion"
           ],
-          "id": "http://localhost:3000all-minerals/v1.1#armed-groups",
+          "id": "http://localhost:3000/standards/rmap/all-minerals/v1.1#armed-groups",
           "name": "Non-State Armed Groups",
           "description": "Companies must not provide direct or indirect support to non-state armed groups who illegally control, tax or extort benefits at mines, trading points, transportation routes or supply chain actors.",
           "conformityTopic": "social.rights",

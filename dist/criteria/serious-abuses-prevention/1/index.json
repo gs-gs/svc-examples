@@ -1,0 +1,15 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/serious-abuses-prevention/1/",
+  "name": "Serious Abuses Prevention",
+  "description": "Companies must not tolerate torture, forced labor, worst forms of child labor, gross human rights violations, war crimes, crimes against humanity or genocide in their mineral supply chains.",
+  "conformityTopic": "social.rights",
+  "status": "active",
+  "tag": [
+    "human-rights",
+    "serious-abuses"
+  ],
+  "originalId": "http://localhost:3000/standards/rmap/all-minerals/v1.1#serious-abuses"
+}

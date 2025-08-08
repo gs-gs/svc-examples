@@ -1,0 +1,15 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/cahra-due-diligence-requirements/1/",
+  "name": "CAHRA Due Diligence Requirements",
+  "description": "For materials known or suspected to be from Conflict-Affected and High-Risk Areas, companies must establish chain of custody, conduct on-the-ground assessments, and perform Annex II risk assessment.",
+  "conformityTopic": "social.rights",
+  "status": "active",
+  "tag": [
+    "CAHRA",
+    "conflict-minerals"
+  ],
+  "originalId": "http://localhost:3000/standards/rmap/all-minerals/v1.1#cahra-requirements"
+}

@@ -1,0 +1,15 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/step-1e-establish-company-level-grievance-mechanism/1/",
+  "name": "Step 1E - Establish Company-Level Grievance Mechanism",
+  "description": "Company must have a mechanism allowing internal and external parties to voice concerns regarding mineral extraction, trade and handling circumstances, and record concerns and follow-up results.",
+  "conformityTopic": "social.rights",
+  "status": "active",
+  "tag": [
+    "grievance",
+    "stakeholder"
+  ],
+  "originalId": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step1e-grievance-mechanism"
+}

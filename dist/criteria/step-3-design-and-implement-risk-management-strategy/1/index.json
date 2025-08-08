@@ -1,0 +1,33 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/step-3-design-and-implement-risk-management-strategy/1/",
+  "name": "Step 3 - Design and Implement Risk Management Strategy",
+  "description": "Companies must report findings to senior management, devise and adopt risk management plans, implement and monitor risk mitigation efforts, and undertake additional assessments for ongoing risks.",
+  "conformityTopic": "governance.compliance",
+  "status": "active",
+  "subCriterion": [
+    {
+      "type": [
+        "CriterionReference"
+      ],
+      "id": "http://localhost:3000/criteria/step-3a-report-findings-to-senior-management/1/",
+      "name": "Step 3A - Report Findings to Senior Management",
+      "version": "1"
+    },
+    {
+      "type": [
+        "CriterionReference"
+      ],
+      "id": "http://localhost:3000/criteria/step-3b-devise-and-adopt-risk-management-plan/1/",
+      "name": "Step 3B - Devise and Adopt Risk Management Plan",
+      "version": "1"
+    }
+  ],
+  "tag": [
+    "risk-management",
+    "OECD-step3"
+  ],
+  "originalId": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step3-risk-management"
+}

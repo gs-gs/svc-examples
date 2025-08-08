@@ -1,0 +1,15 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/step-1c-establish-system-of-controls-and-transparency/1/",
+  "name": "Step 1C - Establish System of Controls and Transparency",
+  "description": "Company must have chain of custody or traceability system, collect and retain information for red flag review for minimum five years, implement Know Your Counterparty (KYC) processes, and calculate mass balance.",
+  "conformityTopic": "governance.transparency",
+  "status": "active",
+  "tag": [
+    "traceability",
+    "transparency"
+  ],
+  "originalId": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step1c-controls-transparency"
+}

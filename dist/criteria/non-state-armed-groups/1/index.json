@@ -1,0 +1,15 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/non-state-armed-groups/1/",
+  "name": "Non-State Armed Groups",
+  "description": "Companies must not provide direct or indirect support to non-state armed groups who illegally control, tax or extort benefits at mines, trading points, transportation routes or supply chain actors.",
+  "conformityTopic": "social.rights",
+  "status": "active",
+  "tag": [
+    "armed-groups",
+    "conflict"
+  ],
+  "originalId": "http://localhost:3000/standards/rmap/all-minerals/v1.1#armed-groups"
+}

@@ -521,11 +521,10 @@ class SVCGenerator {
   async generateMainIndex() {
     const indexPath = path.join(this.outputDir, "index.html");
 
-    // Scan for available catalogs
+    // Scan for available catalogs in entire output directory
     const catalogs = [];
-    const vocabularyDir = path.join(this.outputDir, this.catalogPath);
 
-    if (fs.existsSync(vocabularyDir)) {
+    if (fs.existsSync(this.outputDir)) {
       const scanDir = (dir, basePath = "") => {
         const items = fs.readdirSync(dir);
         for (const item of items) {
@@ -533,21 +532,24 @@ class SVCGenerator {
           if (fs.statSync(itemPath).isDirectory()) {
             const indexJson = path.join(itemPath, "index.json");
             if (fs.existsSync(indexJson)) {
-              // This is a catalog directory
-              const relativePath = path.join(basePath, item);
+              // Check if this looks like a catalog (has scheme property)
               try {
                 const catalogData = JSON.parse(
                   fs.readFileSync(indexJson, "utf8"),
                 );
-                catalogs.push({
-                  name: catalogData.scheme?.name || item,
-                  description: catalogData.scheme?.description || "",
-                  version: catalogData.scheme?.version || "",
-                  path: relativePath,
-                  id: catalogData.id || "",
-                });
+                if (catalogData.scheme && catalogData.conformityCriterion) {
+                  // This is a catalog directory
+                  const relativePath = path.join(basePath, item);
+                  catalogs.push({
+                    name: catalogData.scheme?.name || item,
+                    description: catalogData.scheme?.description || "",
+                    version: catalogData.scheme?.version || "",
+                    path: relativePath,
+                    id: catalogData.id || "",
+                  });
+                }
               } catch (error) {
-                this.log(`Warning: Could not read catalog at ${indexJson}`);
+                this.log(`Warning: Could not read JSON at ${indexJson}`);
               }
             } else {
               // Recurse into subdirectory
@@ -557,7 +559,7 @@ class SVCGenerator {
         }
       };
 
-      scanDir(vocabularyDir);
+      scanDir(this.outputDir);
     }
 
     // Count criteria
@@ -770,10 +772,10 @@ class SVCGenerator {
             ${catalog.description ? `<div class="catalog-description">${catalog.description}</div>` : ""}
 
             <div class="catalog-links">
-                <a href="${this.catalogPath}/${catalog.path}/" class="catalog-link html">
+                <a href="${catalog.path}/" class="catalog-link html">
                     📄 View HTML
                 </a>
-                <a href="${this.catalogPath}/${catalog.path}/index.json" class="catalog-link json">
+                <a href="${catalog.path}/index.json" class="catalog-link json">
                     📋 View JSON
                 </a>
             </div>

@@ -1,0 +1,15 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/step-1a-adopt-and-commit-to-supply-chain-policy/1/",
+  "name": "Step 1A - Adopt and Commit to Supply Chain Policy",
+  "description": "Company must adopt a written supply chain policy with effective date, include standards consistent with Annex II model, cover all covered minerals, and ensure policy is publicly available and communicated to suppliers.",
+  "conformityTopic": "governance.compliance",
+  "status": "active",
+  "tag": [
+    "policy",
+    "management"
+  ],
+  "originalId": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step1a-supply-chain-policy"
+}
