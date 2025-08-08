@@ -1,0 +1,35 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/working-hours/1/",
+  "name": "Working Hours",
+  "description": "Working hours shall not exceed the maximum set by local law. Further, a work week shall not be more than 60 hours per week, including overtime, except in emergency or unusual situations. All overtime shall be voluntary. Workers shall be allowed to have at least one day off every seven days.",
+  "conformityTopic": "social.labour",
+  "status": "active",
+  "thresholdValue": {
+    "metricName": "Maximum weekly working hours",
+    "metricValue": {
+      "value": 60,
+      "unit": "HUR"
+    }
+  },
+  "category": [
+    {
+      "type": [
+        "Classification"
+      ],
+      "id": "http://localhost:3000/vocabulary/rba-vap-standard/labor",
+      "code": "A3",
+      "name": "Working Hours",
+      "schemeID": "http://localhost:3000/vocabulary/rba-vap-standard/",
+      "schemeName": "RBA VAP Standard"
+    }
+  ],
+  "tag": [
+    "working-hours",
+    "overtime",
+    "rest-days"
+  ],
+  "originalId": "http://localhost:3000/vocabulary/rba-vap-standard/8.0.2/A3"
+}

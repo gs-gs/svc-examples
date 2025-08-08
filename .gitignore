@@ -1,6 +1,10 @@
 # Catalog file for auto-loading (should be created locally by users)
 catalog.json
 
+# Generated output - committed for examples/documentation
+# dist/ is NOT ignored because this repository serves as documentation
+# and users should be able to see the transformed output without running tools
+
 # OS generated files
 .DS_Store
 .DS_Store?
@@ -31,7 +35,9 @@ yarn.lock
 # CLI tool backups
 *.bak
 
-# Demo/test output files
+# Demo/test output files (temporary)
 demo/
+demo-output/
 local-*.json
 *-demo.json
+generated/

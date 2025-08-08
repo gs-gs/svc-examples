@@ -1,0 +1,29 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/non-discrimination-non-harassment-humane-treatment/1/",
+  "name": "Non-Discrimination / Non-Harassment / Humane Treatment",
+  "description": "Participants shall commit to a workplace free of harassment and unlawful discrimination. There shall be no harsh or inhumane treatment including violence, gender-based violence, sexual harassment, sexual abuse, corporal punishment, mental or physical coercion, bullying, public shaming, or verbal abuse of workers.",
+  "conformityTopic": "social.rights",
+  "status": "active",
+  "category": [
+    {
+      "type": [
+        "Classification"
+      ],
+      "id": "http://localhost:3000/vocabulary/rba-vap-standard/labor",
+      "code": "A5",
+      "name": "Non-Discrimination / Non-Harassment / Humane Treatment",
+      "schemeID": "http://localhost:3000/vocabulary/rba-vap-standard/",
+      "schemeName": "RBA VAP Standard"
+    }
+  ],
+  "tag": [
+    "discrimination",
+    "harassment",
+    "humane-treatment",
+    "workplace-violence"
+  ],
+  "originalId": "http://localhost:3000/vocabulary/rba-vap-standard/8.0.2/A5"
+}

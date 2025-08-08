@@ -1,0 +1,29 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/prohibition-of-forced-labor/1/",
+  "name": "Prohibition of Forced Labor",
+  "description": "Forced labor in any form, including but not limited to, bonded (including debt bondage) or indentured labor, involuntary or exploitative prison labor, slavery or trafficking of persons is not permitted. This includes transporting, harboring, recruiting, transferring, or receiving persons by means of threat, force, coercion, abduction or fraud for labor or services.",
+  "conformityTopic": "social.labour",
+  "status": "active",
+  "category": [
+    {
+      "type": [
+        "Classification"
+      ],
+      "id": "http://localhost:3000/vocabulary/rba-vap-standard/labor",
+      "code": "A1",
+      "name": "Prohibition of Forced Labor",
+      "schemeID": "http://localhost:3000/vocabulary/rba-vap-standard/",
+      "schemeName": "RBA VAP Standard"
+    }
+  ],
+  "tag": [
+    "forced-labor",
+    "human-trafficking",
+    "recruitment-fees",
+    "document-retention"
+  ],
+  "originalId": "http://localhost:3000/vocabulary/rba-vap-standard/8.0.2/A1"
+}

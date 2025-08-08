@@ -1,0 +1,36 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/wages-and-benefits/1/",
+  "name": "Wages and Benefits",
+  "description": "Compensation paid to workers shall comply with all applicable wage laws, including those relating to minimum wages, overtime hours and legally mandated benefits. All workers shall receive equal pay for equal work and qualification. Workers shall be compensated for overtime at pay rates greater than regular hourly rates.",
+  "conformityTopic": "social.labour",
+  "status": "active",
+  "thresholdValue": {
+    "metricName": "Overtime premium rate",
+    "metricValue": {
+      "value": 1.25,
+      "unit": "C62"
+    }
+  },
+  "category": [
+    {
+      "type": [
+        "Classification"
+      ],
+      "id": "http://localhost:3000/vocabulary/rba-vap-standard/labor",
+      "code": "A4",
+      "name": "Wages and Benefits",
+      "schemeID": "http://localhost:3000/vocabulary/rba-vap-standard/",
+      "schemeName": "RBA VAP Standard"
+    }
+  ],
+  "tag": [
+    "wages",
+    "benefits",
+    "overtime-pay",
+    "equal-pay"
+  ],
+  "originalId": "http://localhost:3000/vocabulary/rba-vap-standard/8.0.2/A4"
+}

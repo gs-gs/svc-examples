@@ -8,7 +8,38 @@ This directory contains examples of Sustainable Vocabulary Catalog files and a s
 
 The purpose of the repository is to generate and collect initial SVC's that are compliant with the current schema and then incrementally improve their display as needed or requested. No attempt has been made to audit the SVC generation from their respective PDFs.
 
-## Quick Start
+## 🆕 Independent Criteria Solution
+
+This repository now includes a solution for **independently versioned criteria** that addresses key architectural issues with the original SVC format:
+
+- **Issue #2**: Criteria can now be versioned separately from catalogs
+- **Issue #3**: Each criterion ID resolves to its own page with content negotiation
+
+### Key Benefits
+- 🔄 **Independent versioning**: Criteria don't get new URLs when catalogs update
+- 🔗 **Resolvable URLs**: Every criterion ID serves actual content (HTML + JSON)
+- 📱 **Content negotiation**: Browsers get HTML, APIs get JSON
+- 🌐 **Web-native**: Works with standard web infrastructure
+
+### Quick Start with Independent Criteria
+```bash
+# First, rebase URLs for local development (BEFORE transformation)
+npm run rebase-urls catalogs/ResponsibleBusinessAlliance/ValidatedAssessmentProgram-8.0.2.json -- -f "https://responsiblebusiness.org" -t "http://localhost:3000" -o catalogs/ResponsibleBusinessAlliance/ValidatedAssessmentProgram-8.0.2-localhost.json
+
+# Transform the localhost-rebased catalog to independent criteria
+npm run generate catalogs/ResponsibleBusinessAlliance/ValidatedAssessmentProgram-8.0.2-localhost.json -- --verbose
+
+# Serve with content negotiation
+npm run serve -- --root-dir dist --verbose
+
+# Navigate to http://localhost:3000/ to see the discovery index with all catalogs
+# Or view with enhanced viewer (criteria links will work with localhost URLs)
+open svc-viewer-v2.html
+```
+
+**📖 [Read the full documentation](README-INDEPENDENT-CRITERIA.md)** for detailed information about the independent criteria solution.
+
+## Quick Start (Original Viewer)
 
 To view the SVC files as interactive HTML pages, first either clone the git repository or simply [download the ZIP file of the repo](https://github.com/gs-gs/svc-examples/archive/refs/heads/main.zip) and then:
 
@@ -50,9 +81,40 @@ The SVC examples in this repo were initially created with the following prompt u
 
 and attaching the first PDF.
 
-## URL Rebasing CLI Tool
+## CLI Tools
 
-The repository includes a command-line tool to rebase URLs in SVC catalog files, addressing [issue #4](https://github.com/gs-gs/svc-examples/issues/4) - the need for configurable domain names when hosting catalogs for demonstrations.
+The repository includes several command-line tools:
+
+### 1. Independent Criteria Generator
+Transform monolithic SVC catalogs into independently versioned criteria (addresses issues #2 and #3):
+
+```bash
+# Transform a catalog
+npm run generate <catalog-file> -- [options]
+
+# Example
+npm run generate catalogs/ResponsibleBusinessAlliance/ValidatedAssessmentProgram-8.0.2.json -- --verbose
+```
+
+**Generates:**
+- Individual criteria files with HTML and JSON versions
+- Updated catalog with criterion references  
+- **Main discovery index** at `dist/index.html` with links to all catalogs
+
+### 2. Development Server
+Serve generated criteria with content negotiation support:
+
+```bash
+# Start server
+npm run serve -- [options]
+
+# Example
+npm run serve -- --root-dir dist --port 3000 --verbose
+```
+
+### 3. URL Rebasing CLI Tool
+Transform URLs in SVC catalogs for different hosting environments:
+Rebase URLs in SVC catalog files, addressing [issue #4](https://github.com/gs-gs/svc-examples/issues/4) - the need for configurable domain names when hosting catalogs for demonstrations:
 
 ### Installation
 
@@ -78,8 +140,8 @@ npx svc-rebase-urls catalog.json -f "https://responsiblebusiness.org" -t "https:
 # Dry run to see what would change
 npx svc-rebase-urls catalog.json -f "https://responsiblebusiness.org" -t "https://demo.sustainablevocab.org" --dry-run
 
-# Create backup and verbose output
-npx svc-rebase-urls catalog.json -f "https://responsiblebusiness.org" -t "https://demo.sustainablevocab.org" -o catalog.json --backup --verbose
+# Overwrite original file (automatic backup created) with verbose output
+npx svc-rebase-urls catalog.json -f "https://responsiblebusiness.org" -t "https://demo.sustainablevocab.org" -o catalog.json --verbose
 ```
 
 ### Options
@@ -87,7 +149,7 @@ npx svc-rebase-urls catalog.json -f "https://responsiblebusiness.org" -t "https:
 - `-f, --from <url>`: Base URL to replace (required)
 - `-t, --to <url>`: New base URL (required)  
 - `-o, --output <file>`: Output file path (default: stdout)
-- `-b, --backup`: Create backup of original file
+
 - `-d, --dry-run`: Show what would be changed without modifying files
 - `-v, --verbose`: Show detailed output
 - `-h, --help`: Show help
@@ -187,6 +249,15 @@ Other production webservers provide similar functionality - the above is just an
 ## About SVC
 
 Sustainable Vocabulary Catalog (SVC) is a structured format for defining conformity schemes and their criteria. Read more at [UNTP Sustainable Vocabulary Catalog](https://uncefact.github.io/spec-untp/docs/specification/SustainabilityVocabularyCatalog).
+
+### SVC Evolution
+This repository demonstrates the evolution of SVC from a monolithic format to independently versioned criteria:
+
+- **Original format**: Criteria embedded in catalogs with version-dependent URLs
+- **New format**: Independent criteria with stable URLs and content negotiation
+- **Migration path**: Tools to transform existing catalogs to the new structure
+
+The independent criteria approach provides better versioning, resolvability, and integration capabilities while maintaining compatibility with existing workflows.
 
 ## Requirements
 

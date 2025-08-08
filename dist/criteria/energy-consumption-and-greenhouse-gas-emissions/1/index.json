@@ -1,0 +1,29 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/energy-consumption-and-greenhouse-gas-emissions/1/",
+  "name": "Energy Consumption and Greenhouse Gas Emissions",
+  "description": "Participants shall establish and report against an absolute corporate-wide greenhouse gas reduction goal. Energy consumption and all Scopes 1, 2, and significant categories of Scope 3 greenhouse gas emissions shall be tracked, documented, and publicly reported.",
+  "conformityTopic": "environment.emissions",
+  "status": "active",
+  "category": [
+    {
+      "type": [
+        "Classification"
+      ],
+      "id": "http://localhost:3000/vocabulary/rba-vap-standard/environment",
+      "code": "C6",
+      "name": "Energy Consumption and Greenhouse Gas Emissions",
+      "schemeID": "http://localhost:3000/vocabulary/rba-vap-standard/",
+      "schemeName": "RBA VAP Standard"
+    }
+  ],
+  "tag": [
+    "greenhouse-gas",
+    "energy-consumption",
+    "scope-1-2-3",
+    "carbon-reporting"
+  ],
+  "originalId": "http://localhost:3000/vocabulary/rba-vap-standard/8.0.2/C6"
+}

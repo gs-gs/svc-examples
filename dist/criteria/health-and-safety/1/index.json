@@ -1,0 +1,46 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/health-and-safety/1/",
+  "name": "Health and Safety",
+  "description": "Participants recognize that in addition to minimizing the incidence of work-related injuries and illnesses, a safe and healthy working environment enhances the quality of products and services, consistency of production and worker retention and morale. Participants also recognize that ongoing worker input and education are essential to identifying and solving health and safety issues in the workplace.",
+  "conformityTopic": "social.safety",
+  "status": "active",
+  "subCriterion": [
+    {
+      "type": [
+        "CriterionReference"
+      ],
+      "id": "http://localhost:3000/criteria/occupational-health-and-safety/1/",
+      "name": "Occupational Health and Safety",
+      "version": "1"
+    },
+    {
+      "type": [
+        "CriterionReference"
+      ],
+      "id": "http://localhost:3000/criteria/emergency-preparedness/1/",
+      "name": "Emergency Preparedness",
+      "version": "1"
+    }
+  ],
+  "category": [
+    {
+      "type": [
+        "Classification"
+      ],
+      "id": "http://localhost:3000/vocabulary/rba-vap-standard/health-safety",
+      "code": "B",
+      "name": "Health and Safety",
+      "schemeID": "http://localhost:3000/vocabulary/rba-vap-standard/",
+      "schemeName": "RBA VAP Standard"
+    }
+  ],
+  "tag": [
+    "health",
+    "safety",
+    "workplace-safety"
+  ],
+  "originalId": "http://localhost:3000/vocabulary/rba-vap-standard/8.0.2/B"
+}

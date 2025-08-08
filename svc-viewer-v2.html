@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVC Viewer v2 - Independent Criteria</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f8fa;
+            color: #24292f;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            margin: 0 0 1rem 0;
+            color: #0969da;
+            font-size: 2.5rem;
+        }
+
+        .header p {
+            margin: 0;
+            color: #656d76;
+            font-size: 1.1rem;
+        }
+
+        .content {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: 1fr;
+        }
+
+        @media (min-width: 768px) {
+            .content {
+                grid-template-columns: 1fr 300px;
+            }
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .sidebar {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            height: fit-content;
+        }
+
+        .file-selector {
+            padding: 2rem;
+            text-align: center;
+            border: 2px dashed #d0d7de;
+            margin: 2rem;
+            border-radius: 8px;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .file-label {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #0969da;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .file-label:hover {
+            background: #0860ca;
+        }
+
+        .file-info {
+            margin-top: 1rem;
+            color: #656d76;
+            font-size: 0.9rem;
+        }
+
+        .scheme-info {
+            padding: 2rem;
+            border-bottom: 1px solid #d0d7de;
+        }
+
+        .scheme-info h2 {
+            margin: 0 0 1rem 0;
+            color: #24292f;
+        }
+
+        .info-grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            margin-top: 1.5rem;
+        }
+
+        .info-item {
+            padding: 1rem;
+            background: #f6f8fa;
+            border-radius: 6px;
+        }
+
+        .info-label {
+            font-size: 0.8rem;
+            color: #656d76;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .info-value {
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .criteria-section {
+            padding: 2rem;
+        }
+
+        .criteria-section h2 {
+            margin: 0 0 1.5rem 0;
+            color: #24292f;
+        }
+
+        .criterion-card {
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: border-color 0.2s;
+        }
+
+        .criterion-card:hover {
+            border-color: #0969da;
+        }
+
+        .criterion-header {
+            padding: 1rem 1.5rem;
+            background: #f6f8fa;
+            border-bottom: 1px solid #d0d7de;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .criterion-title {
+            font-weight: 600;
+            margin: 0;
+            color: #24292f;
+        }
+
+        .criterion-meta {
+            font-size: 0.8rem;
+            color: #656d76;
+            margin-top: 0.25rem;
+        }
+
+        .criterion-toggle {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #656d76;
+            transition: transform 0.2s;
+        }
+
+        .criterion-toggle.expanded {
+            transform: rotate(90deg);
+        }
+
+        .criterion-content {
+            padding: 1.5rem;
+            display: none;
+        }
+
+        .criterion-content.expanded {
+            display: block;
+        }
+
+        .criterion-description {
+            margin: 0 0 1.5rem 0;
+            line-height: 1.6;
+        }
+
+        .criterion-badges {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .topic-badge {
+            background: #ddf4ff;
+            color: #0969da;
+        }
+
+        .status-badge {
+            background: #dcfce7;
+            color: #16a34a;
+        }
+
+        .version-badge {
+            background: #f3e8ff;
+            color: #9333ea;
+        }
+
+        .criterion-link {
+            color: #0969da;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .criterion-link:hover {
+            text-decoration: underline;
+        }
+
+        .sub-criteria {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #d0d7de;
+        }
+
+        .sub-criteria h4 {
+            margin: 0 0 1rem 0;
+            color: #24292f;
+        }
+
+        .sub-criteria ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sub-criteria li {
+            margin-bottom: 0.5rem;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: #656d76;
+        }
+
+        .error {
+            padding: 1rem;
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 6px;
+            color: #dc2626;
+            margin: 1rem 0;
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 3rem;
+            color: #656d76;
+        }
+
+        .sidebar h3 {
+            margin: 0 0 1rem 0;
+            color: #24292f;
+        }
+
+        .sidebar .info-item {
+            margin-bottom: 1rem;
+        }
+
+        .url-input-section {
+            margin-bottom: 2rem;
+        }
+
+        .url-input-section h3 {
+            margin: 0 0 1rem 0;
+        }
+
+        .url-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        .load-button {
+            width: 100%;
+            padding: 0.75rem;
+            background: #0969da;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            transition: background-color 0.2s;
+        }
+
+        .load-button:hover {
+            background: #0860ca;
+        }
+
+        .load-button:disabled {
+            background: #d0d7de;
+            cursor: not-allowed;
+        }
+
+        .criterion-references {
+            margin-top: 1rem;
+        }
+
+        .criterion-references h4 {
+            margin: 0 0 0.5rem 0;
+            font-size: 0.9rem;
+            color: #656d76;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .external-link {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #f6f8fa;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #24292f;
+            font-size: 0.9rem;
+        }
+
+        .external-link:hover {
+            background: #f3f4f6;
+        }
+
+        .spinner {
+            border: 2px solid #f6f8fa;
+            border-top: 2px solid #0969da;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .criterion-loading {
+            color: #656d76;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SVC Viewer v2</h1>
+            <p>Interactive viewer for Sustainable Vocabulary Catalogs with independent criteria support</p>
+        </div>
+
+        <div class="content">
+            <div class="main-content">
+                <div id="fileSelector" class="file-selector">
+                    <h3>Select SVC Catalog</h3>
+                    <p>Choose a JSON catalog file to view its conformity criteria</p>
+                    <label for="fileInput" class="file-label">Choose File</label>
+                    <input type="file" id="fileInput" class="file-input" accept=".json">
+                    <div id="fileInfo" class="file-info"></div>
+                </div>
+
+                <div id="svcContent">
+                    <div class="no-data">Select an SVC JSON file to begin viewing its contents.</div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="url-input-section">
+                    <h3>Load from URL</h3>
+                    <input type="url" id="urlInput" class="url-input" placeholder="https://example.com/catalog.json">
+                    <button id="loadButton" class="load-button">Load Catalog</button>
+                </div>
+
+                <div id="catalogInfo" style="display: none;">
+                    <h3>Catalog Information</h3>
+                    <div id="catalogDetails"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById("fileInput");
+        const fileInfo = document.getElementById("fileInfo");
+        const svcContent = document.getElementById("svcContent");
+        const urlInput = document.getElementById("urlInput");
+        const loadButton = document.getElementById("loadButton");
+        const catalogInfo = document.getElementById("catalogInfo");
+        const catalogDetails = document.getElementById("catalogDetails");
+
+        // Try to load catalog.json automatically on page load
+        window.addEventListener("load", tryLoadCatalogJson);
+
+        fileInput.addEventListener("change", handleFileSelect);
+        loadButton.addEventListener("click", handleUrlLoad);
+        urlInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
+                handleUrlLoad();
+            }
+        });
+
+        function tryLoadCatalogJson() {
+            // Check if fetch is available
+            if (typeof fetch === "undefined") {
+                showFileSelector();
+                return;
+            }
+
+            fetch("catalog.json")
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error("catalog.json not found");
+                    }
+                    return response.json();
+                })
+                .then((svcData) => {
+                    // Render the catalog directly
+                    renderSVC(svcData);
+                })
+                .catch(() => {
+                    // Show file selector when catalog.json doesn't exist
+                    showFileSelector();
+                });
+        }
+
+        function showFileSelector() {
+            const fileSelector = document.getElementById("fileSelector");
+            if (fileSelector) {
+                fileSelector.style.display = "block";
+            }
+            svcContent.innerHTML = '<div class="no-data">Select an SVC JSON file to begin viewing its contents.</div>';
+        }
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            if (file.type !== "application/json" && !file.name.endsWith(".json")) {
+                showError("Please select a valid JSON file.");
+                return;
+            }
+
+            fileInfo.textContent = `Selected: ${file.name} (${formatFileSize(file.size)})`;
+            loadSVCFile(file);
+        }
+
+        function handleUrlLoad() {
+            const url = urlInput.value.trim();
+            if (!url) return;
+
+            loadButton.disabled = true;
+            loadButton.innerHTML = '<span class="spinner"></span>Loading...';
+
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                    }
+                    return response.json();
+                })
+                .then(svcData => {
+                    renderSVC(svcData);
+                    fileInfo.textContent = `Loaded from: ${url}`;
+                    document.getElementById("fileSelector").style.display = "none";
+                })
+                .catch(error => {
+                    showError(`Failed to load from URL: ${error.message}`);
+                })
+                .finally(() => {
+                    loadButton.disabled = false;
+                    loadButton.textContent = "Load Catalog";
+                });
+        }
+
+        function loadSVCFile(file) {
+            svcContent.innerHTML = '<div class="loading"><span class="spinner"></span>Loading SVC file...</div>';
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                try {
+                    const svcData = JSON.parse(e.target.result);
+                    renderSVC(svcData);
+                    document.getElementById("fileSelector").style.display = "none";
+                } catch (error) {
+                    showError("Invalid JSON file. Please check the file format.");
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function renderSVC(svcData) {
+            if (!svcData.scheme || !svcData.conformityCriterion) {
+                showError("Invalid SVC format. Missing required fields.");
+                return;
+            }
+
+            let html = renderSchemeInfo(svcData.scheme);
+            html += renderCriteriaSection(svcData.conformityCriterion);
+
+            svcContent.innerHTML = html;
+            updateSidebar(svcData);
+            attachEventHandlers();
+        }
+
+        function renderSchemeInfo(scheme) {
+            return `
+                <div class="scheme-info">
+                    <h2>${scheme.name || 'Unknown Scheme'}</h2>
+                    <p>${scheme.description || 'No description available'}</p>
+
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <h4 class="info-label">Version</h4>
+                            <p class="info-value">${scheme.version || 'Unknown'}</p>
+                        </div>
+                        <div class="info-item">
+                            <h4 class="info-label">Owner</h4>
+                            <p class="info-value">${scheme.owner?.name || 'Unknown'}</p>
+                        </div>
+                        <div class="info-item">
+                            <h4 class="info-label">Valid From</h4>
+                            <p class="info-value">${scheme.validFrom || 'Unknown'}</p>
+                        </div>
+                        <div class="info-item">
+                            <h4 class="info-label">ID</h4>
+                            <p class="info-value"><code>${scheme.id || 'Unknown'}</code></p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderCriteriaSection(criteria) {
+            return `
+                <div class="criteria-section">
+                    <h2>Conformity Criteria (${criteria.length})</h2>
+                    ${criteria.map(criterion => renderCriterionCard(criterion)).join('')}
+                </div>
+            `;
+        }
+
+        function renderCriterionCard(criterion) {
+            const isReference = criterion.type && criterion.type.includes("CriterionReference");
+
+            return `
+                <div class="criterion-card" data-criterion-id="${criterion.id}">
+                    <div class="criterion-header" onclick="toggleCriterion('${criterion.id}')">
+                        <div>
+                            <h3 class="criterion-title">${criterion.name || 'Unnamed Criterion'}</h3>
+                            <div class="criterion-meta">
+                                ${isReference ? 'Independent Criterion' : 'Embedded Criterion'} •
+                                Version ${criterion.version || '1'} •
+                                ID: <code>${criterion.id}</code>
+                            </div>
+                        </div>
+                        <button class="criterion-toggle" id="toggle-${btoa(criterion.id)}">▶</button>
+                    </div>
+                    <div class="criterion-content" id="content-${btoa(criterion.id)}">
+                        ${isReference ? renderCriterionReference(criterion) : renderCriterionDetails(criterion)}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderCriterionReference(criterion) {
+            return `
+                <div class="criterion-loading">
+                    <span class="spinner"></span>Loading criterion details...
+                </div>
+                <div class="criterion-references">
+                    <h4>External Resources</h4>
+                    <a href="${criterion.id}" class="external-link" target="_blank">
+                        View Full Criterion →
+                    </a>
+                    <a href="${criterion.id.replace(/\/$/, '')}/index.json" class="external-link" target="_blank">
+                        JSON Data →
+                    </a>
+                </div>
+            `;
+        }
+
+        function renderCriterionDetails(criterion) {
+            let html = '';
+
+            // Badges
+            const badges = [];
+            if (criterion.conformityTopic) badges.push(`<span class="badge topic-badge">${criterion.conformityTopic}</span>`);
+            if (criterion.status) badges.push(`<span class="badge status-badge">${criterion.status}</span>`);
+            if (criterion.version) badges.push(`<span class="badge version-badge">v${criterion.version}</span>`);
+
+            if (badges.length > 0) {
+                html += `<div class="criterion-badges">${badges.join('')}</div>`;
+            }
+
+            // Description
+            if (criterion.description) {
+                html += `<div class="criterion-description">${criterion.description}</div>`;
+            }
+
+            // Sub-criteria
+            if (criterion.subCriterion && criterion.subCriterion.length > 0) {
+                html += `
+                    <div class="sub-criteria">
+                        <h4>Sub-criteria (${criterion.subCriterion.length})</h4>
+                        <ul>
+                            ${criterion.subCriterion.map(sub => `
+                                <li>
+                                    <a href="${sub.id}" class="criterion-link" target="_blank">
+                                        ${sub.name} (v${sub.version || '1'})
+                                    </a>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                `;
+            }
+
+            return html;
+        }
+
+        function toggleCriterion(criterionId) {
+            const contentId = 'content-' + btoa(criterionId);
+            const toggleId = 'toggle-' + btoa(criterionId);
+
+            const content = document.getElementById(contentId);
+            const toggle = document.getElementById(toggleId);
+
+            if (content && toggle) {
+                const isExpanded = content.classList.contains('expanded');
+
+                if (isExpanded) {
+                    content.classList.remove('expanded');
+                    toggle.classList.remove('expanded');
+                } else {
+                    content.classList.add('expanded');
+                    toggle.classList.add('expanded');
+
+                    // If this is a criterion reference, try to load its details
+                    const card = document.querySelector(`[data-criterion-id="${criterionId}"]`);
+                    const loadingEl = card.querySelector('.criterion-loading');
+                    if (loadingEl) {
+                        loadCriterionDetails(criterionId, content);
+                    }
+                }
+            }
+        }
+
+        async function loadCriterionDetails(criterionId, contentEl) {
+            try {
+                const jsonUrl = criterionId.replace(/\/$/, '') + '/index.json';
+                const response = await fetch(jsonUrl);
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+
+                const criterionData = await response.json();
+
+                // Replace the loading content with actual criterion details
+                const loadingEl = contentEl.querySelector('.criterion-loading');
+                if (loadingEl) {
+                    loadingEl.style.display = 'none';
+                }
+
+                // Add the detailed content
+                const detailsHtml = renderCriterionDetails(criterionData);
+                const referencesEl = contentEl.querySelector('.criterion-references');
+
+                if (referencesEl) {
+                    referencesEl.insertAdjacentHTML('beforebegin', detailsHtml);
+                }
+
+            } catch (error) {
+                const loadingEl = contentEl.querySelector('.criterion-loading');
+                if (loadingEl) {
+                    loadingEl.innerHTML = `<span class="error">Failed to load criterion details: ${error.message}</span>`;
+                }
+            }
+        }
+
+        function updateSidebar(svcData) {
+            catalogInfo.style.display = 'block';
+
+            const scheme = svcData.scheme;
+            const criteriaCount = svcData.conformityCriterion.length;
+            const referenceCount = svcData.conformityCriterion.filter(c =>
+                c.type && c.type.includes("CriterionReference")
+            ).length;
+
+            catalogDetails.innerHTML = `
+                <div class="info-item">
+                    <h4 class="info-label">Total Criteria</h4>
+                    <p class="info-value">${criteriaCount}</p>
+                </div>
+                <div class="info-item">
+                    <h4 class="info-label">Independent Criteria</h4>
+                    <p class="info-value">${referenceCount}</p>
+                </div>
+                <div class="info-item">
+                    <h4 class="info-label">Embedded Criteria</h4>
+                    <p class="info-value">${criteriaCount - referenceCount}</p>
+                </div>
+                <div class="info-item">
+                    <h4 class="info-label">Scheme Version</h4>
+                    <p class="info-value">${scheme.version || 'Unknown'}</p>
+                </div>
+            `;
+        }
+
+        function attachEventHandlers() {
+            // Event handlers are attached via onclick attributes in the HTML
+        }
+
+        function showError(message) {
+            svcContent.innerHTML = `<div class="error">${message}</div>`;
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+            return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+        }
+    </script>
+</body>
+</html>

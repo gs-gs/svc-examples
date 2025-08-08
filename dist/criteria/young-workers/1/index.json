@@ -1,0 +1,36 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/young-workers/1/",
+  "name": "Young Workers",
+  "description": "Child labor shall not be used in any stage of manufacturing. The term 'child' refers to any person under the age of 15, or under the age for completing compulsory education, or under the minimum age for employment in the country, whichever is greatest. Workers under the age of 18 (Young Workers) shall not perform work that is likely to jeopardize their health or safety.",
+  "conformityTopic": "social.labour",
+  "status": "active",
+  "thresholdValue": {
+    "metricName": "Minimum working age",
+    "metricValue": {
+      "value": 15,
+      "unit": "ANN"
+    }
+  },
+  "category": [
+    {
+      "type": [
+        "Classification"
+      ],
+      "id": "http://localhost:3000/vocabulary/rba-vap-standard/labor",
+      "code": "A2",
+      "name": "Young Workers",
+      "schemeID": "http://localhost:3000/vocabulary/rba-vap-standard/",
+      "schemeName": "RBA VAP Standard"
+    }
+  ],
+  "tag": [
+    "child-labor",
+    "young-workers",
+    "age-verification",
+    "education"
+  ],
+  "originalId": "http://localhost:3000/vocabulary/rba-vap-standard/8.0.2/A2"
+}
