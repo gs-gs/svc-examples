@@ -1,0 +1,28 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/company-commitment/1/",
+  "name": "Company Commitment",
+  "description": "Participants shall establish human rights, health and safety, environmental and ethics policy statements affirming Participant's commitment to due diligence and continual improvement, endorsed by executive management. Policy statements shall be made public and communicated to workers in a language they understand via accessible channels.",
+  "conformityTopic": "governance.transparency",
+  "status": "active",
+  "category": [
+    {
+      "type": [
+        "Classification"
+      ],
+      "id": "http://localhost:3000/vocabulary/rba-vap-standard/supply-chain",
+      "code": "E1",
+      "name": "Company Commitment",
+      "schemeID": "http://localhost:3000/vocabulary/rba-vap-standard/",
+      "schemeName": "RBA VAP Standard"
+    }
+  ],
+  "tag": [
+    "company-commitment",
+    "policy-statements",
+    "executive-endorsement"
+  ],
+  "originalId": "http://localhost:3000/vocabulary/rba-vap-standard/8.0.2/E1"
+}

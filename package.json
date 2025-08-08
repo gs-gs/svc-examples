@@ -4,11 +4,15 @@
   "description": "Sustainable Vocabulary Catalog (SVC) examples and tools",
   "main": "index.js",
   "scripts": {
-    "rebase-urls": "node cli/rebase-urls.js",
+    "rebase-urls": "node src/rebase-urls.js",
+    "generate": "node src/svc-generator.js",
+    "serve": "node src/dev-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "svc-rebase-urls": "./cli/rebase-urls.js"
+    "svc-rebase-urls": "./src/rebase-urls.js",
+    "svc-generate": "./src/svc-generator.js",
+    "svc-serve": "./src/dev-server.js"
   },
   "keywords": [
     "sustainability",

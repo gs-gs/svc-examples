@@ -1,0 +1,57 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/step-1-establish-strong-company-management-systems/1/",
+  "name": "Step 1 - Establish Strong Company Management Systems",
+  "description": "Companies must adopt and publish a supply chain policy, structure internal management to support due diligence, establish controls and transparency systems, strengthen supplier engagement, and establish grievance mechanisms.",
+  "conformityTopic": "governance.compliance",
+  "status": "active",
+  "subCriterion": [
+    {
+      "type": [
+        "CriterionReference"
+      ],
+      "id": "http://localhost:3000/criteria/step-1a-adopt-and-commit-to-supply-chain-policy/1/",
+      "name": "Step 1A - Adopt and Commit to Supply Chain Policy",
+      "version": "1"
+    },
+    {
+      "type": [
+        "CriterionReference"
+      ],
+      "id": "http://localhost:3000/criteria/step-1b-structure-internal-management/1/",
+      "name": "Step 1B - Structure Internal Management",
+      "version": "1"
+    },
+    {
+      "type": [
+        "CriterionReference"
+      ],
+      "id": "http://localhost:3000/criteria/step-1c-establish-system-of-controls-and-transparency/1/",
+      "name": "Step 1C - Establish System of Controls and Transparency",
+      "version": "1"
+    },
+    {
+      "type": [
+        "CriterionReference"
+      ],
+      "id": "http://localhost:3000/criteria/step-1d-strengthen-company-engagement-with-suppliers/1/",
+      "name": "Step 1D - Strengthen Company Engagement with Suppliers",
+      "version": "1"
+    },
+    {
+      "type": [
+        "CriterionReference"
+      ],
+      "id": "http://localhost:3000/criteria/step-1e-establish-company-level-grievance-mechanism/1/",
+      "name": "Step 1E - Establish Company-Level Grievance Mechanism",
+      "version": "1"
+    }
+  ],
+  "tag": [
+    "management-systems",
+    "OECD-step1"
+  ],
+  "originalId": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step1-management-systems"
+}

@@ -1,0 +1,29 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/business-integrity-and-no-improper-advantage/1/",
+  "name": "Business Integrity and No Improper Advantage",
+  "description": "The highest standards of integrity shall be upheld in all business interactions. Participants shall have a zero-tolerance policy to prohibit any and all forms of bribery, corruption, extortion, and embezzlement. Bribes or other means of obtaining undue or improper advantage shall not be promised, offered, authorized, given, or accepted.",
+  "conformityTopic": "governance.ethics",
+  "status": "active",
+  "category": [
+    {
+      "type": [
+        "Classification"
+      ],
+      "id": "http://localhost:3000/vocabulary/rba-vap-standard/ethics",
+      "code": "D1",
+      "name": "Business Integrity and No Improper Advantage",
+      "schemeID": "http://localhost:3000/vocabulary/rba-vap-standard/",
+      "schemeName": "RBA VAP Standard"
+    }
+  ],
+  "tag": [
+    "business-integrity",
+    "anti-corruption",
+    "bribery",
+    "zero-tolerance"
+  ],
+  "originalId": "http://localhost:3000/vocabulary/rba-vap-standard/8.0.2/D1"
+}

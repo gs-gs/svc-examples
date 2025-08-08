@@ -1,0 +1,16 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/step-4-carry-out-independent-third-party-audit/1/",
+  "name": "Step 4 - Carry Out Independent Third-Party Audit",
+  "description": "Companies must undergo independent third-party audits of their supply chain due diligence practices following ISO 19011:2018 standard, allowing auditor access to sites, personnel, and documentation.",
+  "conformityTopic": "governance.compliance",
+  "status": "active",
+  "tag": [
+    "audit",
+    "third-party",
+    "ISO19011"
+  ],
+  "originalId": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step4-independent-audit"
+}

@@ -1,0 +1,15 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/step-3a-report-findings-to-senior-management/1/",
+  "name": "Step 3A - Report Findings to Senior Management",
+  "description": "Company must ensure all risks identified during Step 2 are reported to senior manager with designated responsibility for due diligence on ongoing basis.",
+  "conformityTopic": "governance.compliance",
+  "status": "active",
+  "tag": [
+    "reporting",
+    "senior-management"
+  ],
+  "originalId": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step3a-report-findings"
+}

@@ -1,0 +1,15 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/step-1d-strengthen-company-engagement-with-suppliers/1/",
+  "name": "Step 1D - Strengthen Company Engagement with Suppliers",
+  "description": "Company must establish long-term relationships with suppliers, confirm supplier commitment to supply chain policy, communicate expectations, incorporate requirements into contracts, and support capability building.",
+  "conformityTopic": "social.community",
+  "status": "active",
+  "tag": [
+    "suppliers",
+    "engagement"
+  ],
+  "originalId": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step1d-supplier-engagement"
+}

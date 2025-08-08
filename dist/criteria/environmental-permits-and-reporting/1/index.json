@@ -1,0 +1,28 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/environmental-permits-and-reporting/1/",
+  "name": "Environmental Permits and Reporting",
+  "description": "All required environmental permits (e.g. discharge monitoring), approvals, and registrations shall be obtained, maintained, and kept current, and their operational and reporting requirements shall be followed.",
+  "conformityTopic": "governance.compliance",
+  "status": "active",
+  "category": [
+    {
+      "type": [
+        "Classification"
+      ],
+      "id": "http://localhost:3000/vocabulary/rba-vap-standard/environment",
+      "code": "C1",
+      "name": "Environmental Permits and Reporting",
+      "schemeID": "http://localhost:3000/vocabulary/rba-vap-standard/",
+      "schemeName": "RBA VAP Standard"
+    }
+  ],
+  "tag": [
+    "environmental-permits",
+    "compliance",
+    "reporting"
+  ],
+  "originalId": "http://localhost:3000/vocabulary/rba-vap-standard/8.0.2/C1"
+}

@@ -1,0 +1,16 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/step-5-report-annually-on-supply-chain-due-diligence/1/",
+  "name": "Step 5 - Report Annually on Supply Chain Due Diligence",
+  "description": "Companies must annually report on due diligence for responsible supply chains, publish company management systems information, describe risk assessment methodology, and outline risk management strategies while protecting business confidentiality.",
+  "conformityTopic": "governance.transparency",
+  "status": "active",
+  "tag": [
+    "reporting",
+    "transparency",
+    "annual-report"
+  ],
+  "originalId": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step5-public-reporting"
+}

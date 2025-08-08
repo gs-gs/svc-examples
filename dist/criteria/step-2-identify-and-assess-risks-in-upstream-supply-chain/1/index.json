@@ -1,0 +1,33 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/step-2-identify-and-assess-risks-in-upstream-supply-chain/1/",
+  "name": "Step 2 - Identify and Assess Risks in Upstream Supply Chain",
+  "description": "Companies must identify the scope of risk assessment, map factual circumstances of supply chains, and assess risks against Annex II criteria including red flag review and CAHRA determination.",
+  "conformityTopic": "governance.compliance",
+  "status": "active",
+  "subCriterion": [
+    {
+      "type": [
+        "CriterionReference"
+      ],
+      "id": "http://localhost:3000/criteria/step-2a-red-flag-review/1/",
+      "name": "Step 2A - Red Flag Review",
+      "version": "1"
+    },
+    {
+      "type": [
+        "CriterionReference"
+      ],
+      "id": "http://localhost:3000/criteria/cahra-due-diligence-requirements/1/",
+      "name": "CAHRA Due Diligence Requirements",
+      "version": "1"
+    }
+  ],
+  "tag": [
+    "risk-assessment",
+    "OECD-step2"
+  ],
+  "originalId": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step2-risk-assessment"
+}

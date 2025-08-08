@@ -1,0 +1,183 @@
+{
+  "type": [
+    "ConformitySchemeVocabulary"
+  ],
+  "@context": [
+    "https://test.uncefact.org/vocabulary/untp/svc/0.6.1/"
+  ],
+  "id": "http://localhost:3000/vocabulary/rba-vap-standard/8.0.2",
+  "scheme": {
+    "type": [
+      "ConformityScheme"
+    ],
+    "id": "http://localhost:3000/rba-vap-standard/8.0.2",
+    "name": "RBA Validated Assessment Program (VAP) Standard",
+    "description": "The RBA VAP Standard provides comprehensive guidance for deeper understanding of the Responsible Business Alliance Code of Conduct, offering elements to demonstrate compliance with the RBA Code for companies implementing the RBA Code of Conduct in their operations.",
+    "version": "8.0.2",
+    "validFrom": "2025-04-01",
+    "owner": {
+      "id": "http://localhost:3000",
+      "name": "Responsible Business Alliance (RBA)",
+      "registeredId": "RBA"
+    },
+    "trustmark": {
+      "fileName": "RBA Symbol",
+      "fileType": "image/svg+xml",
+      "file": "PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA1MCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMwMDVjYTY7fS5jbHMtMntmaWxsOiMwMDJmNjA7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5yYmEtc3ltYm9sLWNvbG9yZWQ8L3RpdGxlPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTQ3LjY3LDI0LjQ2bC05LjkyLTUuMTFhLjY3LjY3LDAsMCwwLS4yOC0uMDYuNTIuNTIsMCwwLDAtLjIxLDAsMTMuNDgsMTMuNDgsMCwwLDEsMCwxMS4zNC41Mi41MiwwLDAsMCwuMjEsMCwuNjcuNjcsMCwwLDAsLjI4LS4wNmw5LjkyLTUuMTFhLjYxLjYxLDAsMCwwLDAtMS4wOCIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTM1LjU1LDExLjg5QTE3LjIzLDE3LjIzLDAsMCwxLDM4LDE0LjQ1LDUuNDQsNS40NCwwLDAsMSw0MCwxNWwyLDFhMTkuNTksMTkuNTksMCwwLDAtOC4xMi04LjIzTDM1LDEwYTUuNTQsNS41NCwwLDAsMSwuNTcsMS44NyIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTM4LDM1LjU1YTE3LjE2LDE3LjE2LDAsMCwxLTIuNDksMi41NUE1LjU5LDUuNTksMCwwLDEsMzUsNDBsLTEuMTMsMi4yQTE5LjYxLDE5LjYxLDAsMCwwLDQyLDM0bC0yLDFhNS41LDUuNSwwLDAsMS0xLjk0LjU3Ii8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTEuMTQsMTQuNmExNy4zNCwxNy4zNCwwLDAsMSwzLjQzLTMuMzZBNS42MSw1LjYxLDAsMCwxLDE1LDEwTDE2LjQsNy4zM2ExOS43LDE5LjcsMCwwLDAtOS4zLDkuMTlMMTAsMTVhNS4zOCw1LjM4LDAsMCwxLDEuMTItLjQyIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTIuMjUsMzAuNjVhLjY3LjY3LDAsMCwwLC4yOC4wNi41Mi41MiwwLDAsMCwuMjEsMCwxMy40OCwxMy40OCwwLDAsMSwwLTExLjM0LjUyLjUyLDAsMCwwLS4yMSwwLC42Ny42NywwLDAsMC0uMjguMDZMMi4zMywyNC40NmEuNjEuNjEsMCwwLDAsMCwxLjA4WiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTE0LjU2LDM4Ljc1YTE3LjY5LDE3LjY5LDAsMCwxLTMuNDEtMy4zNEE2LjQyLDYuNDIsMCwwLDEsMTAsMzVsLTIuOTEtMS41YTE5LjYxLDE5LjYxLDAsMCwwLDkuMjksOS4xOEwxNSw0MGE1LjczLDUuNzMsMCwwLDEtLjQ2LTEuMjMiLz48cGF0aCBjbGFzcz0iY2xzLTIiIGQ9Ik0yNSwxMS40OWExMy40MSwxMy40MSwwLDAsMSw1LjY3LDEuMjUuNi42LDAsMCwwLDAtLjQ5TDI1LjU0LDIuMzNhLjYxLjYxLDAsMCwwLTEuMDgsMGwtNS4xMSw5LjkyYS42LjYsMCwwLDAsMCwuNDlBMTMuNDEsMTMuNDEsMCwwLDEsMjUsMTEuNDkiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0yNSwzOC41MWExMy40MSwxMy40MSwwLDAsMS01LjY3LTEuMjUuNi42LDAsMCwwLDAsLjQ5bDUuMTEsOS45MmEuNjEuNjEsMCwwLDAsMS4wOCwwbDUuMTEtOS45MmEuNi42LDAsMCwwLDAtLjQ5QTEzLjQxLDEzLjQxLDAsMCwxLDI1LDM4LjUxIi8+PC9zdmc+"
+    }
+  },
+  "conformityCriterion": [
+    {
+      "type": [
+        "CriterionReference"
+      ],
+      "id": "http://localhost:3000/criteria/labor/1/",
+      "name": "Labor",
+      "version": "1"
+    },
+    {
+      "type": [
+        "CriterionReference"
+      ],
+      "id": "http://localhost:3000/criteria/health-and-safety/1/",
+      "name": "Health and Safety",
+      "version": "1"
+    },
+    {
+      "type": [
+        "CriterionReference"
+      ],
+      "id": "http://localhost:3000/criteria/environment/1/",
+      "name": "Environment",
+      "version": "1"
+    },
+    {
+      "type": [
+        "CriterionReference"
+      ],
+      "id": "http://localhost:3000/criteria/ethics/1/",
+      "name": "Ethics",
+      "version": "1"
+    },
+    {
+      "type": [
+        "CriterionReference"
+      ],
+      "id": "http://localhost:3000/criteria/supply-chain-management/1/",
+      "name": "Supply Chain Management",
+      "version": "1"
+    }
+  ],
+  "regulatoryAlignment": [
+    {
+      "type": [
+        "Regulation"
+      ],
+      "id": "https://www.ilo.org/global/standards/introduction-to-international-labour-standards/conventions-and-recommendations/lang--en/index.htm",
+      "name": "ILO Fundamental Conventions",
+      "jurisdictionCountry": "GLOBAL",
+      "administeredBy": {
+        "id": "https://www.ilo.org/",
+        "name": "International Labour Organization",
+        "registeredId": "ILO"
+      },
+      "effectiveDate": "1919-01-01"
+    },
+    {
+      "type": [
+        "Regulation"
+      ],
+      "id": "https://www.ohchr.org/en/universal-declaration-of-human-rights",
+      "name": "Universal Declaration of Human Rights",
+      "jurisdictionCountry": "GLOBAL",
+      "administeredBy": {
+        "id": "https://www.un.org/",
+        "name": "United Nations",
+        "registeredId": "UN"
+      },
+      "effectiveDate": "1948-12-10"
+    }
+  ],
+  "industryScope": {
+    "type": [
+      "Classification"
+    ],
+    "id": "https://unstats.un.org/unsd/classifications/Econ/isic4/26/",
+    "code": "26",
+    "name": "Manufacture of computer, electronic and optical products",
+    "schemeID": "https://unstats.un.org/unsd/classifications/Econ/isic4/",
+    "schemeName": "International Standard Industrial Classification (ISIC) Rev.4"
+  },
+  "geographicScope": {
+    "type": [
+      "Classification"
+    ],
+    "id": "https://unstats.un.org/unsd/methodology/m49/001/",
+    "code": "001",
+    "name": "World",
+    "schemeID": "https://unstats.un.org/unsd/methodology/m49/",
+    "schemeName": "UN M49 Standard Country or Area Codes for Statistical Use"
+  },
+  "performanceLevelCode": [
+    {
+      "name": "Priority Non-conformance",
+      "rank": 1,
+      "description": "A priority non-conformance is any finding leading to: Imminent Risk to life, limb, facility, the environment, or the community; Egregious ethical breach"
+    },
+    {
+      "name": "Major Non-conformance",
+      "rank": 2,
+      "description": "Violation of applicable law; Systemic failure (e.g., same incident multiple times or multiple incidents at the same time); Non-conformance situation in which equal or greater than 20 % of total sample population is affected."
+    },
+    {
+      "name": "Minor Non-conformance",
+      "rank": 3,
+      "description": "One-off incident, not likely to repeat; A non-conformance situation in which less than 20% of the total sample population is affected."
+    },
+    {
+      "name": "Risk of Non-conformance",
+      "rank": 4,
+      "description": "If the condition or practice meets minimal conformance with the requirement but would likely deteriorate to a non-conformance without some additional action or effort on the part of facility management."
+    },
+    {
+      "name": "Opportunity for Improvement",
+      "rank": 5,
+      "description": "A situation which is not fully in conformance or can be improved but where a Corrective action plan is not mandatory but recommended."
+    },
+    {
+      "name": "Conformance",
+      "rank": 6,
+      "description": "Conformance is noted when the assessor determines that a facility meets or exceeds the assessment criteria and expectations."
+    }
+  ],
+  "tagCode": [
+    {
+      "name": "Labor",
+      "description": "Criteria related to labor practices, worker rights, and employment conditions."
+    },
+    {
+      "name": "Health and Safety",
+      "description": "Criteria related to occupational health and safety practices and workplace safety."
+    },
+    {
+      "name": "Environment",
+      "description": "Criteria related to environmental management and sustainability practices."
+    },
+    {
+      "name": "Ethics",
+      "description": "Criteria related to business ethics, integrity, and governance practices."
+    },
+    {
+      "name": "Supply Chain",
+      "description": "Criteria related to supply chain management and supplier responsibility."
+    },
+    {
+      "name": "Priority",
+      "description": "Criteria that may result in priority non-conformance findings requiring immediate action."
+    },
+    {
+      "name": "Compliance",
+      "description": "Criteria related to legal and regulatory compliance requirements."
+    }
+  ]
+}

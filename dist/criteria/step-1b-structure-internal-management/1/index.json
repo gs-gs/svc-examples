@@ -1,0 +1,15 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/step-1b-structure-internal-management/1/",
+  "name": "Step 1B - Structure Internal Management",
+  "description": "Company must assign responsibility for due diligence to appropriate staff, provide authority to senior level staff, ensure adequate training and resources, and maintain accountability for senior management.",
+  "conformityTopic": "governance.compliance",
+  "status": "active",
+  "tag": [
+    "management",
+    "training"
+  ],
+  "originalId": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step1b-internal-management"
+}

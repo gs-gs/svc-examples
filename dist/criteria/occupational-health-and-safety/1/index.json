@@ -1,0 +1,29 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/occupational-health-and-safety/1/",
+  "name": "Occupational Health and Safety",
+  "description": "Worker potential for exposure to health and safety hazards (chemical, electrical and other energy sources, fire, vehicles, and fall hazards, etc.) shall be identified and assessed, mitigated using the Hierarchy of Controls. Where hazards cannot be adequately controlled by these means, workers shall be provided with appropriate, well-maintained, personal protective equipment.",
+  "conformityTopic": "social.safety",
+  "status": "active",
+  "category": [
+    {
+      "type": [
+        "Classification"
+      ],
+      "id": "http://localhost:3000/vocabulary/rba-vap-standard/health-safety",
+      "code": "B1",
+      "name": "Occupational Health and Safety",
+      "schemeID": "http://localhost:3000/vocabulary/rba-vap-standard/",
+      "schemeName": "RBA VAP Standard"
+    }
+  ],
+  "tag": [
+    "occupational-health",
+    "safety-hazards",
+    "ppe",
+    "hierarchy-of-controls"
+  ],
+  "originalId": "http://localhost:3000/vocabulary/rba-vap-standard/8.0.2/B1"
+}

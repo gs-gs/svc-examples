@@ -1,0 +1,15 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/step-2a-red-flag-review/1/",
+  "name": "Step 2A - Red Flag Review",
+  "description": "Company must review information to conduct red flag review of mineral origins and suppliers, validate information on minerals received, understand plausibility of supply, and determine CAHRAs.",
+  "conformityTopic": "governance.compliance",
+  "status": "active",
+  "tag": [
+    "risk-assessment",
+    "red-flags"
+  ],
+  "originalId": "http://localhost:3000/standards/rmap/all-minerals/v1.1#step2a-red-flag-review"
+}

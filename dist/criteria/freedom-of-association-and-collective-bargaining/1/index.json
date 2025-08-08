@@ -1,0 +1,28 @@
+{
+  "type": [
+    "Criterion"
+  ],
+  "id": "http://localhost:3000/criteria/freedom-of-association-and-collective-bargaining/1/",
+  "name": "Freedom of Association and Collective Bargaining",
+  "description": "Open communication and direct engagement between workers and management are the most effective ways to resolve workplace and compensation issues. Workers and/or their representatives shall be able to openly communicate and share ideas and concerns with management regarding working conditions and management practices without fear of discrimination, reprisal, intimidation, or harassment.",
+  "conformityTopic": "social.rights",
+  "status": "active",
+  "category": [
+    {
+      "type": [
+        "Classification"
+      ],
+      "id": "http://localhost:3000/vocabulary/rba-vap-standard/labor",
+      "code": "A6",
+      "name": "Freedom of Association and Collective Bargaining",
+      "schemeID": "http://localhost:3000/vocabulary/rba-vap-standard/",
+      "schemeName": "RBA VAP Standard"
+    }
+  ],
+  "tag": [
+    "freedom-of-association",
+    "collective-bargaining",
+    "worker-representation"
+  ],
+  "originalId": "http://localhost:3000/vocabulary/rba-vap-standard/8.0.2/A6"
+}
