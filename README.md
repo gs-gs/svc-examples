@@ -243,13 +243,14 @@ npm run rebase-urls \
 
 ## Publishing Catalogs
 
-The development server approach is designed for both local development and production deployment:
+The development server approach is designed for local development, **not production deployment**:
 
 ### Content Negotiation
 The development server automatically handles content negotiation:
 - Browsers (`Accept: text/html`) receive HTML pages
 - API clients (`Accept: application/json`) receive JSON data
 - Same URLs work for both human and machine consumption
+A production webserver should do the same, some examples below.
 
 ### Production Deployment
 1. **Generate the independent structure**: `npm run generate <catalog-file>`
@@ -259,24 +260,6 @@ The development server automatically handles content negotiation:
 The generated structure works with any static file server since it creates actual HTML and JSON files at predictable URLs.
 
 ### Examples
-
-**Using the built-in server:**
-```bash
-npm run serve -- --port 8080
-# Serves at http://localhost:8080/ with full content negotiation
-```
-
-**Using other servers:**
-```bash
-# Using Python 3
-cd dist && python -m http.server 8080
-
-# Using Node.js
-npx serve dist -p 8080
-
-# Using PHP
-cd dist && php -S localhost:8080
-```
 
 **Production Apache example with content negotiation:**
 ```apache
